@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Objects;
+
 import ihm.menew.fragments.MainFragment;
 
 public class MainActivity extends AppCompatActivity implements MainFragment.OnButtonClickedListener {
@@ -26,14 +28,28 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
         String tag = (String) view.getTag();
         if (tag == null){
             Log.e(getClass().getSimpleName(), "Tag est null");
+            return;
         }
         if (tag != null) {
             Log.e(getClass().getSimpleName(), "Tag est non null");
         }
-        //int buttonTag = Integer.parseInt(view.getTag().toString());
+        switch(Objects.requireNonNull(tag)){
+            case "10":
+                Log.e(getClass().getSimpleName(),"Button Home clicked !");
+                startActivity(new Intent(this, SecondActivity.class));
+                break;
+            case "20":
+                Log.e(getClass().getSimpleName(),"Button Plan clicked !");
+                startActivity(new Intent(this, SecondActivity.class));
+                break;
+            case "30":
+                Log.e(getClass().getSimpleName(),"Button Favori clicked !");
+                startActivity(new Intent(this, SecondActivity.class));
+                break;
+            default:break;
+        }
 
-        Log.e(getClass().getSimpleName(),"Button clicked !");
-        startActivity(new Intent(this, SecondActivity.class));
+
     }
 
     private void onClickButtonPlus1() {
