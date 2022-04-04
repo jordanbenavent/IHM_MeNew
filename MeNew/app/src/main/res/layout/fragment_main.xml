@@ -10,14 +10,33 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment"
-        android:textColor="#B1B1B1"/>
+        android:textColor="#B1B1B1"
+        android:tag="0"/>
     <Button
         android:id="@+id/fragment_main_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:background="#69D141"
-        android:textColor="#B1B1B1"/>
+        android:textColor="#B1B1B1"
+        android:tag="10"/>
+
+    <Button
+        android:id="@+id/fragment_favorite_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Favorite"
+        android:background="#69D141"
+        android:textColor="#B1B1B1"
+        android:tag="20"/>
+
+    <Button
+        android:id="@+id/fragment_search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:background="#69D141"
+        android:textColor="#B1B1B1"
+        android:tag="30"/>
 
 </LinearLayout>

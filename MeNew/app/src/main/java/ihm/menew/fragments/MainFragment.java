@@ -38,6 +38,8 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         View result = inflater.inflate(R.layout.fragment_main, container, false);
         //Set onClickListener to button "SHOW ME DETAILS"
         result.findViewById(R.id.fragment_main_button).setOnClickListener(this);
+        result.findViewById(R.id.fragment_search_button).setOnClickListener(this);
+        result.findViewById(R.id.fragment_favorite_button).setOnClickListener(this);
 
         return result;
     }

@@ -22,6 +22,16 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
 
     @Override
     public void onButtonClicked(View view) {
+        // Retrieve button tag
+        String tag = (String) view.getTag();
+        if (tag == null){
+            Log.e(getClass().getSimpleName(), "Tag est null");
+        }
+        if (tag != null) {
+            Log.e(getClass().getSimpleName(), "Tag est non null");
+        }
+        //int buttonTag = Integer.parseInt(view.getTag().toString());
+
         Log.e(getClass().getSimpleName(),"Button clicked !");
         startActivity(new Intent(this, SecondActivity.class));
     }
