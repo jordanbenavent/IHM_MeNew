@@ -46,11 +46,11 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
                 //startActivity(new Intent(this, SecondActivity.class));
                 break;
             case "20":
-                Log.e(getClass().getSimpleName(),"Button Plan clicked !");
+                Log.e(getClass().getSimpleName(),"Button Favori clicked !");
                 startActivity(new Intent(this, SecondActivity.class));
                 break;
             case "30":
-                Log.e(getClass().getSimpleName(),"Button Favori clicked !");
+                Log.e(getClass().getSimpleName(),"Button Search clicked !");
                 startActivity(new Intent(this, SecondActivity.class));
                 break;
             default:break;
