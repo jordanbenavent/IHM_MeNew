@@ -3,6 +3,7 @@
     package="ihm.menew">
 
     <application
+        android:name=".MeNewApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher_foreground"
         android:label="@string/app_name"

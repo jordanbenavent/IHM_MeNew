@@ -1,7 +1,10 @@
 package ihm.menew;
 
+import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.telecom.Call;
@@ -15,11 +18,15 @@ import ihm.menew.fragments.MainFragment;
 
 public class MainActivity extends AppCompatActivity implements MainFragment.OnButtonClickedListener {
 
+    GenerationNotification generateur = new GenerationNotification();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         onButtonClicked(findViewById(R.id.PreparerPlat));
+        onClickButtonPlus1();
+        sendNotification();
     }
 
     @Override
@@ -44,15 +51,15 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
                 Log.e(getClass().getSimpleName(),"Button Home clicked !");
                 onResume();
                 //startActivity(new Intent(this, SecondActivity.class));
-                break;
+                return;
             case "20":
                 Log.e(getClass().getSimpleName(),"Button Favori clicked !");
                 startActivity(new Intent(this, SecondActivity.class));
-                break;
+                return;
             case "30":
                 Log.e(getClass().getSimpleName(),"Button Search clicked !");
                 startActivity(new Intent(this, SecondActivity.class));
-                break;
+                return;
             default:break;
         }
 
@@ -61,9 +68,9 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
 
     private void onClickButtonPlus1() {
         findViewById(R.id.buttonpllus1).setOnClickListener( click -> {
-            Intent intent = new Intent(getApplicationContext(), TestActivity.class);
             ((TextView)findViewById(R.id.jour)).setText("Mardi");
-            startActivity(intent);
+            Log.e(getClass().getSimpleName(),"Button Plus clicked !");
+            generateur.sendNotification(getApplicationContext());
         });
     }
 
@@ -74,4 +81,17 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
             startActivity(intent);
         });
     }
+
+    private void sendNotification() {
+        new Thread(() -> {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            Log.e(getClass().getSimpleName(),"NOTI");
+            generateur.sendNotification(getApplicationContext());
+        }).start();
+    }
+
 }
