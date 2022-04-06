@@ -23,6 +23,12 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        Log.e(getClass().getSimpleName(), "On resume");
+    }
+
+    @Override
     public void onButtonClicked(View view) {
         // Retrieve button tag
         String tag = (String) view.getTag();
@@ -36,7 +42,8 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
         switch(Objects.requireNonNull(tag)){
             case "10":
                 Log.e(getClass().getSimpleName(),"Button Home clicked !");
-                startActivity(new Intent(this, SecondActivity.class));
+                onResume();
+                //startActivity(new Intent(this, SecondActivity.class));
                 break;
             case "20":
                 Log.e(getClass().getSimpleName(),"Button Plan clicked !");

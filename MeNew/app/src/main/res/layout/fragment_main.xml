@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="60px"
+    android:layout_width="wrap_content"
+    android:layout_height="53dp"
+    android:layout_centerHorizontal="true"
     tools:context=".fragments.MainFragment"
-    android:background="#424343">
+    android:background="#00424343"
+    android:layout_gravity="center_horizontal">
 
 
     <TextView
@@ -14,29 +16,47 @@
         android:tag="0"/>
     <Button
         android:id="@+id/fragment_main_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
-        android:background="#69D141"
+        android:layout_width="125px"
+        android:layout_height="125px"
+        android:layout_marginStart="25dp"
+        android:background="@drawable/ic_baseline_home_24"
         android:textColor="#B1B1B1"
         android:tag="10"/>
 
     <Button
+        android:id="@+id/fragment_plan_button"
+        android:layout_width="125px"
+        android:layout_height="125px"
+        android:layout_marginStart="22dp"
+        android:background="@drawable/ic_baseline_calendar_today_24"
+        android:textColor="#B1B1B1"
+        android:tag="15"/>
+
+    <Button
         android:id="@+id/fragment_favorite_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Favori"
-        android:background="#69D141"
+        android:layout_width="125px"
+        android:layout_height="125px"
+        android:layout_marginStart="22dp"
+        android:background="@drawable/ic_twotone_star_24"
         android:textColor="#B1B1B1"
         android:tag="20"/>
 
     <Button
         android:id="@+id/fragment_search_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Search"
-        android:background="#69D141"
+        android:layout_width="125px"
+        android:layout_height="125px"
+        android:layout_marginStart="22dp"
+        android:background="@drawable/ic_twotone_search_24"
         android:textColor="#B1B1B1"
         android:tag="30"/>
+
+    <Button
+        android:id="@+id/fragment_history_button"
+        android:layout_width="125px"
+        android:layout_height="125px"
+        android:layout_marginStart="22dp"
+        android:background="@drawable/ic_twotone_history_24"
+        android:textColor="#B1B1B1"
+        android:tag="40"/>
 
 </LinearLayout>
