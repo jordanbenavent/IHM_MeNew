@@ -15,6 +15,12 @@
             android:name=".SecondActivity"
             android:exported="false" />
         <activity
+            android:name=".activity_utilisateur"
+            android:exported="false" />
+        <activity
+            android:name=".activity_modification_utilisateur"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

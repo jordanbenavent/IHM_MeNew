@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
         onButtonClicked(findViewById(R.id.PreparerPlat));
         onClickButtonPlus1();
         sendNotification();
+        onClickButtonProfil();
     }
 
     @Override
@@ -78,6 +79,13 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
         findViewById(R.id.buttonpllus2).setOnClickListener( click -> {
             Intent intent = new Intent(getApplicationContext(), TestActivity.class);
             ((TextView)findViewById(R.id.jour)).setText("Mardi");
+            startActivity(intent);
+        });
+    }
+
+    private void onClickButtonProfil() {
+        findViewById(R.id.profil).setOnClickListener( click -> {
+            Intent intent = new Intent(getApplicationContext(), activity_utilisateur.class);
             startActivity(intent);
         });
     }

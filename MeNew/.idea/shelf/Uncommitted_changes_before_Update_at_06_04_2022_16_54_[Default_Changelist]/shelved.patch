@@ -1,0 +1,573 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DesignSurface\">\r\n    <option name=\"filePathToZoomLevelMap\">\r\n      <map>\r\n        <entry key=\"app/src/main/res/drawable-v24/ic_launcher_foreground.xml\" value=\"0.1645\" />\r\n        <entry key=\"app/src/main/res/drawable/ic_launcher_background.xml\" value=\"0.1645\" />\r\n        <entry key=\"app/src/main/res/drawable/ic_baseline_add_circle_24.xml\" value=\"0.124\" />\r\n        <entry key=\"app/src/main/res/drawable/myrectangle.xml\" value=\"0.124\" />\r\n        <entry key=\"app/src/main/res/drawable/rectangle.xml\" value=\"0.1\" />\r\n        <entry key=\"app/src/main/res/drawable/rectangle2.xml\" value=\"0.2\" />\r\n        <entry key=\"app/src/main/res/layout/activity_test.xml\" value=\"0.11302083333333333\" />\r\n        <entry key=\"app/src/main/res/layout/test.xml\" value=\"0.12360688956433637\" />\r\n        <entry key=\"app/src/main/res/layout/activity_main.xml\" value=\"0.1\" />\r\n        <entry key=\"app/src/main/res/layout/activity_second.xml\" value=\"0.1\" />\r\n        <entry key=\"app/src/main/res/layout/fragment_main.xml\" value=\"0.357275390625\" />\r\n        <entry key=\"app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml\" value=\"0.1645\" />\r\n        <entry key=\"app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml\" value=\"0.2085\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" default=\"true\" project-jdk-name=\"Android Studio default JDK\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 955fc508c74ab02d96d84a2794542109ee8b62e9)
++++ b/.idea/misc.xml	(date 1649256858008)
+@@ -3,23 +3,15 @@
+   <component name="DesignSurface">
+     <option name="filePathToZoomLevelMap">
+       <map>
+-        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1645" />
+-        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1645" />
+-        <entry key="app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.124" />
+-        <entry key="app/src/main/res/drawable/myrectangle.xml" value="0.124" />
+-        <entry key="app/src/main/res/drawable/rectangle.xml" value="0.1" />
+-        <entry key="app/src/main/res/drawable/rectangle2.xml" value="0.2" />
+-        <entry key="app/src/main/res/layout/activity_test.xml" value="0.11302083333333333" />
+-        <entry key="app/src/main/res/layout/test.xml" value="0.12360688956433637" />
++        <entry key="..\:/Users/Kymio/Documents/GitHub/IHM_MeNew/MeNew/app/src/main/res/layout/activity_main.xml" value="0.1" />
++        <entry key="..\:/Users/Kymio/Documents/GitHub/IHM_MeNew/MeNew/app/src/main/res/layout/activity_modification_utilisateur.xml" value="0.25416666666666665" />
++        <entry key="..\:/Users/Kymio/Documents/GitHub/IHM_MeNew/MeNew/app/src/main/res/layout/activity_utilisateur.xml" value="0.264" />
++        <entry key="..\:/Users/jorda/OneDrive/Bureau/SI_Nice/S6/IHM/IHM_MeNew/MeNew/app/src/main/res/layout/test.xml" value="0.12360688956433637" />
+         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+-        <entry key="app/src/main/res/layout/activity_second.xml" value="0.1" />
+-        <entry key="app/src/main/res/layout/fragment_main.xml" value="0.357275390625" />
+-        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1645" />
+         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2085" />
+       </map>
+     </option>
+   </component>
+-  <component name="ExternalStorageConfigurationManager" enabled="true" />
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+Index: app/src/main/res/layout/activity_utilisateur.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_utilisateur.xml b/app/src/main/res/layout/activity_utilisateur.xml
+new file mode 100644
+--- /dev/null	(date 1649256752017)
++++ b/app/src/main/res/layout/activity_utilisateur.xml	(date 1649256752017)
+@@ -0,0 +1,168 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".activity_utilisateur">
++
++    <TextView
++        android:id="@+id/Nom_MeNew"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_marginBottom="731dp"
++        android:gravity="center"
++        android:text="MeNew"
++        android:textSize="50dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintLeft_toRightOf="parent"
++        app:layout_constraintRight_toLeftOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.0" />
++
++    <TextView
++        android:id="@+id/Utilisateurs"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_gravity="center"
++
++        android:text="Utilisateurs"
++        android:textSize="35dp"
++        app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew" />
++
++
++    <TextView
++        android:id="@+id/utilisateur"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_gravity="center"
++        android:text="Patrick"
++        android:textColor="@color/black"
++        android:textSize="35dp"
++        android:translationZ="90dp"
++        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
++        app:layout_constraintEnd_toEndOf="@+id/BackgroundGrey"
++        app:layout_constraintStart_toStartOf="@+id/BackgroundGrey"
++        app:layout_constraintTop_toTopOf="@+id/BackgroundGrey"
++        app:layout_constraintVertical_bias="0.171" />
++
++    <TextView
++        android:id="@+id/utilisateur2"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_gravity="center"
++        android:text="Jean"
++        android:textColor="@color/black"
++        android:textSize="35dp"
++        android:translationZ="90dp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/utilisateur" />
++
++    <TextView
++        android:id="@+id/utilisateur3"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_gravity="center"
++        android:text="Françoise"
++        android:textColor="@color/black"
++        android:textSize="35dp"
++        android:translationZ="90dp"
++        app:layout_constraintEnd_toEndOf="@+id/BackgroundGrey"
++        app:layout_constraintStart_toStartOf="@+id/BackgroundGrey"
++        app:layout_constraintTop_toBottomOf="@+id/utilisateur2" />
++
++    <Button
++        android:id="@+id/ButtonAddUtilisateur"
++        android:layout_width="64dp"
++        android:layout_height="46dp"
++        android:background="@drawable/ic_baseline_person_add_alt_1_24"
++        android:text=""
++        app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toEndOf="@+id/Utilisateurs"
++        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew" />
++
++    <Button
++        android:id="@+id/buttonEditUtilisateur1"
++        android:layout_width="50dp"
++        android:layout_height="45dp"
++        android:background="@drawable/ic_baseline_edit_24"
++        android:text=""
++        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
++        app:layout_constraintEnd_toEndOf="@+id/BackgroundGrey"
++        app:layout_constraintTop_toTopOf="@+id/BackgroundGrey"
++        app:layout_constraintVertical_bias="0.175" />
++
++    <Button
++        android:id="@+id/buttonEditUtilisateur2"
++        android:layout_width="45dp"
++        android:layout_height="41dp"
++        android:background="@drawable/ic_baseline_edit_24"
++        android:text=""
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/buttonEditUtilisateur1" />
++
++    <Button
++        android:id="@+id/buttonEditIcone"
++        android:layout_width="47dp"
++        android:layout_height="42dp"
++        android:background="@drawable/ic_baseline_edit_24"
++        android:text=""
++        app:layout_constraintEnd_toEndOf="@+id/buttonEditUtilisateur1"
++        app:layout_constraintTop_toBottomOf="@+id/buttonEditUtilisateur2" />
++
++    <ImageView
++        android:id="@+id/BackgroundGrey"
++        android:layout_width="413dp"
++        android:layout_height="274dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.0"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
++        app:layout_constraintVertical_bias="0.738"
++        app:srcCompat="@drawable/myrectangle" />
++
++    <ImageView
++        android:id="@+id/imageProfil"
++        android:layout_width="44dp"
++        android:layout_height="46dp"
++        android:layout_marginEnd="8dp"
++        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
++        app:layout_constraintEnd_toStartOf="@+id/utilisateur"
++        app:layout_constraintHorizontal_bias="0.57"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="@+id/BackgroundGrey"
++        app:layout_constraintVertical_bias="0.175"
++        tools:srcCompat="@tools:sample/avatars" />
++
++    <ImageView
++        android:id="@+id/imageView4"
++        android:layout_width="38dp"
++        android:layout_height="35dp"
++        android:layout_marginEnd="4dp"
++        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
++        app:layout_constraintEnd_toStartOf="@+id/utilisateur2"
++        app:layout_constraintStart_toStartOf="@+id/BackgroundGrey"
++        app:layout_constraintTop_toBottomOf="@+id/imageProfil"
++        app:layout_constraintVertical_bias="0.078"
++        tools:srcCompat="@tools:sample/avatars" />
++
++    <ImageView
++        android:id="@+id/imageView5"
++        android:layout_width="34dp"
++        android:layout_height="37dp"
++        android:layout_marginEnd="4dp"
++        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
++        app:layout_constraintEnd_toStartOf="@+id/utilisateur3"
++        app:layout_constraintHorizontal_bias="0.72"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/imageView4"
++        app:layout_constraintVertical_bias="0.192"
++        tools:srcCompat="@tools:sample/avatars" />
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/ihm/menew/activity_utilisateur.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/ihm/menew/activity_utilisateur.java b/app/src/main/java/ihm/menew/activity_utilisateur.java
+new file mode 100644
+--- /dev/null	(date 1649256752027)
++++ b/app/src/main/java/ihm/menew/activity_utilisateur.java	(date 1649256752027)
+@@ -0,0 +1,18 @@
++package ihm.menew;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.os.Bundle;
++import android.widget.Button;
++
++public class activity_utilisateur extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_utilisateur);
++        editUtilisateur1 = (Button) findViewById(R.id.buttonEditUtilisateur1);
++    }
++
++
++}
+\ No newline at end of file
+Index: app/src/main/res/drawable/ic_baseline_person_add_alt_1_24.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_baseline_person_add_alt_1_24.xml b/app/src/main/res/drawable/ic_baseline_person_add_alt_1_24.xml
+new file mode 100644
+--- /dev/null	(date 1649249666404)
++++ b/app/src/main/res/drawable/ic_baseline_person_add_alt_1_24.xml	(date 1649249666404)
+@@ -0,0 +1,10 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="24dp"
++    android:height="24dp"
++    android:viewportWidth="24"
++    android:viewportHeight="24"
++    android:tint="?attr/colorControlNormal">
++  <path
++      android:fillColor="@android:color/white"
++      android:pathData="M13,8c0,-2.21 -1.79,-4 -4,-4S5,5.79 5,8s1.79,4 4,4S13,10.21 13,8zM15,10v2h3v3h2v-3h3v-2h-3V7h-2v3H15zM1,18v2h16v-2c0,-2.66 -5.33,-4 -8,-4S1,15.34 1,18z"/>
++</vector>
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    package=\"ihm.menew\">\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:icon=\"@drawable/ic_launcher_foreground\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.MeNew\">\r\n        <activity\r\n            android:name=\".SecondActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".MainActivity\"\r\n            android:exported=\"true\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision 955fc508c74ab02d96d84a2794542109ee8b62e9)
++++ b/app/src/main/AndroidManifest.xml	(date 1649252648715)
+@@ -10,7 +10,13 @@
+         android:supportsRtl="true"
+         android:theme="@style/Theme.MeNew">
+         <activity
++            android:name=".activity_modification_utilisateur"
++            android:exported="false" />
++        <activity
+             android:name=".SecondActivity"
++            android:exported="false" />
++        <activity
++            android:name=".activity_utilisateur"
+             android:exported="false" />
+         <activity
+             android:name=".MainActivity"
+Index: app/src/main/res/drawable/ic_baseline_edit_24.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_baseline_edit_24.xml b/app/src/main/res/drawable/ic_baseline_edit_24.xml
+new file mode 100644
+--- /dev/null	(date 1649251979272)
++++ b/app/src/main/res/drawable/ic_baseline_edit_24.xml	(date 1649251979272)
+@@ -0,0 +1,10 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="24dp"
++    android:height="24dp"
++    android:viewportWidth="24"
++    android:viewportHeight="24"
++    android:tint="?attr/colorControlNormal">
++  <path
++      android:fillColor="@android:color/white"
++      android:pathData="M3,17.25V21h3.75L17.81,9.94l-3.75,-3.75L3,17.25zM20.71,7.04c0.39,-0.39 0.39,-1.02 0,-1.41l-2.34,-2.34c-0.39,-0.39 -1.02,-0.39 -1.41,0l-1.83,1.83 3.75,3.75 1.83,-1.83z"/>
++</vector>
+Index: app/src/main/res/layout/activity_modification_utilisateur.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_modification_utilisateur.xml b/app/src/main/res/layout/activity_modification_utilisateur.xml
+new file mode 100644
+--- /dev/null	(date 1649256752023)
++++ b/app/src/main/res/layout/activity_modification_utilisateur.xml	(date 1649256752023)
+@@ -0,0 +1,227 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".activity_modification_utilisateur">
++
++    <TextView
++        android:id="@+id/Nom_MeNew"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_marginBottom="731dp"
++        android:gravity="center"
++        android:text="MeNew"
++        android:textSize="50dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintLeft_toRightOf="parent"
++        app:layout_constraintRight_toLeftOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.0" />
++
++
++    <TextView
++        android:id="@+id/utilisateur"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_gravity="center"
++        android:text="Patrick"
++        android:textColor="@color/black"
++        android:textSize="35dp"
++        android:translationZ="90dp"
++        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
++        app:layout_constraintEnd_toEndOf="@+id/BackgroundGrey"
++        app:layout_constraintHorizontal_bias="0.496"
++        app:layout_constraintStart_toStartOf="@+id/BackgroundGrey"
++        app:layout_constraintTop_toTopOf="@+id/BackgroundGrey"
++        app:layout_constraintVertical_bias="0.023" />
++
++    <TextView
++        android:id="@+id/allergies"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_gravity="center"
++        android:text="Allergies :"
++        android:textColor="@color/black"
++        android:textSize="20dp"
++        android:translationZ="90dp"
++        app:layout_constraintBottom_toBottomOf="@+id/BackgroundWhite1"
++        app:layout_constraintEnd_toEndOf="@+id/BackgroundWhite1"
++        app:layout_constraintHorizontal_bias="0.059"
++        app:layout_constraintStart_toStartOf="@+id/BackgroundWhite1"
++        app:layout_constraintTop_toTopOf="@+id/BackgroundWhite1"
++        app:layout_constraintVertical_bias="0.091" />
++
++    <TextView
++        android:id="@+id/contraintes"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_gravity="center"
++        android:text="Contraintes :"
++        android:textColor="@color/black"
++        android:textSize="20dp"
++        android:translationZ="90dp"
++        app:layout_constraintBottom_toBottomOf="@+id/backgroundWhite2"
++        app:layout_constraintEnd_toEndOf="@+id/backgroundWhite2"
++        app:layout_constraintHorizontal_bias="0.055"
++        app:layout_constraintStart_toStartOf="@+id/backgroundWhite2"
++        app:layout_constraintTop_toTopOf="@+id/backgroundWhite2"
++        app:layout_constraintVertical_bias="0.058" />
++
++    <Button
++        android:id="@+id/buttonEditUtilisateur1"
++        android:layout_width="50dp"
++        android:layout_height="45dp"
++        android:layout_marginEnd="28dp"
++        android:background="@drawable/ic_baseline_edit_24"
++        android:text=""
++        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
++        app:layout_constraintEnd_toEndOf="@+id/BackgroundGrey"
++        app:layout_constraintHorizontal_bias="0.0"
++        app:layout_constraintStart_toEndOf="@+id/utilisateur"
++        app:layout_constraintTop_toTopOf="@+id/BackgroundGrey"
++        app:layout_constraintVertical_bias="0.027" />
++
++    <Button
++        android:id="@+id/buttonEditIcone"
++        android:layout_width="47dp"
++        android:layout_height="42dp"
++        android:background="@drawable/ic_baseline_edit_24"
++        android:text=""
++        app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.0"
++        app:layout_constraintStart_toEndOf="@+id/imageProfil"
++        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
++        app:layout_constraintVertical_bias="0.785" />
++
++    <ImageView
++        android:id="@+id/BackgroundGrey"
++        android:layout_width="413dp"
++        android:layout_height="512dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.0"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
++        app:layout_constraintVertical_bias="0.738"
++        app:srcCompat="@drawable/myrectangle" />
++
++    <ImageView
++        android:id="@+id/BackgroundWhite1"
++        android:layout_width="374dp"
++        android:layout_height="147dp"
++        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.533"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/utilisateur"
++        app:layout_constraintVertical_bias="0.028"
++        app:srcCompat="@color/white" />
++
++    <ImageView
++        android:id="@+id/backgroundWhite2"
++        android:layout_width="374dp"
++        android:layout_height="147dp"
++        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.567"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/utilisateur"
++        app:layout_constraintVertical_bias="0.651"
++        app:srcCompat="@color/white" />
++
++    <ImageView
++        android:id="@+id/imageProfil"
++        android:layout_width="87dp"
++        android:layout_height="82dp"
++        app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
++        tools:srcCompat="@tools:sample/avatars" />
++
++    <CheckBox
++        android:id="@+id/arachides"
++        android:layout_width="110dp"
++        android:layout_height="27dp"
++        android:text="Arachides"
++        app:layout_constraintBottom_toBottomOf="@+id/BackgroundWhite1"
++        app:layout_constraintEnd_toEndOf="@+id/BackgroundWhite1"
++        app:layout_constraintHorizontal_bias="0.265"
++        app:layout_constraintStart_toStartOf="@+id/BackgroundWhite1"
++        app:layout_constraintTop_toBottomOf="@+id/allergies"
++        app:layout_constraintVertical_bias="0.0" />
++
++    <CheckBox
++        android:id="@+id/végétarien"
++        android:layout_width="110dp"
++        android:layout_height="27dp"
++        android:text="Végétarien"
++        app:layout_constraintBottom_toBottomOf="@+id/backgroundWhite2"
++        app:layout_constraintEnd_toEndOf="@+id/backgroundWhite2"
++        app:layout_constraintHorizontal_bias="0.261"
++        app:layout_constraintStart_toStartOf="@+id/backgroundWhite2"
++        app:layout_constraintTop_toBottomOf="@+id/contraintes"
++        app:layout_constraintVertical_bias="0.0" />
++
++    <CheckBox
++        android:id="@+id/lactoVégétarien"
++        android:layout_width="145dp"
++        android:layout_height="27dp"
++        android:text="Lacto-Végétarien"
++        app:layout_constraintBottom_toBottomOf="@+id/backgroundWhite2"
++        app:layout_constraintEnd_toEndOf="@+id/backgroundWhite2"
++        app:layout_constraintHorizontal_bias="0.301"
++        app:layout_constraintStart_toStartOf="@+id/backgroundWhite2"
++        app:layout_constraintTop_toBottomOf="@+id/végétarien"
++        app:layout_constraintVertical_bias="0.0" />
++
++    <CheckBox
++        android:id="@+id/pescetarien"
++        android:layout_width="110dp"
++        android:layout_height="27dp"
++        android:text="Pescetarien"
++        app:layout_constraintBottom_toBottomOf="@+id/backgroundWhite2"
++        app:layout_constraintEnd_toEndOf="@+id/backgroundWhite2"
++        app:layout_constraintHorizontal_bias="0.261"
++        app:layout_constraintStart_toStartOf="@+id/backgroundWhite2"
++        app:layout_constraintTop_toBottomOf="@+id/lactoVégétarien"
++        app:layout_constraintVertical_bias="0.0" />
++
++    <CheckBox
++        android:id="@+id/lactose"
++        android:layout_width="110dp"
++        android:layout_height="27dp"
++        android:text="Lactose"
++        app:layout_constraintBottom_toBottomOf="@+id/BackgroundWhite1"
++        app:layout_constraintEnd_toEndOf="@+id/BackgroundWhite1"
++        app:layout_constraintHorizontal_bias="0.265"
++        app:layout_constraintStart_toStartOf="@+id/BackgroundWhite1"
++        app:layout_constraintTop_toBottomOf="@+id/fruit"
++        app:layout_constraintVertical_bias="0.0" />
++
++    <CheckBox
++        android:id="@+id/fruit"
++        android:layout_width="110dp"
++        android:layout_height="27dp"
++        android:text="Fruits"
++        app:layout_constraintBottom_toBottomOf="@+id/BackgroundWhite1"
++        app:layout_constraintEnd_toEndOf="@+id/BackgroundWhite1"
++        app:layout_constraintHorizontal_bias="0.265"
++        app:layout_constraintStart_toStartOf="@+id/BackgroundWhite1"
++        app:layout_constraintTop_toBottomOf="@+id/arachides"
++        app:layout_constraintVertical_bias="0.0" />
++
++    <Button
++        android:id="@+id/valider"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="Valider"
++        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
++        app:layout_constraintEnd_toEndOf="@+id/BackgroundGrey"
++        app:layout_constraintStart_toStartOf="@+id/BackgroundGrey"
++        app:layout_constraintTop_toBottomOf="@+id/backgroundWhite2" />
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/ihm/menew/activity_modification_utilisateur.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/ihm/menew/activity_modification_utilisateur.java b/app/src/main/java/ihm/menew/activity_modification_utilisateur.java
+new file mode 100644
+--- /dev/null	(date 1649252648824)
++++ b/app/src/main/java/ihm/menew/activity_modification_utilisateur.java	(date 1649252648824)
+@@ -0,0 +1,14 @@
++package ihm.menew;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.os.Bundle;
++
++public class activity_modification_utilisateur extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_modification_utilisateur);
++    }
++}
+\ No newline at end of file

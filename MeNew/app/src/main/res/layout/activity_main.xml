@@ -104,8 +104,19 @@
             android:layout_marginTop="4dp"
             tools:ignore="MissingConstraints"/>
 
-
-
+    <Button
+        android:id="@+id/profil"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:background="@drawable/ic_baseline_person_24"
+        android:text=""
+        android:onClick="onClickButtonProfil"
+        app:layout_constraintBottom_toTopOf="@+id/myRectangleView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.961"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
+        app:layout_constraintVertical_bias="0.377" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
