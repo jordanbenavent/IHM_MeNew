@@ -16,12 +16,12 @@ import java.io.InputStream;
 
 public class GenerationNotification extends Application {
 
+    private Bitmap myBitMap;
     GenerationNotification(){}
 
     public void sendNotification(Context applicationContext){
-        Bitmap myBitMap = BitmapFactory.decodeResource(applicationContext.getResources(), R.drawable.plat);
+        myBitMap = BitmapFactory.decodeResource(applicationContext.getResources(), R.drawable.plat);
         Log.e(getClass().getSimpleName(),"LAA");
-        Log.e(getClass().getSimpleName(),myBitMap.toString());
         NotificationCompat.Builder notification = new NotificationCompat.Builder(applicationContext, MeNewApplication.CHANNEL_HIGH)
                 .setSmallIcon(R.drawable.ic_baseline_add_circle_24_v2)
                 .setContentTitle("Pense à créer ton plat !")
