@@ -25,11 +25,18 @@ public class View_PreparerPlat implements Observer {
         ((TextView)layout.findViewById(R.id.jour)).setText(Model_PreparerPlat.Jour.getJour(Calendar.getInstance().getTime().getDay()).toString());
         Log.d(TAG, "View is created" );
         onClickNext();
+        onClickPlusSoir();
     }
 
     private void onClickNext() {
         layout.findViewById(R.id.next).setOnClickListener( click -> {
             controller.clickOnNext();
+        });
+    }
+
+    private void onClickPlusSoir() {
+        layout.findViewById(R.id.buttonpllus2).setOnClickListener( click -> {
+            controller.clickOnButtonPlus2();
         });
     }
 
@@ -41,6 +48,7 @@ public class View_PreparerPlat implements Observer {
     public void update(Observable observable, Object o) {
         Model_PreparerPlat model = (Model_PreparerPlat) observable;
         ((TextView)layout.findViewById(R.id.jour)).setText(model.getJourAffiche().toString());
+        ((TextView)layout.findViewById(R.id.platSoir)).setText(model.getSoir().toString());
     }
 
     public void setListener(Controller_PreparerPlat controller) {

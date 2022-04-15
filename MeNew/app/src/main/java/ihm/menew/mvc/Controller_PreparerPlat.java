@@ -3,8 +3,16 @@ package ihm.menew.mvc;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
+import ihm.menew.MeNewApplication;
 import ihm.menew.R;
+import ihm.menew.semaine.MyJour;
+import ihm.menew.semaine.Plat;
+import ihm.menew.semaine.Semaine;
+
 import androidx.constraintlayout.widget.ConstraintLayout;
+
+import java.util.ArrayList;
 
 public class Controller_PreparerPlat {
     private String TAG = "Jordan" + getClass().getSimpleName();
@@ -21,5 +29,14 @@ public class Controller_PreparerPlat {
 
     public void clickOnNext() {
         model.clickOnNext();
+    }
+
+    public void clickOnButtonPlus2() {
+        MyJour jour = new MyJour();
+        jour.setSoir(MeNewApplication.plats.data.get("Tartiflette"));
+        Semaine semaine = new Semaine();
+        semaine.getSemaine().add(jour);
+        MeNewApplication.mesPlat.getEmploieDutemps().add(semaine);
+        model.clickOnButtonPlus2();
     }
 }

@@ -7,6 +7,9 @@ import java.util.Date;
 import java.util.Observable;
 import java.util.Observer;
 
+import ihm.menew.MeNewApplication;
+import ihm.menew.semaine.Plat;
+
 public class Model_PreparerPlat extends Observable {
 
     private final String TAG = "frallo " + getClass().getSimpleName();
@@ -14,19 +17,22 @@ public class Model_PreparerPlat extends Observable {
     private Jour jour = Jour.getJour(Calendar.getInstance().getTime().getDay());
     private Jour jourAffiche = jour;
     private int indiceJour = jour.ordinal();
+    private Plat midi;
+    private Plat soir;
 
     public void setController(Controller_PreparerPlat controller) {
         this.controller = controller;
     }
 
     public void clickOnNext() {
-        Log.e("test", jourAffiche+"");
         indiceJour++;
         jourAffiche = Jour.getJour(indiceJour%7);
-        Log.e("ici", indiceJour+"");
-        Log.e("ici", indiceJour%7+"");
-        Log.e("test", jourAffiche+"");
-        Log.e("test", jourAffiche+"");
+        setChanged();
+        notifyObservers();
+    }
+
+    public void clickOnButtonPlus2() {
+        this.soir = MeNewApplication.mesPlat.getEmploieDutemps().get(0).getJour(0).getSoir();
         setChanged();
         notifyObservers();
     }
@@ -58,5 +64,13 @@ public class Model_PreparerPlat extends Observable {
 
     public Jour getJourAffiche() {
         return jourAffiche;
+    }
+
+    public Plat getSoir() {
+        return soir;
+    }
+
+    public Plat getMidi() {
+        return midi;
     }
 }

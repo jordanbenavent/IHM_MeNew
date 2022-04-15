@@ -12,13 +12,15 @@ import java.util.Objects;
 import ihm.menew.mvc.Controller_PreparerPlat;
 import ihm.menew.mvc.Model_PreparerPlat;
 import ihm.menew.mvc.View_PreparerPlat;
+import ihm.menew.semaine.PLatEnregistre;
+import ihm.menew.semaine.PlatPrevu;
 
 public class MeNewApplication extends Application {
     public static final String CHANNEL_DEFAULT = "Channel_Defaut";
     public static final String CHANNEL_HIGH = "Channel_High";
-
+    public static PLatEnregistre plats = new PLatEnregistre();
+    public static PlatPrevu mesPlat = new PlatPrevu();
     public static NotificationManager notificationManager;
-
     public static NotificationManager getNotificationManager() {
         return notificationManager;
     }
