@@ -48,7 +48,12 @@ public class View_PreparerPlat implements Observer {
     public void update(Observable observable, Object o) {
         Model_PreparerPlat model = (Model_PreparerPlat) observable;
         ((TextView)layout.findViewById(R.id.jour)).setText(model.getJourAffiche().toString());
-        ((TextView)layout.findViewById(R.id.platSoir)).setText(model.getSoir().toString());
+
+        if(model.getSoir() != null){
+            ((TextView)layout.findViewById(R.id.platSoir)).setText(model.getSoir().toString());
+        } else {
+            ((TextView)layout.findViewById(R.id.platSoir)).setText("");
+        }
     }
 
     public void setListener(Controller_PreparerPlat controller) {

@@ -25,8 +25,10 @@ public class Model_PreparerPlat extends Observable {
     }
 
     public void clickOnNext() {
-        indiceJour++;
-        jourAffiche = Jour.getJour(indiceJour%7);
+        this.indiceJour++;
+        this.jourAffiche = Jour.getJour(indiceJour%7);
+        this.midi = null;
+        this.soir = null;
         setChanged();
         notifyObservers();
     }
