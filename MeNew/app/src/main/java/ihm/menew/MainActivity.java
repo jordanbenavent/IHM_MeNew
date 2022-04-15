@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ((MeNewApplication)getApplication()).onViewCreated(findViewById(R.id.activity_main));
         onButtonClicked(findViewById(R.id.PreparerPlat));
         onClickButtonPlus1();
         sendNotification();
