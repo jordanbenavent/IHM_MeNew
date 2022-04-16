@@ -2,8 +2,10 @@ package ihm.menew.mvc;
 
 import android.util.Log;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -17,8 +19,24 @@ public class Model_PreparerPlat extends Observable {
     private Jour jour = Jour.getJour(Calendar.getInstance().getTime().getDay());
     private Jour jourAffiche = jour;
     private int indiceJour = jour.ordinal();
+    private int indiceJourSemaine = jour.ordinal();
     private Plat midi;
-    private Plat soir;
+    private List<Plat> soir;
+
+
+    public Jour getJourAffiche() {
+        return jourAffiche;
+    }
+
+    public List<Plat> getSoir() { return soir; }
+
+    public Plat getMidi() {
+        return midi;
+    }
+
+    public int getIndiceJour() { return indiceJour; }
+
+    public int getIndiceJourSemaine() { return indiceJourSemaine; }
 
     public void setController(Controller_PreparerPlat controller) {
         this.controller = controller;
@@ -26,15 +44,28 @@ public class Model_PreparerPlat extends Observable {
 
     public void clickOnNext() {
         this.indiceJour++;
-        this.jourAffiche = Jour.getJour(indiceJour%7);
+        this.indiceJourSemaine = indiceJour%7;
+        this.jourAffiche = Jour.getJour(indiceJourSemaine);
         this.midi = null;
-        this.soir = null;
+        this.soir = MeNewApplication.mesPlat.getEmploieDutemps().get(0).getJour(indiceJourSemaine).getSoir();
+        setChanged();
+        notifyObservers();
+    }
+
+    public void clickOnPrevious() {
+        this.indiceJour--;
+        if(indiceJour<0) indiceJour+=7;
+        this.indiceJourSemaine = indiceJour%7;
+        Log.e(indiceJour+"", indiceJourSemaine+"");
+        this.jourAffiche = Jour.getJour(indiceJourSemaine);
+        this.midi = null;
+        this.soir = MeNewApplication.mesPlat.getEmploieDutemps().get(0).getJour(indiceJourSemaine).getSoir();
         setChanged();
         notifyObservers();
     }
 
     public void clickOnButtonPlus2() {
-        this.soir = MeNewApplication.mesPlat.getEmploieDutemps().get(0).getJour(0).getSoir();
+        this.soir = MeNewApplication.mesPlat.getEmploieDutemps().get(0).getJour(indiceJourSemaine).getSoir();
         setChanged();
         notifyObservers();
     }
@@ -64,15 +95,4 @@ public class Model_PreparerPlat extends Observable {
         Log.d(TAG, "Model is created");
     }
 
-    public Jour getJourAffiche() {
-        return jourAffiche;
-    }
-
-    public Plat getSoir() {
-        return soir;
-    }
-
-    public Plat getMidi() {
-        return midi;
-    }
 }

@@ -70,7 +70,6 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
 
     private void onClickButtonPlus1() {
         findViewById(R.id.buttonpllus1).setOnClickListener( click -> {
-            ((TextView)findViewById(R.id.jour)).setText("Mardi");
             Log.e(getClass().getSimpleName(),"Button Plus clicked !");
             generateur.sendNotification(getApplicationContext());
         });

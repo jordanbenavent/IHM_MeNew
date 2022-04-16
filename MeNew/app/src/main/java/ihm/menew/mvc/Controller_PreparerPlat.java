@@ -13,6 +13,8 @@ import ihm.menew.semaine.Semaine;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
 
 public class Controller_PreparerPlat {
     private String TAG = "Jordan" + getClass().getSimpleName();
@@ -31,12 +33,17 @@ public class Controller_PreparerPlat {
         model.clickOnNext();
     }
 
+    public void clickOnPrevious() { model.clickOnPrevious();
+    }
+
     public void clickOnButtonPlus2() {
         MyJour jour = new MyJour();
-        jour.setSoir(MeNewApplication.plats.data.get("Tartiflette"));
-        Semaine semaine = new Semaine();
-        semaine.getSemaine().add(jour);
-        MeNewApplication.mesPlat.getEmploieDutemps().add(semaine);
+        List<Plat> plats = new ArrayList<>();
+        plats.add((MeNewApplication.plats.data.get("Salade")));
+        plats.add((MeNewApplication.plats.data.get("Tartiflette")));
+        plats.add((MeNewApplication.plats.data.get("Mousse au chocolat")));
+        jour.setSoir(plats);
+        MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().set(model.getIndiceJourSemaine(),jour);
         model.clickOnButtonPlus2();
     }
 }

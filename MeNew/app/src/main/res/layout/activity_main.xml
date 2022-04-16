@@ -144,6 +144,18 @@
         app:layout_constraintBottom_toBottomOf="@id/jour"
         />
 
+    <Button
+        android:id="@+id/previous"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:textSize="10dp"
+        android:text="return"
+        app:layout_constraintTop_toTopOf="@id/jour"
+        app:layout_constraintBottom_toBottomOf="@id/jour"
+        app:layout_constraintEnd_toStartOf="@id/jour"
+        />
+
+
 
 
 

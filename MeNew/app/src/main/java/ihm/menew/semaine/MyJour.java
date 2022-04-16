@@ -1,9 +1,12 @@
 package ihm.menew.semaine;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MyJour {
 
     private Plat midi;
-    private Plat soir;
+    private List<Plat> soir = new ArrayList<>();
 
     public MyJour(){
     }
@@ -12,7 +15,7 @@ public class MyJour {
         return midi;
     }
 
-    public Plat getSoir() {
+    public List<Plat> getSoir() {
         return soir;
     }
 
@@ -20,7 +23,7 @@ public class MyJour {
         this.midi = midi;
     }
 
-    public void setSoir(Plat soir) {
+    public void setSoir(List<Plat> soir) {
         this.soir = soir;
     }
 }

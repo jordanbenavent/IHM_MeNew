@@ -6,8 +6,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import ihm.menew.R;
+import ihm.menew.semaine.Plat;
 
 import java.util.Calendar;
+import java.util.List;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -25,6 +27,7 @@ public class View_PreparerPlat implements Observer {
         ((TextView)layout.findViewById(R.id.jour)).setText(Model_PreparerPlat.Jour.getJour(Calendar.getInstance().getTime().getDay()).toString());
         Log.d(TAG, "View is created" );
         onClickNext();
+        onClickPrevious();
         onClickPlusSoir();
     }
 
@@ -40,6 +43,12 @@ public class View_PreparerPlat implements Observer {
         });
     }
 
+    private void onClickPrevious() {
+        layout.findViewById(R.id.previous).setOnClickListener( click -> {
+            controller.clickOnPrevious();
+        });
+    }
+
     public ViewGroup getLayout() {
         return layout;
     }
@@ -50,7 +59,7 @@ public class View_PreparerPlat implements Observer {
         ((TextView)layout.findViewById(R.id.jour)).setText(model.getJourAffiche().toString());
 
         if(model.getSoir() != null){
-            ((TextView)layout.findViewById(R.id.platSoir)).setText(model.getSoir().toString());
+            ((TextView)layout.findViewById(R.id.platSoir)).setText(stringPlats(model.getSoir()));
         } else {
             ((TextView)layout.findViewById(R.id.platSoir)).setText("");
         }
@@ -58,5 +67,13 @@ public class View_PreparerPlat implements Observer {
 
     public void setListener(Controller_PreparerPlat controller) {
         this.controller = controller;
+    }
+
+    public String stringPlats(List<Plat> plats){
+        StringBuilder string = new StringBuilder();
+        for(Plat plat : plats){
+            string.append(plat + ", ");
+        }
+        return string.toString();
     }
 }
