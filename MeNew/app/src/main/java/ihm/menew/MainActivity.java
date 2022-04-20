@@ -1,13 +1,9 @@
 package ihm.menew;
 
-import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationCompat;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.telecom.Call;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -85,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
 
     private void onClickButtonProfil() {
         findViewById(R.id.profil).setOnClickListener( click -> {
-            Intent intent = new Intent(getApplicationContext(), activity_utilisateur.class);
+            Intent intent = new Intent(getApplicationContext(), ActivityUtilisateur.class);
             startActivity(intent);
         });
     }

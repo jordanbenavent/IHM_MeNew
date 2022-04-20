@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_utilisateur">
+    tools:context=".ActivityUtilisateur">
 
     <TextView
         android:id="@+id/Nom_MeNew"
@@ -35,7 +35,7 @@
 
 
     <TextView
-        android:id="@+id/utilisateur"
+        android:id="@+id/choixNomUtilisateur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -60,7 +60,7 @@
         android:translationZ="90dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/utilisateur" />
+        app:layout_constraintTop_toBottomOf="@+id/choixNomUtilisateur" />
 
     <TextView
         android:id="@+id/utilisateur3"
@@ -133,7 +133,7 @@
         android:layout_height="46dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
-        app:layout_constraintEnd_toStartOf="@+id/utilisateur"
+        app:layout_constraintEnd_toStartOf="@+id/choixNomUtilisateur"
         app:layout_constraintHorizontal_bias="0.57"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/BackgroundGrey"
