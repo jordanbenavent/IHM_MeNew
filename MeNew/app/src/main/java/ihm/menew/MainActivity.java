@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import java.util.Objects;
 
+import ihm.menew.favoris.mvc.FavorisActivity;
 import ihm.menew.fragments.MainFragment;
 
 public class MainActivity extends AppCompatActivity implements MainFragment.OnButtonClickedListener {
@@ -21,7 +22,6 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ((MeNewApplication)getApplication()).onViewCreated(findViewById(R.id.activity_main));
-        onButtonClicked(findViewById(R.id.PreparerPlat));
         onClickButtonPlus1();
         sendNotification();
         onClickButtonProfil();
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
                 return;
             case "20":
                 Log.e(getClass().getSimpleName(),"Button Favori clicked !");
-                startActivity(new Intent(this, SecondActivity.class));
+                startActivity(new Intent(this, FavorisActivity.class));
                 return;
             case "30":
                 Log.e(getClass().getSimpleName(),"Button Search clicked !");

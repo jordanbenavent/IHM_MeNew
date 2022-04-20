@@ -11,16 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MeNew">
         <activity
-            android:name=".ActivityAddUtilisateur"
+            android:name=".favoris.mvc.FavorisActivity"
             android:exported="false" />
         <activity
             android:name=".SecondActivity"
             android:exported="false" />
         <activity
-            android:name=".ActivityUtilisateur"
+            android:name=".activity_utilisateur"
             android:exported="false" />
         <activity
-            android:name=".ActivityModificationUtilisateur"
+            android:name=".activity_modification_utilisateur"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
