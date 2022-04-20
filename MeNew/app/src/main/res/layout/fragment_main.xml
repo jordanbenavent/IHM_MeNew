@@ -25,9 +25,9 @@
 
     <Button
         android:id="@+id/fragment_plan_button"
-        android:layout_width="125px"
-        android:layout_height="125px"
-        android:layout_marginStart="22dp"
+        android:layout_width="105px"
+        android:layout_height="105px"
+        android:layout_marginStart="25dp"
         android:background="@drawable/ic_baseline_calendar_today_24"
         android:textColor="#B1B1B1"
         android:tag="15"/>
@@ -36,7 +36,7 @@
         android:id="@+id/fragment_favorite_button"
         android:layout_width="125px"
         android:layout_height="125px"
-        android:layout_marginStart="22dp"
+        android:layout_marginStart="25dp"
         android:background="@drawable/ic_twotone_star_24"
         android:textColor="#B1B1B1"
         android:tag="20"/>
@@ -45,7 +45,7 @@
         android:id="@+id/fragment_search_button"
         android:layout_width="125px"
         android:layout_height="125px"
-        android:layout_marginStart="22dp"
+        android:layout_marginStart="25dp"
         android:background="@drawable/ic_twotone_search_24"
         android:textColor="#B1B1B1"
         android:tag="30"/>
@@ -54,7 +54,7 @@
         android:id="@+id/fragment_history_button"
         android:layout_width="125px"
         android:layout_height="125px"
-        android:layout_marginStart="22dp"
+        android:layout_marginStart="25dp"
         android:background="@drawable/ic_twotone_history_24"
         android:textColor="#B1B1B1"
         android:tag="40"/>
