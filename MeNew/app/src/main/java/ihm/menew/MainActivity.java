@@ -4,17 +4,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import java.io.IOException;
+import java.util.List;
 import java.util.Objects;
 
 import ihm.menew.fragments.MainFragment;
+import ihm.menew.webservice.Point;
+import ihm.menew.webservice.WebService;
 
 public class MainActivity extends AppCompatActivity implements MainFragment.OnButtonClickedListener {
 
     GenerationNotification generateur = new GenerationNotification();
+    private WebService webService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +31,10 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
         onClickButtonPlus1();
         sendNotification();
         onClickButtonProfil();
+        webService = new WebService();
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
+                .permitAll().build();
+        StrictMode.setThreadPolicy(policy);
     }
 
     @Override
@@ -52,6 +62,13 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
                 return;
             case "20":
                 Log.e(getClass().getSimpleName(),"Button Favori clicked !");
+                Point point;
+                try {
+                    point = webService.makeRequest("pasta");
+                    Log.e("Reponse : ", point.getResults().get(0).toString());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 startActivity(new Intent(this, SecondActivity.class));
                 return;
             case "30":
