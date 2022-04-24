@@ -21,7 +21,7 @@ public class WebService {
     // Base de la requete
     private String url = "https://api.spoonacular.com/recipes/complexSearch?query=";
     private String apiKey = "ed12456ca0e74018a8b271cd04644885";
-    private int numberOfRes = 2;
+    private int numberOfRes = 5;
 
     Gson gson;
 

@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
                 return;
             case "30":
                 Log.e(getClass().getSimpleName(),"Button Search clicked !");
-                startActivity(new Intent(this, SecondActivity.class));
+                startActivity(new Intent(this, Research.class));
                 return;
             default:break;
         }

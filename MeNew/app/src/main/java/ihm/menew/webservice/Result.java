@@ -47,11 +47,6 @@ public class Result {
 
     @Override
     public String toString() {
-        return "Result{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", image='" + image + '\'' +
-                ", imageType='" + imageType + '\'' +
-                '}';
+        return title;
     }
 }
