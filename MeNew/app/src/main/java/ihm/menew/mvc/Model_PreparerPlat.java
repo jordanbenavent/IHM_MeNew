@@ -20,7 +20,7 @@ public class Model_PreparerPlat extends Observable {
     private Jour jourAffiche = jour;
     private int indiceJour = jour.ordinal();
     private int indiceJourSemaine = jour.ordinal();
-    private Plat midi;
+    private List<Plat> midi;
     private List<Plat> soir;
 
 
@@ -30,7 +30,7 @@ public class Model_PreparerPlat extends Observable {
 
     public List<Plat> getSoir() { return soir; }
 
-    public Plat getMidi() {
+    public List<Plat> getMidi() {
         return midi;
     }
 
@@ -46,7 +46,7 @@ public class Model_PreparerPlat extends Observable {
         this.indiceJour++;
         this.indiceJourSemaine = indiceJour%7;
         this.jourAffiche = Jour.getJour(indiceJourSemaine);
-        this.midi = null;
+        this.midi = MeNewApplication.mesPlat.getEmploieDutemps().get(0).getJour(indiceJourSemaine).getMidi();
         this.soir = MeNewApplication.mesPlat.getEmploieDutemps().get(0).getJour(indiceJourSemaine).getSoir();
         setChanged();
         notifyObservers();
@@ -66,6 +66,12 @@ public class Model_PreparerPlat extends Observable {
 
     public void clickOnButtonPlus2() {
         this.soir = MeNewApplication.mesPlat.getEmploieDutemps().get(0).getJour(indiceJourSemaine).getSoir();
+        setChanged();
+        notifyObservers();
+    }
+
+    public void clickOnButtonPlus1() {
+        this.midi = MeNewApplication.mesPlat.getEmploieDutemps().get(0).getJour(indiceJourSemaine).getMidi();
         setChanged();
         notifyObservers();
     }

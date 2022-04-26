@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
 
+import ihm.menew.demonotifications.NotificationsActivity;
 import ihm.menew.favoris.mvc.FavorisActivity;
 import ihm.menew.fragments.MainFragment;
 import ihm.menew.webservice.Point;
@@ -27,12 +28,12 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ((MeNewApplication)getApplication()).onViewCreated(findViewById(R.id.activity_main));
-        onClickButtonPlus1();
         sendNotification();
         onClickButtonProfil();
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                 .permitAll().build();
         StrictMode.setThreadPolicy(policy);
+        generateur.setAlarm(getApplicationContext());
     }
 
     @Override
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
     public void onButtonClicked(View view) {
         // Retrieve button tag
         String tag = (String) view.getTag();
+        System.out.println(tag);
         if (tag == null){
             Log.e(getClass().getSimpleName(), "Tag est null");
             return;
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
         if (tag != null) {
             Log.e(getClass().getSimpleName(), "Tag est non null");
         }
+        System.out.println(tag);
         switch(Objects.requireNonNull(tag)){
             case "10":
                 Log.e(getClass().getSimpleName(),"Button Home clicked !");
@@ -71,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
                 return;
             case "40":
                 Log.e(getClass().getSimpleName(),"Button Historique clicked !");
+                startActivity(new Intent(this, NotificationsActivity.class));
                 return;
             default:break;
         }

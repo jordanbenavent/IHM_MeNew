@@ -5,13 +5,13 @@ import java.util.List;
 
 public class MyJour {
 
-    private Plat midi;
+    private List<Plat> midi = new ArrayList<>();
     private List<Plat> soir = new ArrayList<>();
 
     public MyJour(){
     }
 
-    public Plat getMidi() {
+    public List<Plat> getMidi() {
         return midi;
     }
 
@@ -19,11 +19,11 @@ public class MyJour {
         return soir;
     }
 
-    public void setMidi(Plat midi) {
-        this.midi = midi;
-    }
-
     public void setSoir(List<Plat> soir) {
         this.soir = soir;
+    }
+
+    public void setMidi(List<Plat> plats) {
+        this.midi = plats;
     }
 }

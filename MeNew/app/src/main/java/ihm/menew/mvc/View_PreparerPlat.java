@@ -1,10 +1,12 @@
 package ihm.menew.mvc;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import ihm.menew.ActivityUtilisateur;
 import ihm.menew.R;
 import ihm.menew.semaine.Plat;
 
@@ -29,6 +31,7 @@ public class View_PreparerPlat implements Observer {
         onClickNext();
         onClickPrevious();
         onClickPlusSoir();
+        onClickPlusMidi();
     }
 
     private void onClickNext() {
@@ -40,6 +43,12 @@ public class View_PreparerPlat implements Observer {
     private void onClickPlusSoir() {
         layout.findViewById(R.id.buttonpllus2).setOnClickListener( click -> {
             controller.clickOnButtonPlus2();
+        });
+    }
+
+    private void onClickPlusMidi() {
+        layout.findViewById(R.id.buttonpllus1).setOnClickListener( click -> {
+            controller.clickOnButtonPlus1();
         });
     }
 
@@ -62,6 +71,11 @@ public class View_PreparerPlat implements Observer {
             ((TextView)layout.findViewById(R.id.platSoir)).setText(stringPlats(model.getSoir()));
         } else {
             ((TextView)layout.findViewById(R.id.platSoir)).setText("");
+        }
+        if(model.getMidi() != null){
+            ((TextView)layout.findViewById(R.id.platMidi)).setText(stringPlats(model.getMidi()));
+        } else {
+            ((TextView)layout.findViewById(R.id.platMidi)).setText("");
         }
     }
 
