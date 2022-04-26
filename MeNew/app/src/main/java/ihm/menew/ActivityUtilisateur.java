@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ActivityUtilisateur extends AppCompatActivity {
+import ihm.menew.fragments.MainFragment;
+
+public class ActivityUtilisateur extends AppCompatActivity  implements MainFragment.OnButtonClickedListener {
 
     Button buttonEditUtilisateur1;
     Button buttonAddUtilisateur;
@@ -43,5 +45,10 @@ public class ActivityUtilisateur extends AppCompatActivity {
     private void addUtilisateur() {
         Intent AddUtilisateurIntent = new Intent(this, ActivityAddUtilisateur.class);
         startActivity(AddUtilisateurIntent);
+    }
+
+    @Override
+    public void onButtonClicked(View view) {
+
     }
 }

@@ -19,7 +19,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
 
     // 1 - Declare our interface that will be implemented by any container activity
     public interface OnButtonClickedListener {
-        public void onButtonClicked(View view);
+        void onButtonClicked(View view);
     }
 
     public MainFragment() {

@@ -1,32 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_second"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondActivity"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:name="ihm.menew.fragments.MainFragment"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginTop="4dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        tools:ignore="MissingConstraints"/>
+    <TextView
+        android:id="@+id/Nom_MeNew"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="731dp"
+    android:gravity="center"
+    android:text="test"
+    android:textSize="50dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toRightOf="parent"
+    app:layout_constraintRight_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0" />
 
-    <fragment
-        android:id="@+id/photoFrame"
-        android:name="ihm.menew.fragments.PhotoFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        tools:ignore="MissingConstraints" />
+<TextView
+android:id="@+id/jour"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_gravity="center"
+android:layout_marginStart="162dp"
+android:layout_marginTop="26dp"
+android:layout_marginEnd="163dp"
+android:layout_marginBottom="52dp"
+android:text="Lundi"
+android:textSize="35dp"
+app:layout_constraintBottom_toTopOf="@+id/myRectangleView"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew" />
+<View
+android:id="@+id/myRectangleView"
+android:layout_width="match_parent"
+android:layout_height="280dp"
+android:layout_gravity="center"
+android:background="@drawable/myrectangle"
+app:layout_constraintBottom_toTopOf="@+id/PreparerPlat2"
+android:layout_marginTop="10dp"
+android:layout_marginRight="15dp"
+android:layout_marginLeft="15dp"
+android:layout_marginBottom="20dp"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/jour"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<Button
+android:id="@+id/PreparerPlat2"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginLeft="25dp"
+android:layout_marginRight="25dp"
+android:background="@color/green_menew"
+android:gravity="center"
+android:text="Préparer un plat"
+android:textColor="#000000"
+android:textSize="25dp"
+app:layout_constraintRight_toLeftOf="parent"
+app:layout_constraintTop_toBottomOf="@id/myRectangleView"
+android:layout_marginTop="25dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

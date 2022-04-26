@@ -40,8 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:layout_gravity="center"
-        android:background="@drawable/myrectangle"
-        app:layout_constraintBottom_toTopOf="@+id/PreparerPlat2"
+        android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toTopOf="@+id/PreparerPlat"
         android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
@@ -51,19 +51,16 @@
         app:layout_constraintTop_toBottomOf="@+id/jour"/>
 
     <Button
-        android:id="@+id/PreparerPlat2"
+        android:id="@+id/PreparerPlat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
         android:background="@color/green_menew"
         android:gravity="center"
-        android:text="PrÃ©parer un plat"
+        android:text="Préparer un plat"
         android:textColor="#000000"
         android:textSize="25dp"
         app:layout_constraintRight_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/myRectangleView"
         android:layout_marginTop="25dp"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
