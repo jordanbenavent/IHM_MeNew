@@ -4,17 +4,31 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1645" />
+        <entry key="app/src/main/res/drawable/green_rectangle.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/ic_MeNewLogo1_foreground.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.124" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_circle_24_v2.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/ic_baseline_calendar_today_24.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/ic_baseline_check_circle_24.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/ic_baseline_info_24.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/ic_baseline_info_24_white.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1645" />
         <entry key="app/src/main/res/drawable/ic_me_new_logo1_foreground.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/ic_twotone_history_24.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/ic_twotone_search_24.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/ic_twotone_star_24.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/myrectangle.xml" value="0.124" />
         <entry key="app/src/main/res/drawable/rectangle.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/rectangle2.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_detail.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/layout/activity_favoris.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_research.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_second.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.11302083333333333" />
+        <entry key="app/src/main/res/layout/fragment_detail.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_photo.xml" value="0.1" />
         <entry key="app/src/main/res/layout/test.xml" value="0.12360688956433637" />

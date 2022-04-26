@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MeNew">
         <activity
+            android:name=".DetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".Research"
             android:exported="false" />
         <activity

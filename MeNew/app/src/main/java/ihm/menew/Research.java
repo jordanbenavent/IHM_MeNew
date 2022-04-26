@@ -4,13 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.WeakHashMap;
 
@@ -25,6 +28,7 @@ public class Research extends AppCompatActivity implements MainFragment.OnButton
     private WebService webService;
     private Point point;
     private EditText input;
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,7 @@ public class Research extends AppCompatActivity implements MainFragment.OnButton
         input = (EditText) findViewById(R.id.Input);
         webService = new WebService();
         onClickResearch();
+        intent = new Intent(this, DetailActivity.class);
     }
 
     @Override
@@ -79,6 +84,16 @@ public class Research extends AppCompatActivity implements MainFragment.OnButton
                     = new ArrayAdapter<Result>(this, android.R.layout.simple_list_item_1 , results);
 
             listView.setAdapter(arrayAdapter);
+
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    // On récupère l'item clické
+                    Result result = (Result) listView.getAdapter().getItem(i);
+                    intent.putExtra("RESULT", (Serializable) result);
+                    startActivity(intent);
+                }
+            });
         });
     }
 }

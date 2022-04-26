@@ -1,12 +1,14 @@
 package ihm.menew.webservice;
 
-public class Result {
+import java.io.Serializable;
+
+public class Result implements Serializable {
     private int id;
     private String title;
     private String image;
     private String imageType;
 
-    public Result(int id, String title, String image, String imageType) {
+    public Result (int id, String title, String image, String imageType) {
         this.id = id;
         this.title = title;
         this.image = image;
