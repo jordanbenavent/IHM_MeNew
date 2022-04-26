@@ -14,7 +14,8 @@
         android:textAlignment="center"
         android:textSize="25dp"
         android:fontFamily="Arial"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/Input"
