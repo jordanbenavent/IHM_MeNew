@@ -182,8 +182,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/NomUtilisateur1"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonAddUtilisateur"
-        app:layout_constraintVertical_bias="0.19" />
+        app:layout_constraintTop_toTopOf="@+id/BackgroundGrey"
+        app:layout_constraintVertical_bias="0.075" />
 
     <Button
         android:id="@+id/buttonEditUtilisateur2"
@@ -195,19 +195,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/NomUtilisateur2"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonAddUtilisateur"
-        app:layout_constraintVertical_bias="0.339" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonEditUtilisateur1"
+        app:layout_constraintVertical_bias="0.14" />
 
     <Button
         android:id="@+id/buttonEditUtilisateur3"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginBottom="320dp"
         android:background="@drawable/ic_baseline_edit_24"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/NomUtilisateur3"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonAddUtilisateur"
-        app:layout_constraintVertical_bias="0.497" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonEditUtilisateur2"
+        app:layout_constraintVertical_bias="0.658" />
 </androidx.constraintlayout.widget.ConstraintLayout>

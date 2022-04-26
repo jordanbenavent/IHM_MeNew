@@ -73,10 +73,9 @@
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="@id/myRectangleView"
         app:layout_constraintEnd_toEndOf="@id/myRectangleView"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toStartOf="@+id/myRectangleView"
+        app:layout_constraintStart_toEndOf="@+id/platSoir3"
         app:layout_constraintTop_toTopOf="@id/myRectangleView"
-        app:layout_constraintVertical_bias="0.286" />
+        app:layout_constraintVertical_bias="0.269" />
 
     <ImageButton
         android:id="@+id/buttonpllus2"
@@ -99,10 +98,23 @@
         android:textSize="22dp"
         app:layout_constraintBottom_toBottomOf="@id/myRectangleView"
         app:layout_constraintEnd_toEndOf="@id/myRectangleView"
-        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toStartOf="@+id/myRectangleView"
         app:layout_constraintTop_toTopOf="@id/myRectangleView"
-        app:layout_constraintVertical_bias="0.866" />
+        app:layout_constraintVertical_bias="0.807" />
+
+    <TextView
+        android:id="@+id/platSoir3"
+        android:layout_width="238dp"
+        android:layout_height="108dp"
+        android:text=""
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="@id/myRectangleView"
+        app:layout_constraintEnd_toEndOf="@id/myRectangleView"
+        app:layout_constraintHorizontal_bias="0.178"
+        app:layout_constraintStart_toStartOf="@+id/myRectangleView"
+        app:layout_constraintTop_toTopOf="@id/myRectangleView"
+        app:layout_constraintVertical_bias="0.243" />
 
     <fragment
         android:id="@+id/fragment2"
