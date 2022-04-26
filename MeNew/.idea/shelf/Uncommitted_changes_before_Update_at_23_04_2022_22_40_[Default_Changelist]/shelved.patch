@@ -1,0 +1,469 @@
+Index: app/src/main/res/layout/activity_utilisateur.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".ActivityUtilisateur\">\r\n\r\n    <TextView\r\n        android:id=\"@+id/Nom_MeNew\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginBottom=\"731dp\"\r\n        android:gravity=\"center\"\r\n        android:text=\"MeNew\"\r\n        android:textSize=\"50dp\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintLeft_toRightOf=\"parent\"\r\n        app:layout_constraintRight_toLeftOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"0.0\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/Utilisateurs\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_gravity=\"center\"\r\n\r\n        android:text=\"Utilisateurs\"\r\n        android:textSize=\"35dp\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/BackgroundGrey\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/Nom_MeNew\" />\r\n\r\n\r\n    <TextView\r\n        android:id=\"@+id/choixNomUtilisateur\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_gravity=\"center\"\r\n        android:text=\"Patrick\"\r\n        android:textColor=\"@color/black\"\r\n        android:textSize=\"35dp\"\r\n        android:translationZ=\"90dp\"\r\n        app:layout_constraintBottom_toBottomOf=\"@+id/BackgroundGrey\"\r\n        app:layout_constraintEnd_toEndOf=\"@+id/BackgroundGrey\"\r\n        app:layout_constraintStart_toStartOf=\"@+id/BackgroundGrey\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/BackgroundGrey\"\r\n        app:layout_constraintVertical_bias=\"0.171\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/utilisateur2\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_gravity=\"center\"\r\n        android:text=\"Jean\"\r\n        android:textColor=\"@color/black\"\r\n        android:textSize=\"35dp\"\r\n        android:translationZ=\"90dp\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/choixNomUtilisateur\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/utilisateur3\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_gravity=\"center\"\r\n        android:text=\"Françoise\"\r\n        android:textColor=\"@color/black\"\r\n        android:textSize=\"35dp\"\r\n        android:translationZ=\"90dp\"\r\n        app:layout_constraintEnd_toEndOf=\"@+id/BackgroundGrey\"\r\n        app:layout_constraintStart_toStartOf=\"@+id/BackgroundGrey\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/utilisateur2\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/ButtonAddUtilisateur\"\r\n        android:layout_width=\"64dp\"\r\n        android:layout_height=\"46dp\"\r\n        android:background=\"@drawable/ic_baseline_person_add_alt_1_24\"\r\n        android:text=\"\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/BackgroundGrey\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toEndOf=\"@+id/Utilisateurs\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/Nom_MeNew\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/buttonEditUtilisateur1\"\r\n        android:layout_width=\"50dp\"\r\n        android:layout_height=\"45dp\"\r\n        android:background=\"@drawable/ic_baseline_edit_24\"\r\n        android:text=\"\"\r\n        app:layout_constraintBottom_toBottomOf=\"@+id/BackgroundGrey\"\r\n        app:layout_constraintEnd_toEndOf=\"@+id/BackgroundGrey\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/BackgroundGrey\"\r\n        app:layout_constraintVertical_bias=\"0.175\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/buttonEditUtilisateur2\"\r\n        android:layout_width=\"45dp\"\r\n        android:layout_height=\"41dp\"\r\n        android:background=\"@drawable/ic_baseline_edit_24\"\r\n        android:text=\"\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/buttonEditUtilisateur1\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/buttonEditIcone\"\r\n        android:layout_width=\"47dp\"\r\n        android:layout_height=\"42dp\"\r\n        android:background=\"@drawable/ic_baseline_edit_24\"\r\n        android:text=\"\"\r\n        app:layout_constraintEnd_toEndOf=\"@+id/buttonEditUtilisateur1\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/buttonEditUtilisateur2\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/BackgroundGrey\"\r\n        android:layout_width=\"413dp\"\r\n        android:layout_height=\"274dp\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.0\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/Nom_MeNew\"\r\n        app:layout_constraintVertical_bias=\"0.738\"\r\n        app:srcCompat=\"@drawable/myrectangle\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/imageProfil\"\r\n        android:layout_width=\"44dp\"\r\n        android:layout_height=\"46dp\"\r\n        android:layout_marginEnd=\"8dp\"\r\n        app:layout_constraintBottom_toBottomOf=\"@+id/BackgroundGrey\"\r\n        app:layout_constraintEnd_toStartOf=\"@+id/choixNomUtilisateur\"\r\n        app:layout_constraintHorizontal_bias=\"0.57\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/BackgroundGrey\"\r\n        app:layout_constraintVertical_bias=\"0.175\"\r\n        tools:srcCompat=\"@tools:sample/avatars\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/imageView4\"\r\n        android:layout_width=\"38dp\"\r\n        android:layout_height=\"35dp\"\r\n        android:layout_marginEnd=\"4dp\"\r\n        app:layout_constraintBottom_toBottomOf=\"@+id/BackgroundGrey\"\r\n        app:layout_constraintEnd_toStartOf=\"@+id/utilisateur2\"\r\n        app:layout_constraintStart_toStartOf=\"@+id/BackgroundGrey\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/imageProfil\"\r\n        app:layout_constraintVertical_bias=\"0.078\"\r\n        tools:srcCompat=\"@tools:sample/avatars\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/imageView5\"\r\n        android:layout_width=\"34dp\"\r\n        android:layout_height=\"37dp\"\r\n        android:layout_marginEnd=\"4dp\"\r\n        app:layout_constraintBottom_toBottomOf=\"@+id/BackgroundGrey\"\r\n        app:layout_constraintEnd_toStartOf=\"@+id/utilisateur3\"\r\n        app:layout_constraintHorizontal_bias=\"0.72\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/imageView4\"\r\n        app:layout_constraintVertical_bias=\"0.192\"\r\n        tools:srcCompat=\"@tools:sample/avatars\" />\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_utilisateur.xml b/app/src/main/res/layout/activity_utilisateur.xml
+--- a/app/src/main/res/layout/activity_utilisateur.xml	(revision 39ce2d7d32b52fd5ec0b14bc1d448eb5f502d9fe)
++++ b/app/src/main/res/layout/activity_utilisateur.xml	(date 1650746167362)
+@@ -10,7 +10,7 @@
+         android:id="@+id/Nom_MeNew"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+-        android:layout_marginBottom="731dp"
++        android:layout_marginTop="0dp"
+         android:gravity="center"
+         android:text="MeNew"
+         android:textSize="50dp"
+@@ -20,6 +20,7 @@
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintVertical_bias="0.0" />
+ 
++
+     <TextView
+         android:id="@+id/Utilisateurs"
+         android:layout_width="wrap_content"
+@@ -28,10 +29,25 @@
+ 
+         android:text="Utilisateurs"
+         android:textSize="35dp"
+-        app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
++        app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.476"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew" />
++        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
++        app:layout_constraintVertical_bias="0.0" />
++
++    <Button
++        android:id="@+id/ButtonAddUtilisateur"
++        android:layout_width="50dp"
++        android:layout_height="50dp"
++        android:background="@drawable/ic_baseline_person_add_alt_1_24"
++        android:text=""
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.542"
++        app:layout_constraintStart_toEndOf="@+id/Utilisateurs"
++        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
++        app:layout_constraintVertical_bias="0.0" />
+ 
+ 
+     <TextView
+@@ -41,13 +57,13 @@
+         android:layout_gravity="center"
+         android:text="Patrick"
+         android:textColor="@color/black"
+-        android:textSize="35dp"
+-        android:translationZ="90dp"
+-        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
+-        app:layout_constraintEnd_toEndOf="@+id/BackgroundGrey"
+-        app:layout_constraintStart_toStartOf="@+id/BackgroundGrey"
+-        app:layout_constraintTop_toTopOf="@+id/BackgroundGrey"
+-        app:layout_constraintVertical_bias="0.171" />
++        android:textSize="25dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.498"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/Utilisateurs"
++        app:layout_constraintVertical_bias="0.252" />
+ 
+     <TextView
+         android:id="@+id/utilisateur2"
+@@ -56,11 +72,13 @@
+         android:layout_gravity="center"
+         android:text="Jean"
+         android:textColor="@color/black"
+-        android:textSize="35dp"
+-        android:translationZ="90dp"
++        android:textSize="25dp"
++        app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.498"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/choixNomUtilisateur" />
++        app:layout_constraintTop_toBottomOf="@+id/choixNomUtilisateur"
++        app:layout_constraintVertical_bias="0.131" />
+ 
+     <TextView
+         android:id="@+id/utilisateur3"
+@@ -69,100 +87,86 @@
+         android:layout_gravity="center"
+         android:text="Françoise"
+         android:textColor="@color/black"
+-        android:textSize="35dp"
+-        android:translationZ="90dp"
+-        app:layout_constraintEnd_toEndOf="@+id/BackgroundGrey"
+-        app:layout_constraintStart_toStartOf="@+id/BackgroundGrey"
+-        app:layout_constraintTop_toBottomOf="@+id/utilisateur2" />
+-
+-    <Button
+-        android:id="@+id/ButtonAddUtilisateur"
+-        android:layout_width="64dp"
+-        android:layout_height="46dp"
+-        android:background="@drawable/ic_baseline_person_add_alt_1_24"
+-        android:text=""
+-        app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
++        android:textSize="25dp"
++        app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toEndOf="@+id/Utilisateurs"
+-        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew" />
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/utilisateur2"
++        app:layout_constraintVertical_bias="0.237" />
+ 
+     <Button
+         android:id="@+id/buttonEditUtilisateur1"
+-        android:layout_width="50dp"
+-        android:layout_height="45dp"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
+         android:background="@drawable/ic_baseline_edit_24"
+         android:text=""
+-        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
+-        app:layout_constraintEnd_toEndOf="@+id/BackgroundGrey"
+-        app:layout_constraintTop_toTopOf="@+id/BackgroundGrey"
+-        app:layout_constraintVertical_bias="0.175" />
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.43"
++        app:layout_constraintStart_toEndOf="@+id/choixNomUtilisateur"
++        app:layout_constraintTop_toBottomOf="@+id/ButtonAddUtilisateur"
++        app:layout_constraintVertical_bias="0.248" />
+ 
+     <Button
+         android:id="@+id/buttonEditUtilisateur2"
+-        android:layout_width="45dp"
+-        android:layout_height="41dp"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
+         android:background="@drawable/ic_baseline_edit_24"
+         android:text=""
++        app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/buttonEditUtilisateur1" />
++        app:layout_constraintHorizontal_bias="0.505"
++        app:layout_constraintStart_toEndOf="@+id/utilisateur2"
++        app:layout_constraintTop_toBottomOf="@+id/buttonEditUtilisateur1"
++        app:layout_constraintVertical_bias="0.097" />
+ 
+     <Button
+         android:id="@+id/buttonEditIcone"
+-        android:layout_width="47dp"
+-        android:layout_height="42dp"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
+         android:background="@drawable/ic_baseline_edit_24"
+         android:text=""
++        app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="@+id/buttonEditUtilisateur1"
+-        app:layout_constraintTop_toBottomOf="@+id/buttonEditUtilisateur2" />
+-
+-    <ImageView
+-        android:id="@+id/BackgroundGrey"
+-        android:layout_width="413dp"
+-        android:layout_height="274dp"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.0"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
+-        app:layout_constraintVertical_bias="0.738"
+-        app:srcCompat="@drawable/myrectangle" />
++        app:layout_constraintHorizontal_bias="1.0"
++        app:layout_constraintStart_toEndOf="@+id/utilisateur3"
++        app:layout_constraintTop_toBottomOf="@+id/buttonEditUtilisateur2"
++        app:layout_constraintVertical_bias="0.18" />
+ 
+     <ImageView
+         android:id="@+id/imageProfil"
+-        android:layout_width="44dp"
+-        android:layout_height="46dp"
+-        android:layout_marginEnd="8dp"
+-        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
++        android:layout_width="50dp"
++        android:layout_height="50dp"
++        app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toStartOf="@+id/choixNomUtilisateur"
+-        app:layout_constraintHorizontal_bias="0.57"
++        app:layout_constraintHorizontal_bias="0.605"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="@+id/BackgroundGrey"
+-        app:layout_constraintVertical_bias="0.175"
++        app:layout_constraintTop_toBottomOf="@+id/Utilisateurs"
++        app:layout_constraintVertical_bias="0.247"
+         tools:srcCompat="@tools:sample/avatars" />
+ 
+     <ImageView
+         android:id="@+id/imageView4"
+-        android:layout_width="38dp"
+-        android:layout_height="35dp"
+-        android:layout_marginEnd="4dp"
+-        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
++        android:layout_width="50dp"
++        android:layout_height="50dp"
++        app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toStartOf="@+id/utilisateur2"
+-        app:layout_constraintStart_toStartOf="@+id/BackgroundGrey"
++        app:layout_constraintHorizontal_bias="0.542"
++        app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/imageProfil"
+-        app:layout_constraintVertical_bias="0.078"
++        app:layout_constraintVertical_bias="0.095"
+         tools:srcCompat="@tools:sample/avatars" />
+ 
+     <ImageView
+         android:id="@+id/imageView5"
+-        android:layout_width="34dp"
+-        android:layout_height="37dp"
+-        android:layout_marginEnd="4dp"
+-        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
++        android:layout_width="50dp"
++        android:layout_height="50dp"
++        app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toStartOf="@+id/utilisateur3"
+-        app:layout_constraintHorizontal_bias="0.72"
++        app:layout_constraintHorizontal_bias="0.693"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/imageView4"
+-        app:layout_constraintVertical_bias="0.192"
++        app:layout_constraintVertical_bias="0.174"
+         tools:srcCompat="@tools:sample/avatars" />
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: .idea/deploymentTargetDropDown.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"deploymentTargetDropDown\">\r\n    <targetSelectedWithDropDown>\r\n      <Target>\r\n        <type value=\"QUICK_BOOT_TARGET\" />\r\n        <deviceKey>\r\n          <Key>\r\n            <type value=\"VIRTUAL_DEVICE_PATH\" />\r\n            <value value=\"C:\\Users\\Kymio\\.android\\avd\\Pixel_2_API_27_2.avd\" />\r\n          </Key>\r\n        </deviceKey>\r\n      </Target>\r\n    </targetSelectedWithDropDown>\r\n    <timeTargetWasSelectedWithDropDown value=\"2022-04-20T12:57:08.066566200Z\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/deploymentTargetDropDown.xml b/.idea/deploymentTargetDropDown.xml
+--- a/.idea/deploymentTargetDropDown.xml	(revision 39ce2d7d32b52fd5ec0b14bc1d448eb5f502d9fe)
++++ b/.idea/deploymentTargetDropDown.xml	(date 1650746093280)
+@@ -12,6 +12,6 @@
+         </deviceKey>
+       </Target>
+     </targetSelectedWithDropDown>
+-    <timeTargetWasSelectedWithDropDown value="2022-04-20T12:57:08.066566200Z" />
++    <timeTargetWasSelectedWithDropDown value="2022-04-23T20:33:58.436217300Z" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: app/src/main/res/layout-land/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout-land/activity_main.xml b/app/src/main/res/layout-land/activity_main.xml
+new file mode 100644
+--- /dev/null	(date 1650461976473)
++++ b/app/src/main/res/layout-land/activity_main.xml	(date 1650461976473)
+@@ -0,0 +1,159 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:id="@+id/activity_main"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:orientation="vertical">
++
++
++    <TextView
++        android:id="@+id/Nom_MeNew"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:gravity="center"
++        android:text="MeNew"
++        android:textSize="50dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintLeft_toRightOf="parent"
++        app:layout_constraintRight_toLeftOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.0" />
++
++
++    <TextView
++        android:id="@+id/jour"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_gravity="center"
++        android:layout_marginStart="162dp"
++        android:layout_marginTop="26dp"
++        android:layout_marginEnd="163dp"
++        android:layout_marginBottom="52dp"
++        android:text="Lundi"
++        android:textSize="35dp"
++        app:layout_constraintBottom_toTopOf="@+id/myRectangleView"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
++        app:layout_constraintVertical_bias="0.65" />
++
++    <View
++        android:id="@+id/myRectangleView"
++        android:layout_width="293dp"
++        android:layout_height="148dp"
++        android:layout_gravity="center"
++        android:background="@drawable/myrectangle"
++        app:layout_constraintBottom_toTopOf="@+id/fragment"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.622" />
++
++    <Button
++        android:id="@+id/PreparerPlat"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_marginLeft="200dp"
++        android:layout_marginRight="200dp"
++        android:gravity="center"
++        android:text="Préparer un plat"
++        android:textColor="#000000"
++        android:textSize="25dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintRight_toLeftOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/myRectangleView" />
++
++    <ImageButton
++        android:id="@+id/buttonpllus1"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="0pt"
++        android:background="@drawable/ic_baseline_add_circle_24_v2"
++        android:text="Button"
++        app:layout_constraintBottom_toBottomOf="@id/myRectangleView"
++        app:layout_constraintEnd_toEndOf="@id/myRectangleView"
++        app:layout_constraintHorizontal_bias="0.854"
++        app:layout_constraintStart_toStartOf="@+id/myRectangleView"
++        app:layout_constraintTop_toTopOf="@+id/myRectangleView"
++        app:layout_constraintVertical_bias="0.084" />
++
++    <ImageButton
++        android:id="@+id/buttonpllus2"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="0pt"
++        android:layout_marginBottom="0pt"
++        android:background="@drawable/ic_baseline_add_circle_24"
++        app:layout_constraintBottom_toBottomOf="@id/platSoir"
++        app:layout_constraintEnd_toEndOf="@id/myRectangleView"
++        app:layout_constraintHorizontal_bias="0.519"
++        app:layout_constraintStart_toEndOf="@+id/platSoir"
++        app:layout_constraintTop_toTopOf="@id/platSoir"
++        app:layout_constraintVertical_bias="1.0" />
++
++    <TextView
++        android:id="@+id/platSoir"
++        android:layout_width="167dp"
++        android:layout_height="40dp"
++        android:text=""
++        android:textSize="22dp"
++        app:layout_constraintBottom_toBottomOf="@id/myRectangleView"
++        app:layout_constraintEnd_toEndOf="@id/myRectangleView"
++        app:layout_constraintHorizontal_bias="0.248"
++        app:layout_constraintStart_toStartOf="@+id/myRectangleView"
++        app:layout_constraintTop_toTopOf="@id/myRectangleView"
++        app:layout_constraintVertical_bias="0.892" />
++
++    <fragment
++        android:id="@+id/fragment"
++        android:name="ihm.menew.fragments.MainFragment"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        app:layout_constraintBottom_toBottomOf="parent"
++        tools:ignore="MissingConstraints" />
++
++
++    <Button
++        android:id="@+id/profil"
++        android:layout_width="47dp"
++        android:layout_height="47dp"
++        android:background="@drawable/ic_baseline_person_24"
++        android:onClick="onClickButtonProfil"
++        android:text=""
++        app:layout_constraintBottom_toTopOf="@+id/myRectangleView"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.976"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
++        app:layout_constraintVertical_bias="0.0" />
++
++    <Button
++        android:id="@+id/next"
++        android:layout_width="52dp"
++        android:layout_height="40dp"
++        android:text=">>"
++        app:layout_constraintBottom_toBottomOf="@id/jour"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.084"
++        app:layout_constraintStart_toEndOf="@id/jour"
++        app:layout_constraintTop_toTopOf="@id/jour"
++        app:layout_constraintVertical_bias="0.571" />
++
++    <Button
++        android:id="@+id/previous"
++        android:layout_width="75dp"
++        android:layout_height="40dp"
++        android:text="return"
++        android:textSize="10dp"
++        app:layout_constraintBottom_toBottomOf="@id/jour"
++        app:layout_constraintEnd_toStartOf="@id/jour"
++        app:layout_constraintHorizontal_bias="0.91"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="@id/jour"
++        app:layout_constraintVertical_bias="0.571" />
++
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout\r\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:id=\"@+id/activity_main\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\">\r\n\r\n    <TextView\r\n        android:id=\"@+id/Nom_MeNew\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginBottom=\"731dp\"\r\n        android:gravity=\"center\"\r\n        android:text=\"MeNew\"\r\n        android:textSize=\"50dp\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintLeft_toRightOf=\"parent\"\r\n        app:layout_constraintRight_toLeftOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"0.0\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/jour\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_gravity=\"center\"\r\n        android:layout_marginStart=\"162dp\"\r\n        android:layout_marginTop=\"26dp\"\r\n        android:layout_marginEnd=\"163dp\"\r\n        android:layout_marginBottom=\"52dp\"\r\n        android:text=\"Lundi\"\r\n        android:textSize=\"35dp\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/myRectangleView\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/Nom_MeNew\" />\r\n\r\n\r\n    <View\r\n        android:id=\"@+id/myRectangleView\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"280dp\"\r\n        android:layout_gravity=\"center\"\r\n        android:background=\"@drawable/myrectangle\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/PreparerPlat\"\r\n        android:layout_marginTop=\"10dp\"\r\n        android:layout_marginRight=\"15dp\"\r\n        android:layout_marginLeft=\"15dp\"\r\n        android:layout_marginBottom=\"20dp\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/jour\"\r\n        />\r\n\r\n\r\n    <Button\r\n        android:id=\"@+id/PreparerPlat\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:gravity=\"center\"\r\n        android:text=\"Préparer un plat\"\r\n        android:textColor=\"#000000\"\r\n        android:textSize=\"25dp\"\r\n        app:layout_constraintRight_toLeftOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/myRectangleView\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        android:layout_marginBottom=\"25dp\"\r\n        android:layout_marginTop=\"25dp\"\r\n        android:layout_marginLeft=\"15dp\"\r\n        android:layout_marginRight=\"15dp\" />\r\n\r\n    <ImageButton\r\n        android:id=\"@+id/buttonpllus1\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginStart=\"0pt\"\r\n        android:layout_marginBottom=\"60pt\"\r\n        android:text=\"Button\"\r\n        app:layout_constraintBottom_toBottomOf=\"@id/myRectangleView\"\r\n        app:layout_constraintStart_toStartOf=\"@+id/myRectangleView\"\r\n        app:layout_constraintTop_toTopOf=\"@id/myRectangleView\"\r\n        app:layout_constraintEnd_toEndOf=\"@id/myRectangleView\"\r\n        android:background=\"@drawable/ic_baseline_add_circle_24_v2\"/>\r\n\r\n    <ImageButton\r\n        android:id=\"@+id/buttonpllus2\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginStart=\"0pt\"\r\n        android:layout_marginBottom=\"0pt\"\r\n        app:layout_constraintBottom_toBottomOf=\"@id/platSoir\"\r\n        app:layout_constraintStart_toEndOf=\"@+id/platSoir\"\r\n        app:layout_constraintTop_toTopOf=\"@id/platSoir\"\r\n        app:layout_constraintEnd_toEndOf=\"@id/myRectangleView\"\r\n        android:background=\"@drawable/ic_baseline_add_circle_24\"/>\r\n\r\n\r\n    <TextView\r\n        android:id=\"@+id/platSoir\"\r\n        android:layout_width=\"238dp\"\r\n        android:layout_height=\"108dp\"\r\n        android:text=\"\"\r\n        android:textSize=\"22dp\"\r\n        app:layout_constraintBottom_toBottomOf=\"@id/myRectangleView\"\r\n        app:layout_constraintEnd_toEndOf=\"@id/myRectangleView\"\r\n        app:layout_constraintHorizontal_bias=\"0.152\"\r\n        app:layout_constraintStart_toStartOf=\"@+id/myRectangleView\"\r\n        app:layout_constraintTop_toTopOf=\"@id/myRectangleView\"\r\n        app:layout_constraintVertical_bias=\"0.866\" />\r\n\r\n    <fragment\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:name=\"ihm.menew.fragments.MainFragment\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            android:layout_marginTop=\"4dp\"\r\n            tools:ignore=\"MissingConstraints\"/>\r\n\r\n    <Button\r\n        android:id=\"@+id/profil\"\r\n        android:layout_width=\"47dp\"\r\n        android:layout_height=\"47dp\"\r\n        android:background=\"@drawable/ic_baseline_person_24\"\r\n        android:text=\"\"\r\n        android:onClick=\"onClickButtonProfil\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/myRectangleView\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.961\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/Nom_MeNew\"\r\n        app:layout_constraintVertical_bias=\"0.377\" />\r\n\r\n\r\n    <Button\r\n        android:id=\"@+id/next\"\r\n        android:layout_width=\"52dp\"\r\n        android:layout_height=\"40dp\"\r\n        android:text=\">>\"\r\n        app:layout_constraintStart_toEndOf=\"@id/jour\"\r\n        app:layout_constraintTop_toTopOf=\"@id/jour\"\r\n        app:layout_constraintBottom_toBottomOf=\"@id/jour\"\r\n        />\r\n\r\n    <Button\r\n        android:id=\"@+id/previous\"\r\n        android:layout_width=\"75dp\"\r\n        android:layout_height=\"40dp\"\r\n        android:textSize=\"10dp\"\r\n        android:text=\"return\"\r\n        app:layout_constraintTop_toTopOf=\"@id/jour\"\r\n        app:layout_constraintBottom_toBottomOf=\"@id/jour\"\r\n        app:layout_constraintEnd_toStartOf=\"@id/jour\"\r\n        />\r\n\r\n\r\n\r\n\r\n\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	(revision 39ce2d7d32b52fd5ec0b14bc1d448eb5f502d9fe)
++++ b/app/src/main/res/layout/activity_main.xml	(date 1650461908518)
+@@ -12,11 +12,10 @@
+         android:id="@+id/Nom_MeNew"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+-        android:layout_marginBottom="731dp"
+         android:gravity="center"
+         android:text="MeNew"
+         android:textSize="50dp"
+-        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintBottom_toTopOf="@+id/fragment2"
+         app:layout_constraintLeft_toRightOf="parent"
+         app:layout_constraintRight_toLeftOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+@@ -112,12 +111,12 @@
+         app:layout_constraintVertical_bias="0.866" />
+ 
+     <fragment
+-            android:layout_width="match_parent"
+-            android:layout_height="wrap_content"
+-            android:name="ihm.menew.fragments.MainFragment"
+-            app:layout_constraintBottom_toBottomOf="parent"
+-            android:layout_marginTop="4dp"
+-            tools:ignore="MissingConstraints"/>
++        android:id="@+id/fragment2"
++        android:name="ihm.menew.fragments.MainFragment"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        app:layout_constraintBottom_toBottomOf="parent"
++        tools:ignore="MissingConstraints" />
+ 
+     <Button
+         android:id="@+id/profil"

@@ -14,6 +14,9 @@
         android:theme="@style/Theme.MeNew">
         <activity
             android:name=".DetailActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".demonotifications.NotificationsActivity"
             android:exported="false" />
         <activity
             android:name=".Research"
@@ -28,10 +31,10 @@
             android:name=".SecondActivity"
             android:exported="false" />
         <activity
-            android:name=".activity_utilisateur"
+            android:name=".ActivityUtilisateur"
             android:exported="false" />
         <activity
-            android:name=".activity_modification_utilisateur"
+            android:name=".ActivityModificationUtilisateur"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

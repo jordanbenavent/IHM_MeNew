@@ -20,6 +20,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+
     <TextView
         android:id="@+id/NomUtilisateur1"
         android:layout_width="wrap_content"
@@ -34,7 +35,7 @@
         app:layout_constraintHorizontal_bias="0.396"
         app:layout_constraintStart_toStartOf="@+id/BackgroundGrey"
         app:layout_constraintTop_toTopOf="@+id/BackgroundGrey"
-        app:layout_constraintVertical_bias="0.132" />
+        app:layout_constraintVertical_bias="0.06" />
 
     <TextView
         android:id="@+id/NomUtilisateur2"
@@ -47,56 +48,53 @@
         android:translationZ="90dp"
         app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="@+id/BackgroundGrey"
-        app:layout_constraintHorizontal_bias="0.376"
+        app:layout_constraintHorizontal_bias="0.385"
         app:layout_constraintStart_toStartOf="@+id/BackgroundGrey"
         app:layout_constraintTop_toBottomOf="@+id/NomUtilisateur1"
-        app:layout_constraintVertical_bias="0.281" />
+        app:layout_constraintVertical_bias="0.17" />
 
     <TextView
         android:id="@+id/NomUtilisateur3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="92dp"
         android:text="Françoise"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:translationZ="90dp"
         app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="@+id/BackgroundGrey"
-        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintHorizontal_bias="0.409"
         app:layout_constraintStart_toStartOf="@+id/BackgroundGrey"
         app:layout_constraintTop_toBottomOf="@+id/NomUtilisateur2"
-        app:layout_constraintVertical_bias="1.0" />
-
+        app:layout_constraintVertical_bias="0.221" />
 
     <TextView
         android:id="@+id/avatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="28dp"
         android:text="Utilisateur"
         android:textColor="@color/black"
         android:textSize="40dp"
         android:translationZ="90dp"
         app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.382"
+        app:layout_constraintHorizontal_bias="0.388"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
-        app:layout_constraintVertical_bias="0.142" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/BackgroundGrey"
-        android:layout_width="match_parent"
-        android:layout_height="390dp"
+        android:layout_width="878dp"
+        android:layout_height="155dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
-        app:layout_constraintVertical_bias="0.403"
+        app:layout_constraintVertical_bias="0.287"
         app:srcCompat="@drawable/myrectangle" />
 
     <ImageView
@@ -108,7 +106,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/BackgroundGrey"
-        app:layout_constraintVertical_bias="0.111"
+        app:layout_constraintVertical_bias="0.017"
         app:srcCompat="@drawable/avatar1" />
 
     <ImageView
@@ -120,7 +118,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageProfil"
-        app:layout_constraintVertical_bias="0.234"
+        app:layout_constraintVertical_bias="0.016"
         app:srcCompat="@drawable/avatar2" />
 
     <ImageView
@@ -132,7 +130,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageProfil2"
-        app:layout_constraintVertical_bias="0.468"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/avatar3" />
 
     <Button
@@ -167,10 +165,10 @@
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.002"
         app:layout_constraintStart_toEndOf="@+id/avatar"
         app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
-        app:layout_constraintVertical_bias="0.338" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/buttonEditUtilisateur1"
@@ -183,7 +181,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/NomUtilisateur1"
         app:layout_constraintTop_toBottomOf="@+id/ButtonAddUtilisateur"
-        app:layout_constraintVertical_bias="0.19" />
+        app:layout_constraintVertical_bias="0.113" />
 
     <Button
         android:id="@+id/buttonEditUtilisateur2"
@@ -196,7 +194,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/NomUtilisateur2"
         app:layout_constraintTop_toBottomOf="@+id/ButtonAddUtilisateur"
-        app:layout_constraintVertical_bias="0.339" />
+        app:layout_constraintVertical_bias="0.298" />
 
     <Button
         android:id="@+id/buttonEditUtilisateur3"
@@ -209,5 +207,5 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/NomUtilisateur3"
         app:layout_constraintTop_toBottomOf="@+id/ButtonAddUtilisateur"
-        app:layout_constraintVertical_bias="0.497" />
+        app:layout_constraintVertical_bias="0.47" />
 </androidx.constraintlayout.widget.ConstraintLayout>

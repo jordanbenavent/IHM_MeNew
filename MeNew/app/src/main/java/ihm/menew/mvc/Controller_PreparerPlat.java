@@ -46,4 +46,15 @@ public class Controller_PreparerPlat {
         MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().set(model.getIndiceJourSemaine(),jour);
         model.clickOnButtonPlus2();
     }
+
+    public void clickOnButtonPlus1() {
+        MyJour jour = new MyJour();
+        List<Plat> plats = new ArrayList<>();
+        plats.add((MeNewApplication.plats.data.get("Salade")));
+        plats.add((MeNewApplication.plats.data.get("Tartiflette")));
+        plats.add((MeNewApplication.plats.data.get("Mousse au chocolat")));
+        jour.setMidi(plats);
+        MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().set(model.getIndiceJourSemaine(),jour);
+        model.clickOnButtonPlus1();
+    }
 }

@@ -19,7 +19,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
 
     // 1 - Declare our interface that will be implemented by any container activity
     public interface OnButtonClickedListener {
-        public void onButtonClicked(View view);
+        void onButtonClicked(View view);
     }
 
     public MainFragment() {
@@ -40,6 +40,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         result.findViewById(R.id.fragment_main_button).setOnClickListener(this);
         result.findViewById(R.id.fragment_search_button).setOnClickListener(this);
         result.findViewById(R.id.fragment_favorite_button).setOnClickListener(this);
+        result.findViewById(R.id.fragment_history_button).setOnClickListener(this);
 
         return result;
     }

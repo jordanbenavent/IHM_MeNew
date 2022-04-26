@@ -11,19 +11,17 @@
         android:id="@+id/Nom_MeNew"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="731dp"
         android:gravity="center"
         android:text="MeNew"
-        android:textSize="50dp"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintRight_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/choixNomUtilisateur"
+        android:id="@+id/NomUtilisateur1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -86,85 +84,87 @@
 
     <ImageView
         android:id="@+id/BackgroundGrey"
-        android:layout_width="413dp"
-        android:layout_height="512dp"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
-        app:layout_constraintVertical_bias="0.738"
+        app:layout_constraintVertical_bias="0.507"
         app:srcCompat="@drawable/myrectangle" />
 
     <ImageView
         android:id="@+id/BackgroundWhite1"
-        android:layout_width="374dp"
-        android:layout_height="147dp"
+        android:layout_width="330dp"
+        android:layout_height="120dp"
         app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/choixNomUtilisateur"
-        app:layout_constraintVertical_bias="0.229"
+        app:layout_constraintTop_toBottomOf="@+id/NomUtilisateur1"
+        app:layout_constraintVertical_bias="0.174"
         app:srcCompat="@color/white" />
 
     <ImageView
         android:id="@+id/backgroundWhite2"
-        android:layout_width="374dp"
-        android:layout_height="147dp"
+        android:layout_width="330dp"
+        android:layout_height="120dp"
         app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/choixNomUtilisateur"
-        app:layout_constraintVertical_bias="0.782"
+        app:layout_constraintTop_toBottomOf="@+id/NomUtilisateur1"
+        app:layout_constraintVertical_bias="0.74"
         app:srcCompat="@color/white" />
 
     <ImageView
         android:id="@+id/imageProfil"
-        android:layout_width="52dp"
-        android:layout_height="44dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/avatar"
-        app:layout_constraintVertical_bias="0.523"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintVertical_bias="0.028"
+        app:srcCompat="@drawable/avatar1" />
 
     <ImageView
         android:id="@+id/imageProfil2"
-        android:layout_width="52dp"
-        android:layout_height="44dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintHorizontal_bias="0.162"
         app:layout_constraintStart_toEndOf="@+id/imageProfil"
         app:layout_constraintTop_toBottomOf="@+id/avatar"
-        app:layout_constraintVertical_bias="0.523"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintVertical_bias="0.028"
+        app:srcCompat="@drawable/avatar2" />
 
     <ImageView
         android:id="@+id/imageProfil3"
-        android:layout_width="52dp"
-        android:layout_height="44dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.279"
+        app:layout_constraintHorizontal_bias="0.231"
         app:layout_constraintStart_toEndOf="@+id/imageProfil2"
         app:layout_constraintTop_toBottomOf="@+id/avatar"
-        app:layout_constraintVertical_bias="0.523"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintVertical_bias="0.028"
+        app:srcCompat="@drawable/avatar3" />
 
     <ImageView
         android:id="@+id/imageProfil4"
-        android:layout_width="52dp"
-        android:layout_height="44dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
         app:layout_constraintStart_toEndOf="@+id/imageProfil3"
         app:layout_constraintTop_toBottomOf="@+id/avatar"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintVertical_bias="0.028"
+        app:srcCompat="@drawable/avatar4" />
 
     <CheckBox
         android:id="@+id/arachides"
@@ -243,21 +243,80 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Valider"
-        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
-        app:layout_constraintEnd_toEndOf="@+id/BackgroundGrey"
-        app:layout_constraintStart_toStartOf="@+id/BackgroundGrey"
-        app:layout_constraintTop_toBottomOf="@+id/backgroundWhite2" />
+        app:layout_constraintBottom_toTopOf="@+id/fragment2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BackgroundGrey"
+        app:layout_constraintVertical_bias="0.104" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_width="169dp"
+        android:layout_height="35dp"
+        android:textSize="15dp"
         android:inputType="textPersonName"
         android:text="Nom..."
         app:layout_constraintBottom_toTopOf="@+id/BackgroundWhite1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/choixNomUtilisateur" />
+        app:layout_constraintTop_toBottomOf="@+id/NomUtilisateur1"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageProfil"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintStart_toEndOf="@+id/checkBox1"
+        app:layout_constraintTop_toBottomOf="@+id/imageProfil"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.296"
+        app:layout_constraintStart_toEndOf="@+id/checkBox2"
+        app:layout_constraintTop_toBottomOf="@+id/imageProfil"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toEndOf="@+id/checkBox3"
+        app:layout_constraintTop_toBottomOf="@+id/imageProfil"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="ihm.menew.fragments.MainFragment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BackgroundGrey"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
