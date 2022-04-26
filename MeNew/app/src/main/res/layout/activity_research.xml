@@ -6,11 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".Research">
 
+    <TextView
+        android:id="@+id/Recherche"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recherche"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:fontFamily="Arial"
+        android:textStyle="bold"/>
+
     <EditText
         android:id="@+id/Input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Entrer le nom du plat"
+        app:layout_constraintTop_toBottomOf="@id/Recherche"
         />
 
     <Button

@@ -20,7 +20,6 @@ import ihm.menew.webservice.WebService;
 public class MainActivity extends AppCompatActivity implements MainFragment.OnButtonClickedListener {
 
     GenerationNotification generateur = new GenerationNotification();
-    private WebService webService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +30,6 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
         onClickButtonPlus1();
         sendNotification();
         onClickButtonProfil();
-        webService = new WebService();
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                 .permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -58,22 +56,22 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
             case "10":
                 Log.e(getClass().getSimpleName(),"Button Home clicked !");
                 onResume();
+                return;
+            case "15":
+                Log.e(getClass().getSimpleName(),"Button Planning clicked !");
                 //startActivity(new Intent(this, SecondActivity.class));
                 return;
             case "20":
                 Log.e(getClass().getSimpleName(),"Button Favori clicked !");
                 Point point;
-                try {
-                    point = webService.makeRequest("pasta");
-                    Log.e("Reponse : ", point.getResults().get(0).toString());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
                 startActivity(new Intent(this, SecondActivity.class));
                 return;
             case "30":
                 Log.e(getClass().getSimpleName(),"Button Search clicked !");
                 startActivity(new Intent(this, Research.class));
+                return;
+            case "40":
+                Log.e(getClass().getSimpleName(),"Button Historique clicked !");
                 return;
             default:break;
         }
