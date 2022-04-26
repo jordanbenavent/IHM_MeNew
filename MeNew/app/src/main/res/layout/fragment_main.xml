@@ -5,7 +5,7 @@
     android:layout_height="53dp"
     android:layout_centerHorizontal="true"
     tools:context=".fragments.MainFragment"
-    android:background="#00424343"
+    android:background="@color/white"
     android:layout_gravity="center_horizontal">
 
 
