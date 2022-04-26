@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
         ((MeNewApplication)getApplication()).onViewCreated(findViewById(R.id.activity_main));
         sendNotification();
         onClickButtonProfil();
+        onClickButtonPlat();
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                 .permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -100,6 +101,13 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
     private void onClickButtonProfil() {
         findViewById(R.id.profil).setOnClickListener( click -> {
             Intent intent = new Intent(getApplicationContext(), ActivityUtilisateur.class);
+            startActivity(intent);
+        });
+    }
+
+    private void onClickButtonPlat() {
+        findViewById(R.id.PreparerPlat).setOnClickListener( click -> {
+            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
             startActivity(intent);
         });
     }

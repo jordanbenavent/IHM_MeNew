@@ -13,6 +13,8 @@ import ihm.menew.fragments.MainFragment;
 
 public class SecondActivity extends AppCompatActivity implements MainFragment.OnButtonClickedListener {
 
+    // Contient actuellement le fragment photo
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
