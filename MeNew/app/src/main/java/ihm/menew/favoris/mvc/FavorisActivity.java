@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import ihm.menew.MainActivity;
 import ihm.menew.MeNewApplication;
 import ihm.menew.R;
-import ihm.menew.Research;
 import ihm.menew.SecondActivity;
 import ihm.menew.fragments.MainFragment;
 
@@ -49,7 +48,7 @@ public class FavorisActivity extends AppCompatActivity implements MainFragment.O
                 return;
             case "30":
                 Log.e(getClass().getSimpleName(),"Button Search clicked !");
-                startActivity(new Intent(this, Research.class));
+                startActivity(new Intent(this, SecondActivity.class));
                 return;
             default:break;
         }

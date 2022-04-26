@@ -16,9 +16,6 @@
             android:name=".DetailActivity"
             android:exported="false"/>
         <activity
-            android:name=".RecetteActivity"
-            android:exported="false" />
-        <activity
             android:name=".demonotifications.NotificationsActivity"
             android:exported="false" />
         <activity

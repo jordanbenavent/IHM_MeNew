@@ -14,7 +14,7 @@ import ihm.menew.semaine.Plat;
 
 public class Model_PreparerPlat extends Observable {
 
-    private final String TAG = "Jordan " + getClass().getSimpleName();
+    private final String TAG = "frallo " + getClass().getSimpleName();
     private Controller_PreparerPlat controller;
     private Jour jour = Jour.getJour(Calendar.getInstance().getTime().getDay());
     private Jour jourAffiche = jour;
@@ -58,7 +58,7 @@ public class Model_PreparerPlat extends Observable {
         this.indiceJourSemaine = indiceJour%7;
         Log.e(indiceJour+"", indiceJourSemaine+"");
         this.jourAffiche = Jour.getJour(indiceJourSemaine);
-        this.midi = MeNewApplication.mesPlat.getEmploieDutemps().get(0).getJour(indiceJourSemaine).getMidi();
+        this.midi = null;
         this.soir = MeNewApplication.mesPlat.getEmploieDutemps().get(0).getJour(indiceJourSemaine).getSoir();
         setChanged();
         notifyObservers();
