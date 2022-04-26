@@ -1,5 +1,6 @@
 package ihm.menew.plat;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 
@@ -10,8 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.function.BiPredicate;
+import java.util.zip.Inflater;
 
 import ihm.menew.R;
+import ihm.menew.RecetteActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,11 +25,13 @@ public class PlatFragment extends Fragment {
 
     private String nomDuPlat = "Nom Du plat";
     private Bitmap image;
+    private LayoutInflater inflater;
     private int duree = 0;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private ViewGroup container;
 
     public PlatFragment() {
         // Required empty public constructor
@@ -58,6 +63,18 @@ public class PlatFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        this.inflater = inflater;
+        this.container = container;
+        onClickInfo();
         return inflater.inflate(R.layout.fragment_plat, container, false);
+    }
+
+
+    public void onClickInfo(){
+        View result = inflater.inflate(R.layout.fragment_main, container, false);
+
+        result.findViewById(R.id.info).setOnClickListener(click -> {
+            startActivity(new Intent(inflater.getContext(), RecetteActivity.class));
+        });
     }
 }

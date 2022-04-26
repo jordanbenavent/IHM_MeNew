@@ -33,11 +33,10 @@
         <entry key="..\:/Users/Kymio/Documents/GitHub/IHM_MeNew/MeNew/app/src/main/res/layout/second_activity.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Kymio/Documents/GitHub/IHM_MeNew/MeNew/app/src/main/res/layout/test.xml" value="0.20863616930312098" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1645" />
-<<<<<<< HEAD
+
         <entry key="app/src/main/res/drawable/green_rectangle.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/ic_MeNewLogo1_foreground.xml" value="0.2085" />
-=======
->>>>>>> 821db901ce5fd078b2d6c9e0b100f8e6ef4da477
+
         <entry key="app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.124" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_circle_24_v2.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/ic_baseline_calendar_today_24.xml" value="0.2085" />
@@ -47,13 +46,13 @@
         <entry key="app/src/main/res/drawable/ic_baseline_info_24.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/ic_baseline_info_24_white.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1645" />
-<<<<<<< HEAD
+
         <entry key="app/src/main/res/drawable/ic_me_new_logo1_foreground.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/ic_twotone_history_24.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/ic_twotone_search_24.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/ic_twotone_star_24.xml" value="0.2085" />
-=======
->>>>>>> 821db901ce5fd078b2d6c9e0b100f8e6ef4da477
+
+
         <entry key="app/src/main/res/drawable/myrectangle.xml" value="0.124" />
         <entry key="app/src/main/res/drawable/rectangle.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/rectangle2.xml" value="0.2" />
