@@ -58,7 +58,7 @@ public class Model_PreparerPlat extends Observable {
         this.indiceJourSemaine = indiceJour%7;
         Log.e(indiceJour+"", indiceJourSemaine+"");
         this.jourAffiche = Jour.getJour(indiceJourSemaine);
-        this.midi = null;
+        this.midi = MeNewApplication.mesPlat.getEmploieDutemps().get(0).getJour(indiceJourSemaine).getMidi();;
         this.soir = MeNewApplication.mesPlat.getEmploieDutemps().get(0).getJour(indiceJourSemaine).getSoir();
         setChanged();
         notifyObservers();
