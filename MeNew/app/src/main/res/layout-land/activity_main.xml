@@ -70,15 +70,13 @@
         android:id="@+id/buttonpllus1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="0pt"
         android:background="@drawable/ic_baseline_add_circle_24_v2"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="@id/myRectangleView"
         app:layout_constraintEnd_toEndOf="@id/myRectangleView"
-        app:layout_constraintHorizontal_bias="0.854"
-        app:layout_constraintStart_toStartOf="@+id/myRectangleView"
+        app:layout_constraintStart_toEndOf="@+id/platSoir2"
         app:layout_constraintTop_toTopOf="@+id/myRectangleView"
-        app:layout_constraintVertical_bias="0.084" />
+        app:layout_constraintVertical_bias="0.183" />
 
     <ImageButton
         android:id="@+id/buttonpllus2"
@@ -109,6 +107,19 @@
 
     /
 
+
+    <TextView
+        android:id="@+id/platSoir2"
+        android:layout_width="167dp"
+        android:layout_height="40dp"
+        android:text=""
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="@id/myRectangleView"
+        app:layout_constraintEnd_toEndOf="@id/myRectangleView"
+        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintStart_toStartOf="@+id/myRectangleView"
+        app:layout_constraintTop_toTopOf="@id/myRectangleView"
+        app:layout_constraintVertical_bias="0.259" />
 
     <fragment
         android:id="@+id/fragment"

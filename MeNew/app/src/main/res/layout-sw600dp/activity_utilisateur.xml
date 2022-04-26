@@ -32,6 +32,7 @@
         app:layout_constraintVertical_bias="0.407"
         app:srcCompat="@drawable/myrectangle" />
 
+
     <TextView
         android:id="@+id/NomUtilisateur1"
         android:layout_width="wrap_content"
@@ -43,6 +44,7 @@
         android:translationZ="90dp"
         app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="@+id/BackgroundGrey"
+        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="@+id/BackgroundGrey"
         app:layout_constraintTop_toTopOf="@+id/BackgroundGrey"
         app:layout_constraintVertical_bias="0.216" />
@@ -61,8 +63,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/BackgroundGrey"
         app:layout_constraintTop_toBottomOf="@+id/NomUtilisateur1"
-        app:layout_constraintVertical_bias="0.287" />
-
+        app:layout_constraintVertical_bias="0.244" />
 
     <TextView
         android:id="@+id/NomUtilisateur3"
@@ -79,7 +80,7 @@
         app:layout_constraintHorizontal_bias="0.565"
         app:layout_constraintStart_toStartOf="@+id/BackgroundGrey"
         app:layout_constraintTop_toBottomOf="@+id/NomUtilisateur2"
-        app:layout_constraintVertical_bias="0.84" />
+        app:layout_constraintVertical_bias="0.725" />
 
     <TextView
         android:id="@+id/avatar"
@@ -108,7 +109,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/BackgroundGrey"
-        app:layout_constraintVertical_bias="0.201"
+        app:layout_constraintVertical_bias="0.177"
         app:srcCompat="@drawable/avatar1" />
 
     <ImageView
@@ -132,7 +133,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageProfil2"
-        app:layout_constraintVertical_bias="0.468"
+        app:layout_constraintVertical_bias="0.335"
         app:srcCompat="@drawable/avatar3" />
 
     <Button
@@ -184,7 +185,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/NomUtilisateur1"
         app:layout_constraintTop_toBottomOf="@+id/ButtonAddUtilisateur"
-        app:layout_constraintVertical_bias="0.237" />
+        app:layout_constraintVertical_bias="0.219" />
 
     <Button
         android:id="@+id/buttonEditUtilisateur2"
@@ -197,7 +198,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/NomUtilisateur2"
         app:layout_constraintTop_toBottomOf="@+id/ButtonAddUtilisateur"
-        app:layout_constraintVertical_bias="0.413" />
+        app:layout_constraintVertical_bias="0.378" />
 
     <Button
         android:id="@+id/buttonEditUtilisateur3"
@@ -210,5 +211,5 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/NomUtilisateur3"
         app:layout_constraintTop_toBottomOf="@+id/ButtonAddUtilisateur"
-        app:layout_constraintVertical_bias="0.601" />
+        app:layout_constraintVertical_bias="0.561" />
 </androidx.constraintlayout.widget.ConstraintLayout>
