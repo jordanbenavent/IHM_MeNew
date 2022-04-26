@@ -4,14 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import java.io.IOException;
+import java.util.List;
 import java.util.Objects;
 
 import ihm.menew.favoris.mvc.FavorisActivity;
 import ihm.menew.fragments.MainFragment;
+import ihm.menew.webservice.Point;
+import ihm.menew.webservice.WebService;
 
 public class MainActivity extends AppCompatActivity implements MainFragment.OnButtonClickedListener {
 
@@ -25,6 +30,9 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
         onClickButtonPlus1();
         sendNotification();
         onClickButtonProfil();
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
+                .permitAll().build();
+        StrictMode.setThreadPolicy(policy);
     }
 
     @Override
@@ -48,6 +56,9 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
             case "10":
                 Log.e(getClass().getSimpleName(),"Button Home clicked !");
                 onResume();
+                return;
+            case "15":
+                Log.e(getClass().getSimpleName(),"Button Planning clicked !");
                 //startActivity(new Intent(this, SecondActivity.class));
                 return;
             case "20":
@@ -56,7 +67,10 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
                 return;
             case "30":
                 Log.e(getClass().getSimpleName(),"Button Search clicked !");
-                startActivity(new Intent(this, SecondActivity.class));
+                startActivity(new Intent(this, Research.class));
+                return;
+            case "40":
+                Log.e(getClass().getSimpleName(),"Button Historique clicked !");
                 return;
             default:break;
         }

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ihm.menew">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".MeNewApplication"
         android:allowBackup="true"
@@ -11,7 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MeNew">
         <activity
+            android:name=".Research"
+            android:exported="false" />
+        <activity
             android:name=".favoris.mvc.FavorisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAddUtilisateur"
             android:exported="false" />
         <activity
             android:name=".SecondActivity"
