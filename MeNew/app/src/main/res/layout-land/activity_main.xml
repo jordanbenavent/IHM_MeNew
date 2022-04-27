@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="MeNew"
-        android:textSize="50dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintRight_toLeftOf="parent"
@@ -41,15 +41,15 @@
 
     <View
         android:id="@+id/myRectangleView"
-        android:layout_width="293dp"
-        android:layout_height="148dp"
+        android:layout_width="697dp"
+        android:layout_height="164dp"
         android:layout_gravity="center"
         android:background="@drawable/myrectangle"
         app:layout_constraintBottom_toTopOf="@+id/fragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.69" />
+        app:layout_constraintVertical_bias="0.624" />
 
     <Button
         android:id="@+id/PreparerPlat"
@@ -66,60 +66,59 @@
         app:layout_constraintTop_toTopOf="@+id/Nom_MeNew"
         app:layout_constraintVertical_bias="0.842" />
 
+    /
+
+
     <ImageButton
         android:id="@+id/buttonpllus1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:background="@drawable/ic_baseline_add_circle_24_v2"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="@id/myRectangleView"
         app:layout_constraintEnd_toEndOf="@id/myRectangleView"
-        app:layout_constraintStart_toEndOf="@+id/platSoir2"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toEndOf="@+id/platMidi"
         app:layout_constraintTop_toTopOf="@+id/myRectangleView"
-        app:layout_constraintVertical_bias="0.183" />
+        app:layout_constraintVertical_bias="0.179" />
 
     <ImageButton
         android:id="@+id/buttonpllus2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0pt"
-        android:layout_marginBottom="0pt"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:background="@drawable/ic_baseline_add_circle_24"
         app:layout_constraintBottom_toBottomOf="@id/platSoir"
         app:layout_constraintEnd_toEndOf="@id/myRectangleView"
-        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintHorizontal_bias="0.164"
         app:layout_constraintStart_toEndOf="@+id/platSoir"
         app:layout_constraintTop_toTopOf="@id/platSoir"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.457" />
 
     <TextView
         android:id="@+id/platSoir"
-        android:layout_width="167dp"
-        android:layout_height="40dp"
+        android:layout_width="350dp"
+        android:layout_height="65dp"
         android:text=""
-        android:textSize="22dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@id/myRectangleView"
         app:layout_constraintEnd_toEndOf="@id/myRectangleView"
-        app:layout_constraintHorizontal_bias="0.248"
+        app:layout_constraintHorizontal_bias="0.317"
         app:layout_constraintStart_toStartOf="@+id/myRectangleView"
         app:layout_constraintTop_toTopOf="@id/myRectangleView"
-        app:layout_constraintVertical_bias="0.892" />
-
-    /
-
+        app:layout_constraintVertical_bias="0.888" />
 
     <TextView
-        android:id="@+id/platSoir2"
-        android:layout_width="167dp"
-        android:layout_height="40dp"
+        android:id="@+id/platMidi"
+        android:layout_width="350dp"
+        android:layout_height="65dp"
         android:text=""
-        android:textSize="22dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@id/myRectangleView"
         app:layout_constraintEnd_toEndOf="@id/myRectangleView"
-        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintHorizontal_bias="0.317"
         app:layout_constraintStart_toStartOf="@+id/myRectangleView"
         app:layout_constraintTop_toTopOf="@id/myRectangleView"
-        app:layout_constraintVertical_bias="0.259" />
+        app:layout_constraintVertical_bias="0.09" />
 
     <fragment
         android:id="@+id/fragment"

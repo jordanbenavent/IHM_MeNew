@@ -7,13 +7,49 @@
     tools:context=".ActivityAddUtilisateur">
 
 
+    <ImageView
+        android:id="@+id/BackgroundGrey"
+        android:layout_width="match_parent"
+        android:layout_height="402dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatar"
+        app:layout_constraintVertical_bias="0.496"
+        app:srcCompat="@drawable/myrectangle" />
+
+    <ImageView
+        android:id="@+id/BackgroundWhite1"
+        android:layout_width="450dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NomUtilisateur1"
+        app:layout_constraintVertical_bias="0.575"
+        app:srcCompat="@color/white" />
+
+    <ImageView
+        android:id="@+id/backgroundWhite2"
+        android:layout_width="450dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NomUtilisateur1"
+        app:layout_constraintVertical_bias="0.585"
+        app:srcCompat="@color/white" />
+
     <TextView
         android:id="@+id/Nom_MeNew"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="MeNew"
-        android:textSize="20dp"
+        android:textSize="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintLeft_toRightOf="parent"
@@ -28,7 +64,7 @@
         android:layout_gravity="center"
         android:text="Saisissez votre nom :"
         android:textColor="@color/black"
-        android:textSize="15dp"
+        android:textSize="40dp"
         android:translationZ="90dp"
         app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="@+id/BackgroundGrey"
@@ -44,8 +80,7 @@
         android:layout_gravity="center"
         android:text="Sélectionner votre avatar :"
         android:textColor="@color/black"
-        android:textSize="15dp"
-        android:translationZ="90dp"
+        android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew" />
@@ -57,7 +92,7 @@
         android:layout_gravity="center"
         android:text="Allergies :"
         android:textColor="@color/black"
-        android:textSize="15dp"
+        android:textSize="30dp"
         android:translationZ="90dp"
         app:layout_constraintBottom_toBottomOf="@+id/BackgroundWhite1"
         app:layout_constraintEnd_toEndOf="@+id/BackgroundWhite1"
@@ -73,7 +108,7 @@
         android:layout_gravity="center"
         android:text="Contraintes :"
         android:textColor="@color/black"
-        android:textSize="15dp"
+        android:textSize="30dp"
         android:translationZ="90dp"
         app:layout_constraintBottom_toBottomOf="@+id/backgroundWhite2"
         app:layout_constraintEnd_toEndOf="@+id/backgroundWhite2"
@@ -83,49 +118,17 @@
         app:layout_constraintVertical_bias="0.058" />
 
 
-    <ImageView
-        android:id="@+id/BackgroundGrey"
-        android:layout_width="match_parent"
-        android:layout_height="184dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/avatar"
-        app:layout_constraintVertical_bias="0.366"
-        app:srcCompat="@drawable/myrectangle" />
 
-    <ImageView
-        android:id="@+id/BackgroundWhite1"
-        android:layout_width="175dp"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.219"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NomUtilisateur1"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@color/white" />
 
-    <ImageView
-        android:id="@+id/backgroundWhite2"
-        android:layout_width="175dp"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.79"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NomUtilisateur1"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@color/white" />
+
 
     <ImageView
         android:id="@+id/imageProfil"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintHorizontal_bias="0.265"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/avatar"
         app:layout_constraintVertical_bias="0.0"
@@ -133,8 +136,8 @@
 
     <ImageView
         android:id="@+id/imageProfil2"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.119"
@@ -145,8 +148,8 @@
 
     <ImageView
         android:id="@+id/imageProfil3"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.137"
@@ -157,8 +160,8 @@
 
     <ImageView
         android:id="@+id/imageProfil4"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.164"
@@ -170,38 +173,38 @@
     <CheckBox
         android:id="@+id/arachides"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:text="Arachides"
-        android:textSize="10dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/BackgroundWhite1"
         app:layout_constraintEnd_toEndOf="@+id/BackgroundWhite1"
-        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintHorizontal_bias="0.294"
         app:layout_constraintStart_toStartOf="@+id/BackgroundWhite1"
         app:layout_constraintTop_toBottomOf="@+id/allergies"
         app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/végétarien"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_width="130dp"
+        android:layout_height="53dp"
         android:text="Végétarien"
-        android:textSize="10dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/backgroundWhite2"
         app:layout_constraintEnd_toEndOf="@+id/backgroundWhite2"
-        app:layout_constraintHorizontal_bias="0.244"
+        app:layout_constraintHorizontal_bias="0.418"
         app:layout_constraintStart_toStartOf="@+id/backgroundWhite2"
         app:layout_constraintTop_toBottomOf="@+id/contraintes"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/lactoVégétarien"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:text="Lacto-Végétarien"
-        android:textSize="10dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/backgroundWhite2"
         app:layout_constraintEnd_toEndOf="@+id/backgroundWhite2"
-        app:layout_constraintHorizontal_bias="0.348"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="@+id/backgroundWhite2"
         app:layout_constraintTop_toBottomOf="@+id/végétarien"
         app:layout_constraintVertical_bias="0.0" />
@@ -209,12 +212,12 @@
     <CheckBox
         android:id="@+id/pescetarien"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:text="Pescetarien"
-        android:textSize="10dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/backgroundWhite2"
         app:layout_constraintEnd_toEndOf="@+id/backgroundWhite2"
-        app:layout_constraintHorizontal_bias="0.255"
+        app:layout_constraintHorizontal_bias="0.429"
         app:layout_constraintStart_toStartOf="@+id/backgroundWhite2"
         app:layout_constraintTop_toBottomOf="@+id/lactoVégétarien"
         app:layout_constraintVertical_bias="0.0" />
@@ -222,12 +225,12 @@
     <CheckBox
         android:id="@+id/lactose"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:text="Lactose"
-        android:textSize="10dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/BackgroundWhite1"
         app:layout_constraintEnd_toEndOf="@+id/BackgroundWhite1"
-        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintHorizontal_bias="0.279"
         app:layout_constraintStart_toStartOf="@+id/BackgroundWhite1"
         app:layout_constraintTop_toBottomOf="@+id/fruit"
         app:layout_constraintVertical_bias="0.0" />
@@ -235,12 +238,12 @@
     <CheckBox
         android:id="@+id/fruit"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:text="Fruits"
-        android:textSize="10dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/BackgroundWhite1"
         app:layout_constraintEnd_toEndOf="@+id/BackgroundWhite1"
-        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintHorizontal_bias="0.261"
         app:layout_constraintStart_toStartOf="@+id/BackgroundWhite1"
         app:layout_constraintTop_toBottomOf="@+id/arachides"
         app:layout_constraintVertical_bias="0.0" />
@@ -250,20 +253,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Valider"
+        android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/fragment2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BackgroundGrey"
-        app:layout_constraintVertical_bias="0.104" />
+        app:layout_constraintVertical_bias="0.329" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
-        android:layout_width="90dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:text="Nom..."
-        android:textSize="10dp"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="@+id/BackgroundGrey"
         app:layout_constraintHorizontal_bias="0.499"
@@ -273,44 +276,52 @@
 
     <CheckBox
         android:id="@+id/checkBox1"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="2"
+        android:scaleY="2"
         app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintHorizontal_bias="0.281"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageProfil"
         app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/checkBox2"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="2"
+        android:scaleY="2"
         app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toEndOf="@+id/checkBox1"
         app:layout_constraintTop_toBottomOf="@+id/imageProfil"
         app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/checkBox3"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="2"
+        android:scaleY="2"
         app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintHorizontal_bias="0.217"
         app:layout_constraintStart_toEndOf="@+id/checkBox2"
         app:layout_constraintTop_toBottomOf="@+id/imageProfil"
         app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/checkBox4"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="2"
+        android:scaleY="2"
         app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintHorizontal_bias="0.248"
         app:layout_constraintStart_toEndOf="@+id/checkBox3"
         app:layout_constraintTop_toBottomOf="@+id/imageProfil"
         app:layout_constraintVertical_bias="0.0" />
@@ -318,7 +329,7 @@
     <fragment
         android:id="@+id/fragment2"
         android:name="ihm.menew.fragments.MainFragment"
-        android:layout_width="400dp"
+        android:layout_width="450dp"
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

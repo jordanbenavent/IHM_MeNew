@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Objects;
 
-import ihm.menew.GenerationNotification;
+import ihm.menew.notifications.GenerationNotification;
 import ihm.menew.R;
 import ihm.menew.Research;
 import ihm.menew.favoris.mvc.FavorisActivity;

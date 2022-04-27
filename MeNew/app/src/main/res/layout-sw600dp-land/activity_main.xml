@@ -5,7 +5,6 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/creme"
     android:orientation="vertical">
 
     <TextView
@@ -26,12 +25,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="162dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="163dp"
-        android:layout_marginBottom="52dp"
         android:text="Lundi"
-        android:textSize="35dp"
+        android:textSize="70dp"
         app:layout_constraintBottom_toTopOf="@+id/myRectangleView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,8 +35,8 @@
 
     <View
         android:id="@+id/myRectangleView"
-        android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_width="1255dp"
+        android:layout_height="384dp"
         android:layout_gravity="center"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="10dp"
@@ -61,7 +56,7 @@
         android:gravity="center"
         android:text="Préparer un plat"
         android:textColor="#000000"
-        android:textSize="25dp"
+        android:textSize="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -71,8 +66,8 @@
 
     <ImageButton
         android:id="@+id/buttonpllus1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:background="@drawable/ic_baseline_add_circle_24_v2"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="@+id/platMidi"
@@ -82,10 +77,8 @@
 
     <ImageButton
         android:id="@+id/buttonpllus2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0pt"
-        android:layout_marginBottom="0pt"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:background="@drawable/ic_baseline_add_circle_24"
         app:layout_constraintBottom_toBottomOf="@id/platSoir"
         app:layout_constraintEnd_toEndOf="@id/myRectangleView"
@@ -95,10 +88,10 @@
 
     <TextView
         android:id="@+id/platSoir"
-        android:layout_width="238dp"
-        android:layout_height="108dp"
+        android:layout_width="700dp"
+        android:layout_height="130dp"
         android:text=""
-        android:textSize="22dp"
+        android:textSize="50dp"
         app:layout_constraintBottom_toBottomOf="@id/myRectangleView"
         app:layout_constraintEnd_toEndOf="@id/myRectangleView"
         app:layout_constraintHorizontal_bias="0.152"
@@ -109,10 +102,10 @@
 
     <TextView
         android:id="@+id/platMidi"
-        android:layout_width="238dp"
-        android:layout_height="108dp"
+        android:layout_width="700dp"
+        android:layout_height="130dp"
         android:text=""
-        android:textSize="22dp"
+        android:textSize="50dp"
         app:layout_constraintBottom_toTopOf="@id/platSoir"
         app:layout_constraintEnd_toEndOf="@id/myRectangleView"
         app:layout_constraintHorizontal_bias="0.153"
@@ -127,7 +120,6 @@
         android:layout_height="51dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PreparerPlat"
         app:layout_constraintVertical_bias="1.0"
@@ -135,8 +127,8 @@
 
     <Button
         android:id="@+id/profil"
-        android:layout_width="47dp"
-        android:layout_height="47dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:background="@drawable/ic_baseline_person_24"
         android:onClick="onClickButtonProfil"
         android:text=""
@@ -148,43 +140,30 @@
         app:layout_constraintVertical_bias="0.421" />
 
     <Button
-        android:id="@+id/twitter"
-        android:layout_width="47dp"
-        android:layout_height="47dp"
-        android:background="@drawable/twitter"
-        android:onClick="onClickButtonTwitter"
-        android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/myRectangleView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
-        app:layout_constraintVertical_bias="0.418" />
-
-    <Button
         android:id="@+id/next"
-        android:layout_width="52dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text=">>"
+        android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="@id/jour"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toEndOf="@id/jour"
         app:layout_constraintTop_toTopOf="@id/jour"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.368" />
 
     <Button
         android:id="@+id/previous"
-        android:layout_width="75dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="return"
-        android:textSize="10dp"
+        android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="@id/jour"
         app:layout_constraintEnd_toStartOf="@id/jour"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.848"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/jour"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.368" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

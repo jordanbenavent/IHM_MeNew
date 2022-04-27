@@ -9,15 +9,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import java.io.IOException;
-import java.util.List;
 import java.util.Objects;
 
 import ihm.menew.demonotifications.NotificationsActivity;
 import ihm.menew.favoris.mvc.FavorisActivity;
 import ihm.menew.fragments.MainFragment;
-import ihm.menew.webservice.Point;
-import ihm.menew.webservice.WebService;
+import ihm.menew.notifications.GenerationNotification;
+import ihm.menew.notifications.NotificationService2;
 
 public class MainActivity extends AppCompatActivity implements MainFragment.OnButtonClickedListener {
 
@@ -45,6 +43,12 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
     }
 
     @Override
+    protected void onStop() {
+        super.onStop();
+        startService(new Intent(this, NotificationService2.class));
+    }
+
+    @Override
     public void onButtonClicked(View view) {
         // Retrieve button tag
         String tag = (String) view.getTag();
@@ -64,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
                 return;
             case "15":
                 Log.e(getClass().getSimpleName(),"Button Planning clicked !");
-                //startActivity(new Intent(this, SecondActivity.class));
+                startActivity(new Intent(this, SecondActivity.class));
                 return;
             case "20":
                 Log.e(getClass().getSimpleName(),"Button Favori clicked !");

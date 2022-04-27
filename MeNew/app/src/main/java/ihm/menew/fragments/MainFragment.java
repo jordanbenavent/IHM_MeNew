@@ -41,6 +41,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         result.findViewById(R.id.fragment_search_button).setOnClickListener(this);
         result.findViewById(R.id.fragment_favorite_button).setOnClickListener(this);
         result.findViewById(R.id.fragment_history_button).setOnClickListener(this);
+        result.findViewById(R.id.fragment_plan_button).setOnClickListener(this);
 
         return result;
     }
