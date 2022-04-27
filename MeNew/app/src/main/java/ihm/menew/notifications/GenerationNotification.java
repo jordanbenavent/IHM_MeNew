@@ -1,7 +1,6 @@
-package ihm.menew;
+package ihm.menew.notifications;
 
 import android.app.AlarmManager;
-import android.app.Application;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
@@ -19,7 +18,8 @@ import java.net.URL;
 import java.util.Calendar;
 import java.util.Date;
 
-import ihm.menew.notifications.NotificationService;
+import ihm.menew.MeNewApplication;
+import ihm.menew.R;
 
 public class GenerationNotification extends WakefulBroadcastReceiver {
 
@@ -42,8 +42,8 @@ public class GenerationNotification extends WakefulBroadcastReceiver {
     }
 
     public void sendNotification(Context applicationContext){
-        myBitMap = BitmapFactory.decodeResource(applicationContext.getResources(), R.drawable.plat);
-        //myBitMap = getBitmapFromURL("https://images.pexels.com/photos/11866150/pexels-photo-11866150.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+        //myBitMap = BitmapFactory.decodeResource(applicationContext.getResources(), R.drawable.plat);
+        myBitMap = getBitmapFromURL("https://images.pexels.com/photos/11866150/pexels-photo-11866150.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
         Log.e(getClass().getSimpleName(),"LAA");
         NotificationCompat.Builder notification = new NotificationCompat.Builder(applicationContext, MeNewApplication.CHANNEL_HIGH)
                 .setSmallIcon(R.drawable.ic_baseline_add_circle_24_v2)
@@ -100,6 +100,6 @@ public class GenerationNotification extends WakefulBroadcastReceiver {
     private static PendingIntent getStartPendingIntent(Context context) {
         Intent intent = new Intent(context, GenerationNotification.class);
         intent.setAction(ACTION_START_NOTIFICATION_SERVICE);
-        return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_MUTABLE);
     }
 }

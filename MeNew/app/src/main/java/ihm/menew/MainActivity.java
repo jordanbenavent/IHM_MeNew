@@ -9,15 +9,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import java.io.IOException;
-import java.util.List;
 import java.util.Objects;
 
 import ihm.menew.demonotifications.NotificationsActivity;
 import ihm.menew.favoris.mvc.FavorisActivity;
 import ihm.menew.fragments.MainFragment;
-import ihm.menew.webservice.Point;
-import ihm.menew.webservice.WebService;
+import ihm.menew.notifications.GenerationNotification;
+import ihm.menew.notifications.NotificationService2;
 
 public class MainActivity extends AppCompatActivity implements MainFragment.OnButtonClickedListener {
 
@@ -41,6 +39,12 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
     protected void onResume() {
         super.onResume();
         Log.e(getClass().getSimpleName(), "On resume");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        startService(new Intent(this, NotificationService2.class));
     }
 
     @Override

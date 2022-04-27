@@ -1,14 +1,7 @@
 package ihm.menew.semaine;
 
 import android.app.Application;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
 import android.os.Parcel;
-
-import ihm.menew.GenerationNotification;
-import ihm.menew.R;
 
 public class Plat extends Application {
 
