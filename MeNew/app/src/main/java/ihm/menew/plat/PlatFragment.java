@@ -1,5 +1,6 @@
 package ihm.menew.plat;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 import java.util.function.BiPredicate;
 
 import ihm.menew.R;
+import ihm.menew.demonotifications.NotificationsActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,6 +60,11 @@ public class PlatFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_plat, container, false);
+        View result = inflater.inflate(R.layout.fragment_plat, container, false);
+        result.findViewById(R.id.info).setOnClickListener(click -> {
+            System.out.println("click");
+            startActivity(new Intent(this.getContext(), NotificationsActivity.class));
+        });
+        return result;
     }
 }

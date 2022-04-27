@@ -16,14 +16,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MeNew">
         <activity
+            android:name=".RecetteActivity"
+            android:exported="false" />
+        <activity
             android:name=".DetailActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".WhoIsHungryActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".TwitterActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".CalendarActivity"
             android:exported="false"/>
@@ -57,13 +60,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service
             android:name=".notifications.NotificationService2"
-            android:label="@string/app_name"
-            android:exported="false">
+            android:exported="false"
+            android:label="@string/app_name">
             <intent-filter>
-                <action
-                    android:name="ihm.menew.notifications.NotificationService2"/>
+                <action android:name="ihm.menew.notifications.NotificationService2" />
             </intent-filter>
         </service>
     </application>

@@ -43,7 +43,7 @@ public class Controller_PreparerPlat {
         plats.add((MeNewApplication.plats.data.get("Tartiflette")));
         plats.add((MeNewApplication.plats.data.get("Mousse au chocolat")));
         jour.setSoir(plats);
-        MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().set(model.getIndiceJourSemaine(),jour);
+        MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(model.getIndiceJour()).setSoir(plats);
         model.clickOnButtonPlus2();
     }
 
@@ -54,7 +54,7 @@ public class Controller_PreparerPlat {
         plats.add((MeNewApplication.plats.data.get("Tartiflette")));
         plats.add((MeNewApplication.plats.data.get("Mousse au chocolat")));
         jour.setMidi(plats);
-        MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().set(model.getIndiceJourSemaine(),jour);
+        MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(model.getIndiceJour()).setMidi(plats);
         model.clickOnButtonPlus1();
     }
 }

@@ -52,13 +52,14 @@ public class NotificationService2 extends Service {
     public Date getGoodDate(){
         Date date = new Date();
         System.out.println(date);
-        if( date.getHours() > 22 && date.getHours() < 13){
+        if( !(date.getHours() > 22) && date.getHours() < 13){
             date.setHours(11);
             date.setMinutes(30);
         } else {
             System.out.println("maintenant");
-            date.setHours(16);
-            date.setMinutes(date.getMinutes()+1);
+            date.setHours(22);
+            date.setMinutes(date.getMinutes());
+            date.setSeconds(date.getSeconds()+10);
         }
         return date;
     }

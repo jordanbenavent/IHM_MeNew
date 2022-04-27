@@ -58,4 +58,8 @@ public class Model_Favoris extends Observable {
     public int getImage(int position){
         return favoris.get(position).getImage();
     }
+
+    public Plat getPlat(int position){
+        return favoris.get(position);
+    }
 }

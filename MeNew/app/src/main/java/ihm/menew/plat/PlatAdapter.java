@@ -1,8 +1,10 @@
 package ihm.menew.plat;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +13,11 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import ihm.menew.DetailActivity;
 import ihm.menew.R;
+import ihm.menew.RecetteActivity;
+import ihm.menew.SecondActivity;
+import ihm.menew.TestActivity;
 import ihm.menew.favoris.mvc.Model_Favoris;
 import ihm.menew.favoris.mvc.View_Favoris;
 
@@ -67,6 +73,10 @@ public class PlatAdapter extends BaseAdapter {
 
         //écouter si clic sur la vue
         layoutItem.setOnClickListener( clic ->  viewFavoris.onClickItem(i) );
+        layoutItem.findViewById(R.id.info).setOnClickListener(clic -> {
+            context.startActivity(new Intent(context, RecetteActivity.class).putExtra("Plat", model.getPlat(i)));
+            viewFavoris.onClickInfo(i, model.getNomPlat(i));
+        });
 
         //On retourne l'item créé.
         return layoutItem;

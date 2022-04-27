@@ -54,4 +54,8 @@ public class View_Favoris implements Observer {
             adapter.refresh(model);
         }
     }
+
+    public void onClickInfo(int i, String nom) {
+        System.out.println(i + nom);
+    }
 }

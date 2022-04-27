@@ -3,6 +3,7 @@ package ihm.menew;
 import android.app.Application;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.Intent;
 import android.os.Build;
 import android.util.Log;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import ihm.menew.favoris.mvc.View_Favoris;
 import ihm.menew.mvc.Controller_PreparerPlat;
 import ihm.menew.mvc.Model_PreparerPlat;
 import ihm.menew.mvc.View_PreparerPlat;
+import ihm.menew.notifications.NotificationService2;
 import ihm.menew.semaine.PLatEnregistre;
 import ihm.menew.semaine.PlatPrevu;
 
@@ -37,6 +39,7 @@ public class MeNewApplication extends Application {
         createNotificationChannelDefaut("Defaut", "Without Picture", NotificationManager.IMPORTANCE_DEFAULT);
         createNotificationChannelHigh("High", "With Picture", NotificationManager.IMPORTANCE_HIGH);
     }
+
 
     private void createNotificationChannelHigh(String name, String description, int importance) {
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){

@@ -11,5 +11,6 @@ public class Controller_Favoris {
     }
 
     public void onClickItem(int position) {
+        System.out.println("CLIQUE " + position);
     }
 }

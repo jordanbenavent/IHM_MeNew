@@ -43,9 +43,14 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        System.out.println("ici");
+    }
+
+    @Override
     protected void onStop() {
         super.onStop();
-        startService(new Intent(this, NotificationService2.class));
     }
 
     @Override

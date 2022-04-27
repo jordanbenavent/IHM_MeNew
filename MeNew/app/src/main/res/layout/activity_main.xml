@@ -139,11 +139,11 @@
         android:background="@drawable/ic_baseline_person_24"
         android:onClick="onClickButtonProfil"
         android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/myRectangleView"
+        app:layout_constraintBottom_toBottomOf="@id/Nom_MeNew"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.958"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
+        app:layout_constraintTop_toTopOf="@id/Nom_MeNew"
         app:layout_constraintVertical_bias="0.421" />
 
     <Button
