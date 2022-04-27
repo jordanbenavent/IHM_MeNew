@@ -155,6 +155,20 @@
         app:layout_constraintVertical_bias="0.421" />
 
     <Button
+        android:id="@+id/twitter"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:background="@drawable/twitter"
+        android:onClick="onClickButtonTwitter"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/myRectangleView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
+        app:layout_constraintVertical_bias="0.418" />
+
+    <Button
         android:id="@+id/next"
         android:layout_width="52dp"
         android:layout_height="40dp"

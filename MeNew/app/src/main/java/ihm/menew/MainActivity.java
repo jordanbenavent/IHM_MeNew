@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
         sendNotification();
         onClickButtonProfil();
         onClickButtonPlat();
+        onClickButtonTwitter();
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                 .permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -112,6 +113,13 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
         });
     }
 
+    private void onClickButtonTwitter(){
+        findViewById(R.id.twitter).setOnClickListener( click -> {
+            Intent intent = new Intent(getApplicationContext(), TwitterActivity.class);
+            startActivity(intent);
+        });
+    }
+
     private void sendNotification() {
         new Thread(() -> {
             try {
@@ -123,5 +131,4 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
             generateur.sendNotification(getApplicationContext());
         }).start();
     }
-
 }

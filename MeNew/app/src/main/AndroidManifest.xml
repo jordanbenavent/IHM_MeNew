@@ -19,6 +19,9 @@
             android:name=".WhoIsHungryActivity"
             android:exported="false"/>
         <activity
+            android:name=".TwitterActivity"
+            android:exported="false"/>
+        <activity
             android:name=".demonotifications.NotificationsActivity"
             android:exported="false" />
         <activity
