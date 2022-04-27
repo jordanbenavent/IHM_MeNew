@@ -41,7 +41,7 @@ public class ActivityAddUtilisateur extends AppCompatActivity implements MainFra
                 return;
             case "15":
                 Log.e(getClass().getSimpleName(), "Button Planning clicked !");
-                //startActivity(new Intent(this, SecondActivity.class));
+                startActivity(new Intent(this, CalendarActivity.class));
                 return;
             case "20":
                 Log.e(getClass().getSimpleName(), "Button Favori clicked !");

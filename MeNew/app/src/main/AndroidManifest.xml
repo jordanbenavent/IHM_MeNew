@@ -25,6 +25,9 @@
             android:name=".TwitterActivity"
             android:exported="false"/>
         <activity
+            android:name=".CalendarActivity"
+            android:exported="false"/>
+        <activity
             android:name=".demonotifications.NotificationsActivity"
             android:exported="false" />
         <activity

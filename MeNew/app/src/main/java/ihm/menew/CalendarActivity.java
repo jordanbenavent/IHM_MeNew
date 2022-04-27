@@ -1,42 +1,26 @@
 package ihm.menew;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 
-import java.util.ArrayList;
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Objects;
 
 import ihm.menew.demonotifications.NotificationsActivity;
 import ihm.menew.favoris.mvc.FavorisActivity;
 import ihm.menew.fragments.MainFragment;
 
-
-public class WhoIsHungryActivity extends AppCompatActivity implements MainFragment.OnButtonClickedListener {
+public class CalendarActivity extends AppCompatActivity implements MainFragment.OnButtonClickedListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_who_is_hungry);
-
-        ArrayList<Integer> numberList = new ArrayList<Integer>();
-        for (int i = 0; i<15;i++){
-            numberList.add(i);
-        }
-
-        Spinner spinner1 = findViewById(R.id.spinner);
-
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, numberList);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner1.setAdapter(adapter);
-
-
+        setContentView(R.layout.activity_calendar);
     }
+
 
     @Override
     public void onButtonClicked(View view) {
@@ -72,7 +56,7 @@ public class WhoIsHungryActivity extends AppCompatActivity implements MainFragme
                 Log.e(getClass().getSimpleName(),"Button Historique clicked !");
                 startActivity(new Intent(this, NotificationsActivity.class));
                 return;
-            default: break;
+            default:break;
         }
     }
 }
