@@ -46,7 +46,7 @@ public class GenerationNotification extends WakefulBroadcastReceiver {
         myBitMap = getBitmapFromURL("https://images.pexels.com/photos/11866150/pexels-photo-11866150.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
         Log.e(getClass().getSimpleName(),"LAA");
         NotificationCompat.Builder notification = new NotificationCompat.Builder(applicationContext, MeNewApplication.CHANNEL_HIGH)
-                .setSmallIcon(R.drawable.ic_baseline_add_circle_24_v2)
+                .setSmallIcon(R.drawable.ic_me_new_logo1_foreground)
                 .setContentTitle("Pense à créer ton plat !")
                 .setStyle(new NotificationCompat.BigPictureStyle()
                         .bigPicture(myBitMap))
@@ -58,7 +58,7 @@ public class GenerationNotification extends WakefulBroadcastReceiver {
     public void sendNotificationCourte(Context applicationContext){
         Log.e(getClass().getSimpleName(),"LAA");
         NotificationCompat.Builder notification = new NotificationCompat.Builder(applicationContext, MeNewApplication.CHANNEL_HIGH)
-                .setSmallIcon(R.drawable.ic_baseline_add_circle_24_v2)
+                .setSmallIcon(R.drawable.ic_me_new_logo1_foreground)
                 .setContentTitle("Pense à créer ton plat !")
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setTimeoutAfter(5000);
