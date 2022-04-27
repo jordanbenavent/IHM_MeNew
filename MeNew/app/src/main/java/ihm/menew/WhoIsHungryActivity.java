@@ -54,7 +54,7 @@ public class WhoIsHungryActivity extends AppCompatActivity implements MainFragme
         switch(Objects.requireNonNull(tag)){
             case "10":
                 Log.e(getClass().getSimpleName(),"Button Home clicked !");
-                onResume();
+                WhoIsHungryActivity.this.finish();
                 return;
             case "15":
                 Log.e(getClass().getSimpleName(),"Button Planning clicked !");
@@ -70,6 +70,7 @@ public class WhoIsHungryActivity extends AppCompatActivity implements MainFragme
                 return;
             case "40":
                 Log.e(getClass().getSimpleName(),"Button Historique clicked !");
+                WhoIsHungryActivity.this.finish();
                 startActivity(new Intent(this, NotificationsActivity.class));
                 return;
             default: break;
