@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
 
     private void onClickButtonPlat() {
         findViewById(R.id.PreparerPlat).setOnClickListener( click -> {
-            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+            Intent intent = new Intent(getApplicationContext(), WhoIsHungryActivity.class);
             startActivity(intent);
         });
     }
