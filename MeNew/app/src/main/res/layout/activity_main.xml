@@ -8,13 +8,12 @@
     android:background="@color/creme"
     android:orientation="vertical">
 
-    <TextView
+    <ImageView
         android:id="@+id/Nom_MeNew"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="MeNew"
-        android:textSize="50dp"
+        android:src="@drawable/ic_me_new_main_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintRight_toLeftOf="parent"
@@ -27,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="162dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="163dp"
         android:layout_marginBottom="52dp"
         android:text="Lundi"
