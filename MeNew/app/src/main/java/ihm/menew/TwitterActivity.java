@@ -1,44 +1,34 @@
-package ihm.menew.demonotifications;
+package ihm.menew;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import java.util.ArrayList;
 import java.util.Objects;
 
-import ihm.menew.notifications.GenerationNotification;
-import ihm.menew.R;
-import ihm.menew.Research;
+import ihm.menew.demonotifications.NotificationsActivity;
 import ihm.menew.favoris.mvc.FavorisActivity;
 import ihm.menew.fragments.MainFragment;
 
-public class NotificationsActivity extends AppCompatActivity implements MainFragment.OnButtonClickedListener {
+public class TwitterActivity extends AppCompatActivity implements MainFragment.OnButtonClickedListener{
 
-    GenerationNotification generateur = new GenerationNotification();
+    private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notifications);
-        clickOnBouttonNotifLongue();
-        clickOnBouttonNotifCourte();
-    }
+        setContentView(R.layout.activity_twitter);
 
-    private void clickOnBouttonNotifCourte() {
-        findViewById(R.id.boutonNotifCourte).setOnClickListener( click -> {
-            Log.e(getClass().getSimpleName(),"Button Plus clicked !");
-            generateur.sendNotificationCourte(getApplicationContext());
-        });
-    }
-
-    private void clickOnBouttonNotifLongue() {
-        findViewById(R.id.boutonNotifLongue).setOnClickListener( click -> {
-            Log.e(getClass().getSimpleName(),"Button Plus clicked !");
-            generateur.sendNotification(getApplicationContext());
-        });
+        webView = (WebView) findViewById(R.id.webViewTwitter);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.loadUrl("https://twitter.com/search?q=menew&src=typed_query");
     }
 
     @Override
@@ -57,7 +47,7 @@ public class NotificationsActivity extends AppCompatActivity implements MainFrag
         switch(Objects.requireNonNull(tag)){
             case "10":
                 Log.e(getClass().getSimpleName(),"Button Home clicked !");
-                NotificationsActivity.this.finish();
+                onResume();
                 return;
             case "15":
                 Log.e(getClass().getSimpleName(),"Button Planning clicked !");
@@ -73,10 +63,9 @@ public class NotificationsActivity extends AppCompatActivity implements MainFrag
                 return;
             case "40":
                 Log.e(getClass().getSimpleName(),"Button Historique clicked !");
-                onResume();
+                startActivity(new Intent(this, NotificationsActivity.class));
                 return;
-            default:break;
+            default: break;
         }
-
     }
 }

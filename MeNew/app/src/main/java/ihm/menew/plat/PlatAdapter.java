@@ -3,7 +3,6 @@ package ihm.menew.plat;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,12 +11,9 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import ihm.menew.GenerationNotification;
 import ihm.menew.R;
 import ihm.menew.favoris.mvc.Model_Favoris;
 import ihm.menew.favoris.mvc.View_Favoris;
-
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -8,11 +8,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
 
-import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 import androidx.legacy.content.WakefulBroadcastReceiver;
 
-import ihm.menew.GenerationNotification;
 import ihm.menew.MeNewApplication;
 import ihm.menew.R;
 import ihm.menew.demonotifications.NotificationsActivity;
