@@ -17,6 +17,8 @@ import java.io.Serializable;
 import java.util.Objects;
 import java.util.WeakHashMap;
 
+import ihm.menew.demonotifications.NotificationsActivity;
+import ihm.menew.favoris.mvc.FavorisActivity;
 import ihm.menew.fragments.MainFragment;
 import ihm.menew.webservice.Point;
 import ihm.menew.webservice.Result;
@@ -43,20 +45,37 @@ public class Research extends AppCompatActivity implements MainFragment.OnButton
 
     @Override
     public void onButtonClicked(View view) {
-        Log.e(getClass().getSimpleName(),"Button clicked !");
+        // Retrieve button tag
         String tag = (String) view.getTag();
-        if (tag == null){
+        System.out.println(tag);
+        if (tag == null) {
             Log.e(getClass().getSimpleName(), "Tag est null");
             return;
         }
-        switch(Objects.requireNonNull(tag)) {
+        if (tag != null) {
+            Log.e(getClass().getSimpleName(), "Tag est non null");
+        }
+        System.out.println(tag);
+        switch (Objects.requireNonNull(tag)) {
             case "10":
                 Log.e(getClass().getSimpleName(), "Button Home clicked !");
-                Research.this.finish();
-                break;
+                startActivity(new Intent(this, MainActivity.class));
+                return;
+            case "15":
+                Log.e(getClass().getSimpleName(), "Button Planning clicked !");
+                //startActivity(new Intent(this, SecondActivity.class));
+                return;
             case "20":
-                Log.e(getClass().getSimpleName(),"Button Favori clicked !");
-                startActivity(new Intent(this, SecondActivity.class));
+                Log.e(getClass().getSimpleName(), "Button Favori clicked !");
+                startActivity(new Intent(this, FavorisActivity.class));
+                return;
+            case "30":
+                Log.e(getClass().getSimpleName(), "Button Search clicked !");
+                onResume();
+                return;
+            case "40":
+                Log.e(getClass().getSimpleName(), "Button Historique clicked !");
+                startActivity(new Intent(this, NotificationsActivity.class));
                 return;
             default:
                 break;

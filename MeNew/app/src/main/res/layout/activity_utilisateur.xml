@@ -20,6 +20,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+    <ImageView
+        android:id="@+id/BackgroundGrey"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
+        app:layout_constraintVertical_bias="0.403"
+        app:srcCompat="@drawable/myrectangle" />
+
+
     <TextView
         android:id="@+id/NomUtilisateur1"
         android:layout_width="wrap_content"
@@ -31,10 +44,10 @@
         android:translationZ="90dp"
         app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="@+id/BackgroundGrey"
-        app:layout_constraintHorizontal_bias="0.396"
+        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="@+id/BackgroundGrey"
         app:layout_constraintTop_toTopOf="@+id/BackgroundGrey"
-        app:layout_constraintVertical_bias="0.132" />
+        app:layout_constraintVertical_bias="0.14" />
 
     <TextView
         android:id="@+id/NomUtilisateur2"
@@ -47,10 +60,10 @@
         android:translationZ="90dp"
         app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="@+id/BackgroundGrey"
-        app:layout_constraintHorizontal_bias="0.376"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="@+id/BackgroundGrey"
         app:layout_constraintTop_toBottomOf="@+id/NomUtilisateur1"
-        app:layout_constraintVertical_bias="0.281" />
+        app:layout_constraintVertical_bias="0.266" />
 
     <TextView
         android:id="@+id/NomUtilisateur3"
@@ -64,11 +77,9 @@
         android:translationZ="90dp"
         app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toEndOf="@+id/BackgroundGrey"
-        app:layout_constraintHorizontal_bias="0.427"
         app:layout_constraintStart_toStartOf="@+id/BackgroundGrey"
         app:layout_constraintTop_toBottomOf="@+id/NomUtilisateur2"
         app:layout_constraintVertical_bias="1.0" />
-
 
     <TextView
         android:id="@+id/avatar"
@@ -86,18 +97,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
         app:layout_constraintVertical_bias="0.142" />
-
-    <ImageView
-        android:id="@+id/BackgroundGrey"
-        android:layout_width="match_parent"
-        android:layout_height="390dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
-        app:layout_constraintVertical_bias="0.403"
-        app:srcCompat="@drawable/myrectangle" />
 
     <ImageView
         android:id="@+id/imageProfil"
@@ -129,10 +128,10 @@
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="@+id/BackgroundGrey"
         app:layout_constraintEnd_toStartOf="@+id/NomUtilisateur3"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.961"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageProfil2"
-        app:layout_constraintVertical_bias="0.468"
+        app:layout_constraintVertical_bias="0.44"
         app:srcCompat="@drawable/avatar3" />
 
     <Button
@@ -165,11 +164,11 @@
         android:layout_height="50dp"
         android:background="@drawable/ic_baseline_person_add_alt_1_24"
         android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/BackgroundGrey"
+        app:layout_constraintBottom_toBottomOf="@+id/avatar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/avatar"
-        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
+        app:layout_constraintTop_toTopOf="@+id/avatar"
         app:layout_constraintVertical_bias="0.338" />
 
     <Button
@@ -178,12 +177,12 @@
         android:layout_height="30dp"
         android:background="@drawable/ic_baseline_edit_24"
         android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageProfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/NomUtilisateur1"
-        app:layout_constraintTop_toTopOf="@+id/BackgroundGrey"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintTop_toTopOf="@+id/imageProfil"
+        app:layout_constraintVertical_bias="0.65" />
 
     <Button
         android:id="@+id/buttonEditUtilisateur2"
@@ -191,24 +190,23 @@
         android:layout_height="30dp"
         android:background="@drawable/ic_baseline_edit_24"
         android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageProfil2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/NomUtilisateur2"
-        app:layout_constraintTop_toBottomOf="@+id/buttonEditUtilisateur1"
-        app:layout_constraintVertical_bias="0.14" />
+        app:layout_constraintTop_toTopOf="@+id/imageProfil2"
+        app:layout_constraintVertical_bias="0.35" />
 
     <Button
         android:id="@+id/buttonEditUtilisateur3"
         android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="320dp"
+        android:layout_height="32dp"
         android:background="@drawable/ic_baseline_edit_24"
         android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageProfil3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/NomUtilisateur3"
-        app:layout_constraintTop_toBottomOf="@+id/buttonEditUtilisateur2"
-        app:layout_constraintVertical_bias="0.658" />
+        app:layout_constraintTop_toTopOf="@+id/imageProfil3"
+        app:layout_constraintVertical_bias="0.611" />
 </androidx.constraintlayout.widget.ConstraintLayout>
