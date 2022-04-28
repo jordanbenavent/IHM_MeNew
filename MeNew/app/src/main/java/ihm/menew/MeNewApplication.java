@@ -85,5 +85,6 @@ public class MeNewApplication extends Application {
         Controller_Favoris controller = new Controller_Favoris( view, model );
         model.setController(controller);    //sent for principe but in this exercice, MODEL doesn't need controller
         view.setListener( controller );
+        model.notifyObservers();
     }
 }

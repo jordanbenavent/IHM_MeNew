@@ -23,6 +23,14 @@ public class Model_PreparerPlat extends Observable {
     private List<Plat> midi;
     private List<Plat> soir;
 
+    public Model_PreparerPlat(Controller_PreparerPlat controller){
+        super();
+        this.controller = controller;
+        this.midi = MeNewApplication.mesPlat.getEmploieDutemps().get(0).getJour(indiceJourSemaine).getMidi();
+        this.soir = MeNewApplication.mesPlat.getEmploieDutemps().get(0).getJour(indiceJourSemaine).getSoir();
+        setChanged();
+    }
+
 
     public Jour getJourAffiche() {
         return jourAffiche;
@@ -95,10 +103,5 @@ public class Model_PreparerPlat extends Observable {
         }
     }
 
-    public Model_PreparerPlat(Controller_PreparerPlat controller){
-        super();
-        this.controller = controller;
-        Log.d(TAG, "Model is created");
-    }
 
 }

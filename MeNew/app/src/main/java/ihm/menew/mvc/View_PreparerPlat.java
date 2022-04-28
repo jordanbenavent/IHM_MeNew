@@ -24,6 +24,7 @@ public class View_PreparerPlat implements Observer {
     Controller_PreparerPlat controller;
 
     public <T extends ViewGroup> View_PreparerPlat(Context context, T layout) {
+        System.out.println("VIew CREATE PLAT");
         //adapter = new ViewAdapter(context, this); //carrefull, model is null !
         this.layout = layout;
         ((TextView)layout.findViewById(R.id.jour)).setText(Model_PreparerPlat.Jour.getJour(Calendar.getInstance().getTime().getDay()).toString());
