@@ -74,7 +74,9 @@ public class PlatAdapter extends BaseAdapter {
         //écouter si clic sur la vue
         layoutItem.setOnClickListener( clic ->  viewFavoris.onClickItem(i) );
         layoutItem.findViewById(R.id.info).setOnClickListener(clic -> {
-            context.startActivity(new Intent(context, RecetteActivity.class).putExtra("Plat", model.getPlat(i)));
+            Intent activity = new Intent(context, RecetteActivity.class).putExtra("Plat", model.getPlat(i));
+            activity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(activity);
             viewFavoris.onClickInfo(i, model.getNomPlat(i));
         });
 
