@@ -4,9 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
-import ihm.menew.ActivityUtilisateur;
+
 import ihm.menew.R;
 import ihm.menew.semaine.Plat;
 
@@ -27,6 +28,7 @@ public class View_PreparerPlat implements Observer {
         System.out.println("VIew CREATE PLAT");
         //adapter = new ViewAdapter(context, this); //carrefull, model is null !
         this.layout = layout;
+        ImageButton button = layout.findViewById(R.id.buttonpllus1);
         ((TextView)layout.findViewById(R.id.jour)).setText(Model_PreparerPlat.Jour.getJour(Calendar.getInstance().getTime().getDay()).toString());
         Log.d(TAG, "View is created" );
         onClickNext();

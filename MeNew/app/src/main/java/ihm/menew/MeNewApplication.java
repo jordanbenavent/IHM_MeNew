@@ -8,6 +8,8 @@ import android.os.Build;
 import android.util.Log;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import ihm.menew.favoris.mvc.Controller_Favoris;
@@ -18,6 +20,7 @@ import ihm.menew.mvc.Model_PreparerPlat;
 import ihm.menew.mvc.View_PreparerPlat;
 import ihm.menew.notifications.NotificationService2;
 import ihm.menew.semaine.PLatEnregistre;
+import ihm.menew.semaine.Plat;
 import ihm.menew.semaine.PlatPrevu;
 
 public class MeNewApplication extends Application {
@@ -25,6 +28,7 @@ public class MeNewApplication extends Application {
     public static final String CHANNEL_HIGH = "Channel_High";
     public static PLatEnregistre plats;
     public static PlatPrevu mesPlat = new PlatPrevu();
+    public static List<Plat> favoris = new ArrayList<>();
     public static NotificationManager notificationManager;
     public static NotificationManager getNotificationManager() {
         return notificationManager;
@@ -38,6 +42,13 @@ public class MeNewApplication extends Application {
         Log.e(getClass().getSimpleName(),"CREATION");
         createNotificationChannelDefaut("Defaut", "Without Picture", NotificationManager.IMPORTANCE_DEFAULT);
         createNotificationChannelHigh("High", "With Picture", NotificationManager.IMPORTANCE_HIGH);
+        someFavoriteDish();
+    }
+
+    public void someFavoriteDish(){
+        favoris.add(MeNewApplication.plats.data.get("Tartiflette"));
+        favoris.add(MeNewApplication.plats.data.get("Mousse au chocolat"));
+        favoris.add(MeNewApplication.plats.data.get("Salade"));
     }
 
 
@@ -80,7 +91,7 @@ public class MeNewApplication extends Application {
         View_Favoris view = new View_Favoris( getApplicationContext(), layout );
         Model_Favoris model = new Model_Favoris(null);    //controller not still created so the controller reference will be sent later
         model.addObserver(view);    //MODEL is observable from VIEW
-        model.addPlatDefault();
+        //model.addPlatDefault();
 
         Controller_Favoris controller = new Controller_Favoris( view, model );
         model.setController(controller);    //sent for principe but in this exercice, MODEL doesn't need controller

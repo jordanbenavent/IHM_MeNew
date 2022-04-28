@@ -4,12 +4,30 @@ import android.app.Application;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.Comparator;
+
 public class Plat extends Application implements Parcelable {
 
     private String nomPlat;
     private String preparation;
     private int tempsPreparation;
     private int Image;
+
+    public static Comparator<Plat> triAlpha = new Comparator<Plat>() {
+        @Override
+        public int compare(Plat plat, Plat plat2) {
+            System.out.println(plat.nomPlat.compareTo(plat2.nomPlat));
+            return plat.nomPlat.compareTo(plat2.nomPlat);
+        }
+    };
+
+    public static Comparator<Plat> triDuree = new Comparator<Plat>() {
+        @Override
+        public int compare(Plat plat, Plat plat2) {
+            System.out.println(plat.nomPlat.compareTo(plat2.nomPlat));
+            return plat.tempsPreparation-plat2.tempsPreparation;
+        }
+    };
 
     Plat(String nomPlat, String preparation, int tempsPreparation, int image){
         this.nomPlat=nomPlat;

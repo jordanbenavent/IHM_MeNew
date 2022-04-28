@@ -26,6 +26,8 @@ public class View_Favoris implements Observer {
     public <T extends ViewGroup> View_Favoris(Context context, T layout) {
         adapter = new PlatAdapter(context, this); //carrefull, model is null !
         this.layout = layout;
+        onClickTriAlphabetique();
+        onClickTriDuree();
     }
 
     public ViewGroup getLayout() {
@@ -55,7 +57,15 @@ public class View_Favoris implements Observer {
         }
     }
 
-    public void onClickInfo(int i, String nom) {
-        System.out.println(i + nom);
+    public void onClickTriAlphabetique() {
+        layout.findViewById(R.id.triNom).setOnClickListener( click -> {
+            controller.clickOnTriAlphabetique();
+        });
+    }
+
+    public void onClickTriDuree() {
+        layout.findViewById(R.id.triTemps).setOnClickListener( click -> {
+            controller.clickOnTriDuree();
+        });
     }
 }

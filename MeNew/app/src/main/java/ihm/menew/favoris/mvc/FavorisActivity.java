@@ -7,6 +7,8 @@ import ihm.menew.MeNewApplication;
 import ihm.menew.R;
 import ihm.menew.Research;
 import ihm.menew.SecondActivity;
+import ihm.menew.databinding.ActivityFavorisBinding;
+import ihm.menew.databinding.ActivityRecetteBinding;
 import ihm.menew.demonotifications.NotificationsActivity;
 import ihm.menew.fragments.MainFragment;
 
@@ -19,9 +21,13 @@ import java.util.Objects;
 
 public class FavorisActivity extends AppCompatActivity implements MainFragment.OnButtonClickedListener {
 
+    private ActivityFavorisBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        binding = ActivityFavorisBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         Log.e("Fav", "Oris");
         setContentView(R.layout.activity_favoris);
         ((MeNewApplication)getApplication()).onViewFavorisCreated(findViewById(R.id.activity_favoris));

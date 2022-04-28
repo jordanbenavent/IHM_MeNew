@@ -13,4 +13,12 @@ public class Controller_Favoris {
     public void onClickItem(int position) {
         System.out.println("CLIQUE " + position);
     }
+
+    public void clickOnTriAlphabetique() {
+        model.triAlphabetique();
+    }
+
+    public void clickOnTriDuree() {
+        model.triDuree();
+    }
 }

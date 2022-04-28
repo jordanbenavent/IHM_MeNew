@@ -4,6 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.ColorFilter;
+import android.graphics.PorterDuff;
 import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,10 +17,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import ihm.menew.DetailActivity;
+import ihm.menew.MeNewApplication;
 import ihm.menew.R;
 import ihm.menew.RecetteActivity;
 import ihm.menew.SecondActivity;
 import ihm.menew.TestActivity;
+import ihm.menew.favoris.mvc.FavorisActivity;
 import ihm.menew.favoris.mvc.Model_Favoris;
 import ihm.menew.favoris.mvc.View_Favoris;
 
@@ -71,13 +76,21 @@ public class PlatAdapter extends BaseAdapter {
         temps.setText(model.getTempsPreparationPlat(i) + "min");
         image.setImageResource(model.getImage(i));
 
+        ((ImageView)layoutItem.findViewById(R.id.check)).setImageResource(R.drawable.ic_twotone_star_24);
+        ((ImageView)layoutItem.findViewById(R.id.check)).setColorFilter(Color.RED, PorterDuff.Mode.MULTIPLY);
+
+
+
         //écouter si clic sur la vue
         layoutItem.setOnClickListener( clic ->  viewFavoris.onClickItem(i) );
         layoutItem.findViewById(R.id.info).setOnClickListener(clic -> {
             Intent activity = new Intent(context, RecetteActivity.class).putExtra("Plat", model.getPlat(i));
             activity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(activity);
-            viewFavoris.onClickInfo(i, model.getNomPlat(i));
+        });
+
+        layoutItem.findViewById(R.id.check).setOnClickListener(clic -> {
+            model.removePlat(model.getPlat(i));
         });
 
         //On retourne l'item créé.

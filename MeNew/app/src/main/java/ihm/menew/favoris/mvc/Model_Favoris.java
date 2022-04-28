@@ -17,26 +17,27 @@ import ihm.menew.semaine.Plat;
 public class Model_Favoris extends Observable {
 
     private Controller_Favoris controller;
-    private ArrayList<Plat> favoris = new ArrayList<>();
+    private List<Plat> favoris;
 
     public Model_Favoris(Controller_Favoris controller){
         super();
         this.controller = controller;
+        this.favoris = MeNewApplication.favoris;
+        setChanged();
     }
 
-    public void addPlatDefault(){
-        favoris.add(MeNewApplication.plats.data.get("Tartiflette"));
+    public void addPlatDefault(Plat plat){
+        favoris.add(MeNewApplication.plats.data.get(plat.getNomPlat()));
         favoris.add(MeNewApplication.plats.data.get("Mousse au chocolat"));
-        favoris.add(MeNewApplication.plats.data.get("Salade"));
         setChanged();
         notifyObservers();
     }
 
-    public ArrayList<Plat> getFavoris() {
+    public List<Plat> getFavoris() {
         return favoris;
     }
 
-    public void setFavoris(ArrayList<Plat> favoris) {
+    public void setFavoris(List<Plat> favoris) {
         this.favoris = favoris;
     }
 
@@ -61,5 +62,23 @@ public class Model_Favoris extends Observable {
 
     public Plat getPlat(int position){
         return favoris.get(position);
+    }
+
+    public void removePlat(Plat plat) {
+        favoris.remove(plat);
+        setChanged();
+        notifyObservers();
+    }
+
+    public void triAlphabetique() {
+        favoris.sort(Plat.triAlpha);
+        setChanged();
+        notifyObservers();
+    }
+
+    public void triDuree() {
+        favoris.sort(Plat.triDuree);
+        setChanged();
+        notifyObservers();
     }
 }
