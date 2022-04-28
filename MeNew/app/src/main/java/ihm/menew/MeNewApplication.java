@@ -71,6 +71,7 @@ public class MeNewApplication extends Application {
         Controller_PreparerPlat controller = new Controller_PreparerPlat( view, model );
         model.setController(controller);    //sent for principe but in this exercice, MODEL doesn't need controller
         view.setListener( controller );
+        model.notifyObservers();
     }
 
     public <T extends ViewGroup> void onViewFavorisCreated(T layout){
