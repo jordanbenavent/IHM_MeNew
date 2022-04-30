@@ -57,7 +57,7 @@ public class Model_Starter extends Observable {
         return starters.get(position);
     }
 
-    public String getStarter(int i) {
-        return "Defaut";
+    public Plat getStarter(int i) {
+        return starters.get(i);
     }
 }

@@ -13,6 +13,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import ihm.menew.choiceOfDishes.dish.Controller_Dishes;
+import ihm.menew.choiceOfDishes.dish.Model_Dishes;
+import ihm.menew.choiceOfDishes.dish.View_Dishes;
 import ihm.menew.choiceOfDishes.starter.Controller_Starter;
 import ihm.menew.choiceOfDishes.starter.Model_Starter;
 import ihm.menew.choiceOfDishes.starter.View_Starter;
@@ -113,6 +116,18 @@ public class MeNewApplication extends Application {
         //model.addPlatDefault();
 
         Controller_Starter controller = new Controller_Starter( view, model );
+        model.setController(controller);    //sent for principe but in this exercice, MODEL doesn't need controller
+        view.setListener( controller );
+        model.notifyObservers();
+    }
+
+    public <T extends ViewGroup> void onViewDishesCreated(T layout) {
+        View_Dishes view = new View_Dishes( getApplicationContext(), layout );
+        Model_Dishes model = new Model_Dishes(null);    //controller not still created so the controller reference will be sent later
+        model.addObserver(view);    //MODEL is observable from VIEW
+        //model.addPlatDefault();
+
+        Controller_Dishes controller = new Controller_Dishes( view, model );
         model.setController(controller);    //sent for principe but in this exercice, MODEL doesn't need controller
         view.setListener( controller );
         model.notifyObservers();

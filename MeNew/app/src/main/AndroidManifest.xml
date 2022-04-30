@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MeNew">
         <activity
+            android:name=".choiceOfDishes.dish.DishesActivity"
+            android:exported="false" />
+        <activity
             android:name=".choiceOfDishes.starter.StarterActivity"
             android:exported="false" />
         <activity

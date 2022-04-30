@@ -27,4 +27,14 @@ public class PLatEnregistre {
         });
         return starter;
     }
+
+    public List<Plat> getDishes() {
+        List<Plat> starter = new ArrayList<>();
+        data.forEach((string, plat) -> {
+            if(plat instanceof Plat){
+                starter.add(plat);
+            }
+        });
+        return starter;
+    }
 }
