@@ -1,17 +1,9 @@
 package ihm.menew.favoris.mvc;
 
-import android.graphics.Bitmap;
-import android.text.style.AlignmentSpan;
-import android.util.Log;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Observable;
 
 import ihm.menew.MeNewApplication;
-import ihm.menew.mvc.Controller_PreparerPlat;
 import ihm.menew.semaine.Plat;
 
 public class Model_Favoris extends Observable {

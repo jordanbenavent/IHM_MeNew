@@ -12,6 +12,7 @@ import android.widget.Spinner;
 import java.util.ArrayList;
 import java.util.Objects;
 
+import ihm.menew.choiceOfDishes.starter.StarterActivity;
 import ihm.menew.demonotifications.NotificationsActivity;
 import ihm.menew.favoris.mvc.FavorisActivity;
 import ihm.menew.fragments.MainFragment;
@@ -35,6 +36,7 @@ public class WhoIsHungryActivity extends AppCompatActivity implements MainFragme
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(adapter);
 
+        clickOnChoiceDishes();
 
     }
 
@@ -75,5 +77,11 @@ public class WhoIsHungryActivity extends AppCompatActivity implements MainFragme
                 return;
             default: break;
         }
+    }
+
+    void clickOnChoiceDishes(){
+        findViewById(R.id.buttonChoiceDishes).setOnClickListener(click -> {
+            startActivity(new Intent(getApplicationContext(), StarterActivity.class));
+        });
     }
 }

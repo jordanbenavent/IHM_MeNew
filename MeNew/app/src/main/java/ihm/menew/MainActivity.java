@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import java.util.Objects;
 
 import ihm.menew.demonotifications.NotificationsActivity;
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
                 .permitAll().build();
         StrictMode.setThreadPolicy(policy);
         generateur.setAlarm(getApplicationContext());
+        setUpNavigationBar();
     }
 
     @Override
@@ -139,5 +142,34 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
             Log.e(getClass().getSimpleName(),"NOTI");
             generateur.sendNotification(getApplicationContext());
         }).start();
+    }
+
+    private void setUpNavigationBar(){
+        BottomNavigationView navigation = findViewById(R.id.navigation);
+        navigation.setOnItemSelectedListener(item  -> {
+            switch (item.getItemId()) {
+                case R.id.navigation_home: {
+                    onResume();
+                    return true;
+                }
+                case R.id.navigation_calendar: {
+                    startActivity(new Intent(getApplicationContext(), CalendarActivity.class));
+                    return true;
+                }
+                case R.id.navigation_favoris: {
+                    startActivity(new Intent(getApplicationContext(), FavorisActivity.class));
+                    return true;
+                }
+                case R.id.navigation_research: {
+                    startActivity(new Intent(getApplicationContext(), Research.class));
+                    return true;
+                }
+                case R.id.navigation_history: {
+                    startActivity(new Intent(getApplicationContext(), NotificationsActivity.class));
+                    return true;
+                }
+            }
+            return true;
+        });
     }
 }

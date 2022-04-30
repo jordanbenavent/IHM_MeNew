@@ -61,12 +61,11 @@
         android:text="Préparer un plat"
         android:textColor="#000000"
         android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.911" />
+        app:layout_constraintTop_toBottomOf="@id/myRectangleView"
+        />
 
     <ImageButton
         android:id="@+id/buttonpllus1"
@@ -119,18 +118,6 @@
         app:layout_constraintTop_toTopOf="@id/myRectangleView"
         app:layout_constraintVertical_bias="0.609" />
 
-    <fragment
-        android:id="@+id/fragment2"
-        android:name="ihm.menew.fragments.MainFragment"
-        android:layout_width="396dp"
-        android:layout_height="51dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PreparerPlat"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/profil"
@@ -183,6 +170,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/jour"
         app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:itemRippleColor="@color/green_menew"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/bottom_nav_menu"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

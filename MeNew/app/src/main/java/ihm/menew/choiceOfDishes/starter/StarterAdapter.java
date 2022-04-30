@@ -1,13 +1,11 @@
-package ihm.menew.plat;
+package ihm.menew.choiceOfDishes.starter;
 
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.graphics.ColorFilter;
 import android.graphics.PorterDuff;
-import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,37 +14,32 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import ihm.menew.DetailActivity;
-import ihm.menew.MeNewApplication;
-import ihm.menew.R;
-import ihm.menew.RecetteActivity;
-import ihm.menew.SecondActivity;
-import ihm.menew.TestActivity;
-import ihm.menew.favoris.mvc.FavorisActivity;
-import ihm.menew.favoris.mvc.Model_Favoris;
-import ihm.menew.favoris.mvc.View_Favoris;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class PlatAdapter extends BaseAdapter {
+import ihm.menew.MeNewApplication;
+import ihm.menew.R;
+import ihm.menew.RecetteActivity;
+
+public class StarterAdapter extends BaseAdapter {
 
     private LayoutInflater inflater;
-    private Model_Favoris model;
-    private View_Favoris viewFavoris;
+    private Model_Starter model;
+    private  View_Starter viewStarter;
     private Context context;
+    private boolean selected = false;
 
-    public <T extends ViewGroup> PlatAdapter(Context context, View_Favoris viewFavoris) {
+    public <T extends ViewGroup> StarterAdapter(Context context, View_Starter viewStarter) {
         inflater = LayoutInflater.from(context);
-        this.viewFavoris = viewFavoris;
+        this.viewStarter = viewStarter;
         this.context = context;
     }
 
     @Override
     public int getCount() {
-        return model.getFavoris().size();
+        return model.getStarters().size();
     }
 
     @Override
@@ -73,36 +66,40 @@ public class PlatAdapter extends BaseAdapter {
 
         //(3) : Renseignement des valeurs
         nomPlat.setText( model.getNomPlat(i) );
-        temps.setText(model.getTempsPreparationPlat(i) + "min");
+        temps.setText(model.getTempsPreparationPlat(i)+ "min");
         image.setImageResource(model.getImage(i));
 
-        ((ImageView)layoutItem.findViewById(R.id.check)).setImageResource(R.drawable.ic_baseline_stars_24_favoris);
-        ((ImageView)layoutItem.findViewById(R.id.check)).setColorFilter(Color.BLACK, PorterDuff.Mode.MULTIPLY);
+        ((ImageView)layoutItem.findViewById(R.id.check)).setImageResource(R.drawable.ic_baseline_check_circle_24);
 
 
 
         //écouter si clic sur la vue
-        layoutItem.setOnClickListener( clic ->  viewFavoris.onClickItem(i) );
+        layoutItem.setOnClickListener( clic ->  viewStarter.onClickItem(i) );
         layoutItem.findViewById(R.id.info).setOnClickListener(clic -> {
-            Intent activity = new Intent(context, RecetteActivity.class).putExtra("Plat", model.getPlat(i));
+            Intent activity = new Intent(context, RecetteActivity.class).putExtra("Plat", model.getStarter(i));
             activity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(activity);
         });
 
         layoutItem.findViewById(R.id.check).setOnClickListener(clic -> {
-            model.removePlat(model.getPlat(i));
+            selected = !selected;
+            ((ImageView)layoutItem.findViewById(R.id.check)).setColorFilter( !selected ? Color.WHITE : Color.BLUE);
+            if(selected) MeNewApplication.platsCHoisis.add(model.getPlat(i));
+            else MeNewApplication.platsCHoisis.remove(model.getPlat(i));
+            System.out.println(MeNewApplication.platsCHoisis);
+
         });
 
         //On retourne l'item créé.
-        System.out.println("jaicréé");
+        System.out.println("Jai créé");
         return layoutItem;
     }
 
-    public void updateModel(Model_Favoris model) {
+    public void updateModel(Model_Starter model) {
         this.model = model;
     }
 
-    public void refresh(Model_Favoris model) {
+    public void refresh(Model_Starter model) {
         this.model = model;
         notifyDataSetChanged();
     }

@@ -9,7 +9,7 @@
     <item
         android:id="@+id/navigation_calendar"
         android:icon="@drawable/ic_baseline_calendar_today_24"
-        android:title="Halendar" />
+        android:title="Calendrier" />
 
     <item
         android:id="@+id/navigation_favoris"
@@ -19,11 +19,11 @@
     <item
         android:id="@+id/navigation_research"
         android:icon="@drawable/ic_twotone_search_24"
-        android:title="Research" />
+        android:title="Recherche" />
 
     <item
         android:id="@+id/navigation_history"
         android:icon="@drawable/ic_twotone_history_24"
-        android:title="History" />
+        android:title="Historique" />
 
 </menu>

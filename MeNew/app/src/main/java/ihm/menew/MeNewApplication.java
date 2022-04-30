@@ -6,12 +6,16 @@ import android.app.NotificationManager;
 import android.content.Intent;
 import android.os.Build;
 import android.util.Log;
+import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import ihm.menew.choiceOfDishes.starter.Controller_Starter;
+import ihm.menew.choiceOfDishes.starter.Model_Starter;
+import ihm.menew.choiceOfDishes.starter.View_Starter;
 import ihm.menew.favoris.mvc.Controller_Favoris;
 import ihm.menew.favoris.mvc.Model_Favoris;
 import ihm.menew.favoris.mvc.View_Favoris;
@@ -29,6 +33,7 @@ public class MeNewApplication extends Application {
     public static PLatEnregistre plats;
     public static PlatPrevu mesPlat = new PlatPrevu();
     public static List<Plat> favoris = new ArrayList<>();
+    public static List<Plat> platsCHoisis = new ArrayList<>();
     public static NotificationManager notificationManager;
     public static NotificationManager getNotificationManager() {
         return notificationManager;
@@ -94,6 +99,20 @@ public class MeNewApplication extends Application {
         //model.addPlatDefault();
 
         Controller_Favoris controller = new Controller_Favoris( view, model );
+        model.setController(controller);    //sent for principe but in this exercice, MODEL doesn't need controller
+        view.setListener( controller );
+        model.notifyObservers();
+    }
+
+    public <T extends ViewGroup> void onViewStarterCreated(T layout) {
+        //create VIEW with XML layout
+        System.out.println(layout);
+        View_Starter view = new View_Starter( getApplicationContext(), layout );
+        Model_Starter model = new Model_Starter(null);    //controller not still created so the controller reference will be sent later
+        model.addObserver(view);    //MODEL is observable from VIEW
+        //model.addPlatDefault();
+
+        Controller_Starter controller = new Controller_Starter( view, model );
         model.setController(controller);    //sent for principe but in this exercice, MODEL doesn't need controller
         view.setListener( controller );
         model.notifyObservers();
