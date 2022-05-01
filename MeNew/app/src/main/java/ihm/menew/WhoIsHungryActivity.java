@@ -85,7 +85,9 @@ public class WhoIsHungryActivity extends AppCompatActivity implements MainFragme
         findViewById(R.id.buttonChoiceDishes).setOnClickListener(click -> {
             Intent intent = new Intent(getApplicationContext(), StarterActivity.class);
             int indiceJour = getIntent().getIntExtra("jour", -1);
+            String quand = getIntent().getStringExtra("temps");
             intent.putExtra("jour", indiceJour);
+            intent.putExtra("temps",quand);;
             startActivity(intent);
         });
     }

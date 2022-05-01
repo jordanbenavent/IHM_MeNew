@@ -24,8 +24,9 @@ public class DessertActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dessert);
-        ((MeNewApplication)getApplication()).onViewDessertCreated(findViewById(R.id.activity_desserts));
+        ((MeNewApplication)getApplication()).onViewDessertCreated(findViewById(R.id.activity_desserts), getIntent());
         setUpNavigationBar();
+
         if(getIntent().getIntExtra("jour", -1) != -1) {
             findViewById(R.id.goCook).setVisibility(View.INVISIBLE);
             ConstraintLayout constraintLayout = findViewById(R.id.activity_desserts);
@@ -36,7 +37,6 @@ public class DessertActivity extends AppCompatActivity {
             constraintSet.applyTo(constraintLayout);
 
         }
-        System.out.println(getIntent().getIntExtra("jour", -1));
     }
 
     private void setUpNavigationBar() {

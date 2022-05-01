@@ -31,7 +31,9 @@ public class DishesActivity extends AppCompatActivity {
         findViewById(R.id.goToDessert).setOnClickListener(click -> {
             Intent intent = new Intent(getApplicationContext(), DessertActivity.class);
             int indiceJour = getIntent().getIntExtra("jour", -1);
+            String quand = getIntent().getStringExtra("temps");
             intent.putExtra("jour", indiceJour);
+            intent.putExtra("temps",quand);
             startActivity(intent);
         });
     }

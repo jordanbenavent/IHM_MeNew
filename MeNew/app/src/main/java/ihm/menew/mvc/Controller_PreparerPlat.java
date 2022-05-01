@@ -52,6 +52,7 @@ public class Controller_PreparerPlat {
     public void clickOnButtonPlus1() {
         Intent intent = new Intent(view.getLayout().getContext(), WhoIsHungryActivity.class);
         intent.putExtra("jour", model.getIndiceJour());
+        intent.putExtra("temps", "midi");
         view.getLayout().getContext().startActivity(intent);
         /*
         MyJour jour = new MyJour();

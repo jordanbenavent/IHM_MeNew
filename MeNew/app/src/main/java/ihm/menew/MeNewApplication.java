@@ -137,8 +137,9 @@ public class MeNewApplication extends Application {
         model.notifyObservers();
     }
 
-    public <T extends ViewGroup> void onViewDessertCreated(T layout) {
-        View_Dessert view = new View_Dessert( getApplicationContext(), layout );
+    public <T extends ViewGroup> void onViewDessertCreated(T layout, Intent intent) {
+        System.out.println(intent.getStringExtra("temps") + "on create menew");
+        View_Dessert view = new View_Dessert( getApplicationContext(), layout, intent );
         Model_Dessert model = new Model_Dessert(null);    //controller not still created so the controller reference will be sent later
         model.addObserver(view);    //MODEL is observable from VIEW
         //model.addPlatDefault();
