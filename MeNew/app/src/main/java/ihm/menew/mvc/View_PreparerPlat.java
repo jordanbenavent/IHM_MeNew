@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 
 import ihm.menew.R;
+import ihm.menew.WhoIsHungryActivity;
 import ihm.menew.semaine.Plat;
 
 import java.util.Calendar;

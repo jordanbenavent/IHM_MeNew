@@ -12,6 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.Objects;
@@ -41,6 +43,7 @@ public class Research extends AppCompatActivity implements MainFragment.OnButton
         webService = new WebService();
         onClickResearch();
         intent = new Intent(this, DetailActivity.class);
+        setUpNavigationBar();
     }
 
     @Override
@@ -113,6 +116,35 @@ public class Research extends AppCompatActivity implements MainFragment.OnButton
                     startActivity(intent);
                 }
             });
+        });
+    }
+
+    private void setUpNavigationBar(){
+        BottomNavigationView navigation = findViewById(R.id.navigation);
+        navigation.setOnItemSelectedListener(item  -> {
+            switch (item.getItemId()) {
+                case R.id.navigation_home: {
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    return true;
+                }
+                case R.id.navigation_calendar: {
+                    startActivity(new Intent(getApplicationContext(), CalendarActivity.class));
+                    return true;
+                }
+                case R.id.navigation_favoris: {
+                    startActivity(new Intent(getApplicationContext(), FavorisActivity.class));
+                    return true;
+                }
+                case R.id.navigation_research: {
+                    onResume();
+                    return true;
+                }
+                case R.id.navigation_history: {
+                    startActivity(new Intent(getApplicationContext(), NotificationsActivity.class));
+                    return true;
+                }
+            }
+            return true;
         });
     }
 }

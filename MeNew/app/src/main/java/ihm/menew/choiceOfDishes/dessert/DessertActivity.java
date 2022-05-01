@@ -1,42 +1,42 @@
-package ihm.menew.choiceOfDishes.starter;
+package ihm.menew.choiceOfDishes.dessert;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
 
 import ihm.menew.CalendarActivity;
 import ihm.menew.MainActivity;
 import ihm.menew.MeNewApplication;
 import ihm.menew.R;
 import ihm.menew.Research;
-import ihm.menew.choiceOfDishes.dish.DishesActivity;
 import ihm.menew.demonotifications.NotificationsActivity;
 import ihm.menew.favoris.mvc.FavorisActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class StarterActivity extends AppCompatActivity {
+public class DessertActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_starter);
-        ((MeNewApplication)getApplication()).onViewStarterCreated(findViewById(R.id.activity_starter));
-        goToDishes();
+        setContentView(R.layout.activity_dessert);
+        ((MeNewApplication)getApplication()).onViewDessertCreated(findViewById(R.id.activity_desserts));
         setUpNavigationBar();
-    }
+        if(getIntent().getIntExtra("jour", -1) != -1) {
+            findViewById(R.id.goCook).setVisibility(View.INVISIBLE);
+            ConstraintLayout constraintLayout = findViewById(R.id.activity_desserts);
+            ConstraintSet constraintSet = new ConstraintSet();
+            constraintSet.clone(constraintLayout);
+            constraintSet.connect(R.id.listStarter,ConstraintSet.TOP,R.id.textChoiceDessert,ConstraintSet.BOTTOM,0);
+            constraintSet.connect(R.id.listStarter,ConstraintSet.BOTTOM,R.id.addToPlanning,ConstraintSet.TOP,0);
+            constraintSet.applyTo(constraintLayout);
 
-
-    public void goToDishes(){
-        findViewById(R.id.goToDish).setOnClickListener(click -> {
-            Intent intent = new Intent(getApplicationContext(), DishesActivity.class);
-            int indiceJour = getIntent().getIntExtra("jour", -1);
-            intent.putExtra("jour", indiceJour);
-            startActivity(intent);
-        });
+        }
+        System.out.println(getIntent().getIntExtra("jour", -1));
     }
 
     private void setUpNavigationBar() {

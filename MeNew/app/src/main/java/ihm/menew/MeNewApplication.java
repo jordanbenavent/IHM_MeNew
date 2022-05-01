@@ -13,6 +13,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import ihm.menew.choiceOfDishes.dessert.Controller_Dessert;
+import ihm.menew.choiceOfDishes.dessert.Model_Dessert;
+import ihm.menew.choiceOfDishes.dessert.View_Dessert;
 import ihm.menew.choiceOfDishes.dish.Controller_Dishes;
 import ihm.menew.choiceOfDishes.dish.Model_Dishes;
 import ihm.menew.choiceOfDishes.dish.View_Dishes;
@@ -109,6 +112,7 @@ public class MeNewApplication extends Application {
 
     public <T extends ViewGroup> void onViewStarterCreated(T layout) {
         //create VIEW with XML layout
+        platsCHoisis = new ArrayList<>();
         System.out.println(layout);
         View_Starter view = new View_Starter( getApplicationContext(), layout );
         Model_Starter model = new Model_Starter(null);    //controller not still created so the controller reference will be sent later
@@ -132,4 +136,17 @@ public class MeNewApplication extends Application {
         view.setListener( controller );
         model.notifyObservers();
     }
+
+    public <T extends ViewGroup> void onViewDessertCreated(T layout) {
+        View_Dessert view = new View_Dessert( getApplicationContext(), layout );
+        Model_Dessert model = new Model_Dessert(null);    //controller not still created so the controller reference will be sent later
+        model.addObserver(view);    //MODEL is observable from VIEW
+        //model.addPlatDefault();
+
+        Controller_Dessert controller = new Controller_Dessert( view, model );
+        model.setController(controller);    //sent for principe but in this exercice, MODEL doesn't need controller
+        view.setListener( controller );
+        model.notifyObservers();
+    }
+
 }

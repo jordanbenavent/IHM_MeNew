@@ -1,11 +1,13 @@
 package ihm.menew.mvc;
 
+import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import ihm.menew.MeNewApplication;
 import ihm.menew.R;
+import ihm.menew.WhoIsHungryActivity;
 import ihm.menew.semaine.MyJour;
 import ihm.menew.semaine.Plat;
 import ihm.menew.semaine.Semaine;
@@ -48,6 +50,10 @@ public class Controller_PreparerPlat {
     }
 
     public void clickOnButtonPlus1() {
+        Intent intent = new Intent(view.getLayout().getContext(), WhoIsHungryActivity.class);
+        intent.putExtra("jour", model.getIndiceJour());
+        view.getLayout().getContext().startActivity(intent);
+        /*
         MyJour jour = new MyJour();
         List<Plat> plats = new ArrayList<>();
         plats.add((MeNewApplication.plats.data.get("Salade")));
@@ -56,5 +62,6 @@ public class Controller_PreparerPlat {
         jour.setMidi(plats);
         MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(model.getIndiceJour()).setMidi(plats);
         model.clickOnButtonPlus1();
+         */
     }
 }

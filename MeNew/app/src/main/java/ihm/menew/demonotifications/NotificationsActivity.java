@@ -7,8 +7,12 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import java.util.Objects;
 
+import ihm.menew.CalendarActivity;
+import ihm.menew.MainActivity;
 import ihm.menew.notifications.GenerationNotification;
 import ihm.menew.R;
 import ihm.menew.Research;
@@ -25,6 +29,7 @@ public class NotificationsActivity extends AppCompatActivity implements MainFrag
         setContentView(R.layout.activity_notifications);
         clickOnBouttonNotifLongue();
         clickOnBouttonNotifCourte();
+        setUpNavigationBar();
     }
 
     private void clickOnBouttonNotifCourte() {
@@ -78,5 +83,34 @@ public class NotificationsActivity extends AppCompatActivity implements MainFrag
             default:break;
         }
 
+    }
+
+    private void setUpNavigationBar(){
+        BottomNavigationView navigation = findViewById(R.id.navigation);
+        navigation.setOnItemSelectedListener(item  -> {
+            switch (item.getItemId()) {
+                case R.id.navigation_home: {
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    return true;
+                }
+                case R.id.navigation_calendar: {
+                    startActivity(new Intent(getApplicationContext(), CalendarActivity.class));
+                    return true;
+                }
+                case R.id.navigation_favoris: {
+                    startActivity(new Intent(getApplicationContext(), FavorisActivity.class));
+                    return true;
+                }
+                case R.id.navigation_research: {
+                    startActivity(new Intent(getApplicationContext(), Research.class));
+                    return true;
+                }
+                case R.id.navigation_history: {
+                    startActivity(new Intent(getApplicationContext(), NotificationsActivity.class));
+                    return true;
+                }
+            }
+            return true;
+        });
     }
 }

@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -35,8 +37,8 @@ public class WhoIsHungryActivity extends AppCompatActivity implements MainFragme
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, numberList);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(adapter);
-
         clickOnChoiceDishes();
+        setUpNavigationBar();
 
     }
 
@@ -81,7 +83,39 @@ public class WhoIsHungryActivity extends AppCompatActivity implements MainFragme
 
     void clickOnChoiceDishes(){
         findViewById(R.id.buttonChoiceDishes).setOnClickListener(click -> {
-            startActivity(new Intent(getApplicationContext(), StarterActivity.class));
+            Intent intent = new Intent(getApplicationContext(), StarterActivity.class);
+            int indiceJour = getIntent().getIntExtra("jour", -1);
+            intent.putExtra("jour", indiceJour);
+            startActivity(intent);
+        });
+    }
+
+    private void setUpNavigationBar() {
+        BottomNavigationView navigation = findViewById(R.id.navigation);
+        navigation.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.navigation_home: {
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    return true;
+                }
+                case R.id.navigation_calendar: {
+                    startActivity(new Intent(getApplicationContext(), CalendarActivity.class));
+                    return true;
+                }
+                case R.id.navigation_favoris: {
+                    startActivity(new Intent(getApplicationContext(), FavorisActivity.class));
+                    return true;
+                }
+                case R.id.navigation_research: {
+                    startActivity(new Intent(getApplicationContext(), Research.class));
+                    return true;
+                }
+                case R.id.navigation_history: {
+                    startActivity(new Intent(getApplicationContext(), NotificationsActivity.class));
+                    return true;
+                }
+            }
+            return true;
         });
     }
 }

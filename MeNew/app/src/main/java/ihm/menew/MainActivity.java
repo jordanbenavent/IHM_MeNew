@@ -99,7 +99,6 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
     private void onClickButtonPlus1() {
         findViewById(R.id.buttonpllus1).setOnClickListener( click -> {
             Log.e(getClass().getSimpleName(),"Button Plus clicked !");
-            generateur.sendNotification(getApplicationContext());
         });
     }
 

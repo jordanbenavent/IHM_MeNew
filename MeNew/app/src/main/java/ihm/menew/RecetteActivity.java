@@ -29,7 +29,9 @@ public class RecetteActivity extends AppCompatActivity {
         ((TextView)findViewById(R.id.platRecette)).setText(plat.getNomPlat());
         ((ImageView)findViewById(R.id.imageRecette)).setImageResource(plat.getImage());
         ((TextView)findViewById(R.id.recette)).setText(plat.getPreparation());
-
+        findViewById(R.id.buttonClose).setOnClickListener(click -> {
+            finish();
+        });
         setUpNavigationBar();
     }
 
