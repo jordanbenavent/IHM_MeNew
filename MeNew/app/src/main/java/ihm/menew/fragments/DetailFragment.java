@@ -27,6 +27,7 @@ public class DetailFragment extends Fragment {
 
     private String title;
     private String ImageUrl;
+
     private TextView textView;
     private ImageView imageView;
     private Bitmap bitmap;

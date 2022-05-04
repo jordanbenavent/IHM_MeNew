@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,19 +16,18 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.Objects;
-import java.util.WeakHashMap;
 
 import ihm.menew.demonotifications.NotificationsActivity;
+import ihm.menew.factories.WebServiceRecipeFactory;
 import ihm.menew.favoris.mvc.FavorisActivity;
 import ihm.menew.fragments.MainFragment;
 import ihm.menew.webservice.Point;
 import ihm.menew.webservice.Result;
-import ihm.menew.webservice.WebService;
 
 public class Research extends AppCompatActivity implements MainFragment.OnButtonClickedListener {
 
     public ListView listView;
-    private WebService webService;
+    private WebServiceRecipeFactory webServiceRecipeFactory;
     private Point point;
     private EditText input;
     private Intent intent;
@@ -40,7 +38,7 @@ public class Research extends AppCompatActivity implements MainFragment.OnButton
         setContentView(R.layout.activity_research);
         listView = (ListView)findViewById(R.id.listResults);
         input = (EditText) findViewById(R.id.Input);
-        webService = new WebService();
+        webServiceRecipeFactory = new WebServiceRecipeFactory();
         onClickResearch();
         intent = new Intent(this, DetailActivity.class);
         setUpNavigationBar();
@@ -96,7 +94,7 @@ public class Research extends AppCompatActivity implements MainFragment.OnButton
             Result[] results = new Result[0];
             String request = input.getText().toString();
             try {
-                point = webService.makeRequest(request);
+                point = webServiceRecipeFactory.makeRequest(request);
                 results = point.getResults().toArray(new Result[0]);
             } catch (IOException e) {
                 Log.e("Research", "Something went wrong");
