@@ -2,6 +2,7 @@ package ihm.menew.fragments;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -18,6 +19,7 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.zip.Inflater;
 
 import ihm.menew.R;
@@ -27,8 +29,14 @@ public class DetailFragment extends Fragment {
 
     private String title;
     private String ImageUrl;
+    private String sourceUrl;
+    private int readyIn;
+    private ArrayList<String> ingredients;
 
     private TextView textView;
+    private TextView readyInMin;
+    private TextView ingredientList;
+    private TextView urlRecette;
     private ImageView imageView;
     private Bitmap bitmap;
 
@@ -51,8 +59,15 @@ public class DetailFragment extends Fragment {
         View result = inflater.inflate(R.layout.fragment_detail, container, false);
         textView = result.findViewById(R.id.NomPlat);
         imageView = result.findViewById(R.id.imagePlat);
+        readyInMin = result.findViewById(R.id.readyIn);
+        ingredientList = result.findViewById(R.id.ingrediantsList);
+        urlRecette = result.findViewById(R.id.lienRecette);
+        // setteurs
         textView.setText(title);
+        readyInMin.setText("Prêt dans : " + readyIn + " min");
         imageView.setImageBitmap(bitmap);
+        ingredientList.setText(createList(ingredients));
+        urlRecette.setText(sourceUrl);
         return result;
     }
 
@@ -102,5 +117,25 @@ public class DetailFragment extends Fragment {
 
             //this.imageView.setImageBitmap(bitmap);
         }
+    }
+
+    public void setListIngredients(ArrayList<String> list){
+        this.ingredients = list;
+    }
+
+    public void setReadyIn(int readyIn) {
+        this.readyIn = readyIn;
+    }
+
+    public void setSourceUrl(String sourceUrl) {
+        this.sourceUrl = sourceUrl;
+    }
+
+    public String createList(ArrayList<String> ingredients){
+        String result = "";
+        for (String s : ingredients){
+            result += (" • " + s + "\n");
+        }
+        return result;
     }
 }

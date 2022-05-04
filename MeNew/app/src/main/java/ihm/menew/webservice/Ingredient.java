@@ -3,7 +3,7 @@ package ihm.menew.webservice;
 public class Ingredient {
 
     private String original;
-    private int amount;
+    private float amount;
 
 
     public Ingredient(String original, int amount) {
@@ -20,7 +20,7 @@ public class Ingredient {
         this.original = original;
     }
 
-    public int getAmount() {
+    public float getAmount() {
         return amount;
     }
 

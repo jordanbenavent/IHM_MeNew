@@ -22,6 +22,25 @@ public class PointIngredients {
         return extendedIngredients;
     }
 
+    public ArrayList<String> ingredientsToArray(){
+        ArrayList<String> ingredients = new ArrayList<>();
+        for (Ingredient i : this.extendedIngredients){
+            ingredients.add(i.getOriginal());
+        }
+        return ingredients;
+    }
+
+    @Override
+    public String toString() {
+        return "PointIngredients{" +
+                "extendedIngredients=" + extendedIngredients +
+                ", id=" + id +
+                ", cheap=" + cheap +
+                ", sourceUrl='" + sourceUrl + '\'' +
+                ", readyInMinutes=" + readyInMinutes +
+                '}';
+    }
+
     public void setExtendedIngredients(ArrayList<Ingredient> extendedIngredients) {
         this.extendedIngredients = extendedIngredients;
     }
