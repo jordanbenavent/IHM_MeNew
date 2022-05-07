@@ -17,7 +17,7 @@ import ihm.menew.demonotifications.NotificationsActivity;
 import ihm.menew.favoris.mvc.FavorisActivity;
 import ihm.menew.fragments.MainFragment;
 import ihm.menew.notifications.GenerationNotification;
-import ihm.menew.notifications.NotificationService2;
+import ihm.menew.notifications.NotificationEventReceiver;
 
 public class MainActivity extends AppCompatActivity implements MainFragment.OnButtonClickedListener {
 
@@ -28,14 +28,15 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ((MeNewApplication)getApplication()).onViewCreated(findViewById(R.id.activity_main));
-        sendNotification();
+        //sendNotification();
         onClickButtonProfil();
         onClickButtonPlat();
         onClickButtonTwitter();
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                 .permitAll().build();
         StrictMode.setThreadPolicy(policy);
-        generateur.setAlarm(getApplicationContext());
+        //generateur.setAlarm(getApplicationContext());
+        NotificationEventReceiver.setupAlarm(getApplicationContext());
         setUpNavigationBar();
     }
 
