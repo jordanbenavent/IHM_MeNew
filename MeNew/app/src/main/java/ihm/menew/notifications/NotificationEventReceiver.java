@@ -23,11 +23,11 @@ public class NotificationEventReceiver extends WakefulBroadcastReceiver {
         /*
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,
                 getTriggerAt(new Date()),
-                NOTIFICATIONS_INTERVAL_IN_HOURS * AlarmManager.INTERVAL_HOUR,
+                AlarmManager.INTERVAL_HALF_HOUR,
                 alarmIntent);
-
-         */
-        alarmManager.setExact(AlarmManager.RTC_WAKEUP,getTriggerAt(new Date()), alarmIntent);
+        */
+        alarmManager.set(AlarmManager.RTC_WAKEUP,getTriggerAt(new Date()),alarmIntent);
+        //alarmManager.setExact(AlarmManager.RTC_WAKEUP,getTriggerAt(new Date()), alarmIntent);
     }
 
     @Override
@@ -53,10 +53,10 @@ public class NotificationEventReceiver extends WakefulBroadcastReceiver {
             date.setHours(11);
             date.setMinutes(30);
         } else {
-            System.out.println("maintenant");
-            date.setHours(date.getHours());
-            date.setMinutes(date.getMinutes()+1);
-            date.setSeconds(0);
+            date.setHours(date.getHours());// soucis de timezone
+            date.setMinutes(date.getMinutes());
+            date.setSeconds(date.getSeconds() + 10);
+            System.out.println(date);
         }
         //calendar.add(Calendar.HOUR, NOTIFICATIONS_INTERVAL_IN_HOURS);
         return date.getTime();
@@ -65,12 +65,12 @@ public class NotificationEventReceiver extends WakefulBroadcastReceiver {
     private static PendingIntent getStartPendingIntent(Context context) {
         Intent intent = new Intent(context, NotificationEventReceiver.class);
         intent.setAction(ACTION_START_NOTIFICATION_SERVICE);
-        return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
     }
 
     public static PendingIntent getDeleteIntent(Context context) {
         Intent intent = new Intent(context, NotificationEventReceiver.class);
         intent.setAction(ACTION_DELETE_NOTIFICATION);
-        return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_MUTABLE);
     }
 }

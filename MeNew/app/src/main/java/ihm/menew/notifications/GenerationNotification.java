@@ -43,8 +43,8 @@ public class GenerationNotification extends WakefulBroadcastReceiver {
     }
 
     public void sendNotification(Context applicationContext){
-        //myBitMap = BitmapFactory.decodeResource(applicationContext.getResources(), R.drawable.plat);
-        myBitMap = getBitmapFromURL("https://images.pexels.com/photos/11866150/pexels-photo-11866150.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+        myBitMap = BitmapFactory.decodeResource(applicationContext.getResources(), R.drawable.plat);
+        //myBitMap = getBitmapFromURL("https://images.pexels.com/photos/11866150/pexels-photo-11866150.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
         Log.e(getClass().getSimpleName(),"LAA");
         NotificationCompat.Builder notification = new NotificationCompat.Builder(applicationContext, MeNewApplication.CHANNEL_HIGH)
                 .setSmallIcon(R.drawable.ic_me_new_logo1_foreground)
@@ -70,7 +70,7 @@ public class GenerationNotification extends WakefulBroadcastReceiver {
         PendingIntent pendingIntent = PendingIntent.getActivity(applicationContext,
                 id,
                 new Intent(applicationContext, MainActivity.class),
-                PendingIntent.FLAG_UPDATE_CURRENT);
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
         notification.setContentIntent(pendingIntent);
         notification.setDeleteIntent(NotificationEventReceiver.getDeleteIntent(applicationContext));
         MeNewApplication.getNotificationManager().notify(id++, notification.build());
