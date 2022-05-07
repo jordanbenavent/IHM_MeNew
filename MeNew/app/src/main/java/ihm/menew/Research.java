@@ -111,6 +111,7 @@ public class Research extends AppCompatActivity implements MainFragment.OnButton
                     // On récupère l'item clické
                     Result result = (Result) listView.getAdapter().getItem(i);
                     intent.putExtra("RESULT", (Serializable) result);
+                    intent.putExtra("photo", (boolean) false);
                     startActivity(intent);
                 }
             });

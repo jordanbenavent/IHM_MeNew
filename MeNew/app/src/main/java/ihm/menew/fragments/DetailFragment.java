@@ -32,6 +32,7 @@ public class DetailFragment extends Fragment {
     private String sourceUrl;
     private int readyIn;
     private ArrayList<String> ingredients;
+    private View photoFragment;
 
     private TextView textView;
     private TextView readyInMin;
@@ -39,6 +40,8 @@ public class DetailFragment extends Fragment {
     private TextView urlRecette;
     private ImageView imageView;
     private Bitmap bitmap;
+
+    private boolean photoHere = false;
 
     public DetailFragment() {
         // Required empty public constructor
@@ -62,12 +65,14 @@ public class DetailFragment extends Fragment {
         readyInMin = result.findViewById(R.id.readyIn);
         ingredientList = result.findViewById(R.id.ingrediantsList);
         urlRecette = result.findViewById(R.id.lienRecette);
+        photoFragment = result.findViewById(R.id.photoFrame);
         // setteurs
         textView.setText(title);
         readyInMin.setText("Prêt dans : " + readyIn + " min");
         imageView.setImageBitmap(bitmap);
         ingredientList.setText(createList(ingredients));
         urlRecette.setText(sourceUrl);
+        photoFragment.setVisibility(photoHere ? View.VISIBLE : View.GONE);
         return result;
     }
 
@@ -137,5 +142,9 @@ public class DetailFragment extends Fragment {
             result += (" • " + s + "\n");
         }
         return result;
+    }
+
+    public void setPhotoHere(boolean isHere){
+        this.photoHere = isHere;
     }
 }

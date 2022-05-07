@@ -68,6 +68,7 @@ public class HistoryActivity extends AppCompatActivity {
                 point = webServiceRecipeFactory.makeRequest(request);
                 Result result = point.getResults().get(0);
                 intent.putExtra("RESULT", (Serializable) result);
+                intent.putExtra("photo", (boolean) true);
                 startActivity(intent);
             } catch (IOException e) {
                 Log.e("Research", "Something went wrong");

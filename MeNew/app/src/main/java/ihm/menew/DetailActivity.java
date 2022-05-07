@@ -20,6 +20,8 @@ public class DetailActivity extends AppCompatActivity {
     public static Result result;
     public PointIngredients resultIngredients;
 
+    private boolean photoHere = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +33,7 @@ public class DetailActivity extends AppCompatActivity {
     private void configureAndShowDetailFragment() {
         Intent intent = getIntent();
         result = (Result) intent.getSerializableExtra("RESULT");
+        this.photoHere = (boolean) intent.getSerializableExtra("photo");
         // On fait la requete pour obtenir les ingredients et d'autres infos
         try {
 
@@ -48,6 +51,7 @@ public class DetailActivity extends AppCompatActivity {
             detailFragment.setListIngredients(resultIngredients.ingredientsToArray());
             detailFragment.setReadyIn(resultIngredients.getReadyInMinutes());
             detailFragment.setSourceUrl(resultIngredients.getSourceUrl());
+            detailFragment.setPhotoHere(photoHere);
         }
 
 
@@ -61,6 +65,7 @@ public class DetailActivity extends AppCompatActivity {
             detailFragment.setListIngredients(resultIngredients.ingredientsToArray());
             detailFragment.setReadyIn(resultIngredients.getReadyInMinutes());
             detailFragment.setSourceUrl(resultIngredients.getSourceUrl());
+            detailFragment.setPhotoHere(photoHere);
             // C - Add it to FrameLayout container
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.frame_layout_detail, detailFragment)

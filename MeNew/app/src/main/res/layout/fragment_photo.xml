@@ -6,44 +6,50 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.PhotoFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Photo" />
-
-    <Button
-        android:id="@+id/Camera_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
-        android:text="Prendre Photo" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp">
 
+        <TextView
+            android:id="@+id/titrePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:text="Photo" />
 
-    <ImageView
-        android:id="@+id/Photo"
-        android:layout_width="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_height="450dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        <Button
+            android:id="@+id/Camera_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/titrePhoto"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:text="Prendre Photo" />
+
+
+        <ImageView
+            android:id="@+id/Photo"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/Camera_button"
+            android:layout_height="450dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
         />
 
-    <Button
-        android:id="@+id/Save_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/Photo"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
-        android:text="Sauvgarder Photo" />
+        <Button
+            android:id="@+id/Save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/Photo"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:text="Sauvgarder Photo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
