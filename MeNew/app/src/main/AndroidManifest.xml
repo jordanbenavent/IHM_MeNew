@@ -6,8 +6,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
 
     <application
         android:name=".MeNewApplication"
@@ -17,6 +17,9 @@
         android:roundIcon="@drawable/ic_menew_logo_3_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MeNew">
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false" />
         <activity
             android:name=".choiceOfDishes.dessert.DessertActivity"
             android:exported="false" />
@@ -78,8 +81,8 @@
             android:exported="false" />
 
         <receiver android:name=".notifications.NotificationEventReceiver" />
-
-        <receiver android:name=".notifications.NotificationServiceStarterReceiver"
+        <receiver
+            android:name=".notifications.NotificationServiceStarterReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -87,7 +90,6 @@
                 <action android:name="android.intent.action.TIME_SET" />
             </intent-filter>
         </receiver>
-
 
         <service
             android:name=".notifications.NotificationService2"

@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
                 return;
             case "40":
                 Log.e(getClass().getSimpleName(),"Button Historique clicked !");
-                startActivity(new Intent(this, NotificationsActivity.class));
+                startActivity(new Intent(this, HistoryActivity.class));
                 return;
             default:break;
         }
@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
                     return true;
                 }
                 case R.id.navigation_history: {
-                    startActivity(new Intent(getApplicationContext(), NotificationsActivity.class));
+                    startActivity(new Intent(getApplicationContext(), HistoryActivity.class));
                     return true;
                 }
             }
