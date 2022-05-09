@@ -2,6 +2,7 @@ package ihm.menew.choiceOfDishes.dessert;
 
 import android.content.Intent;
 
+import ihm.menew.CalendarActivity;
 import ihm.menew.MainActivity;
 import ihm.menew.MeNewApplication;
 import ihm.menew.choiceOfDishes.dish.Model_Dishes;
@@ -22,9 +23,19 @@ public class Controller_Dessert {
     }
 
     public void onClickAddPlanning(int jour, String quand) {
+        if(jour==-1){
+            Intent intent =(new Intent(view.getLayout().getContext(), CalendarActivity.class));
+            intent.putExtra("jour", jour);
+            view.getLayout().getContext().startActivity(intent);
+        }
         if("midi".equals(quand)){
             System.out.println("add planning");
             MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(jour).setMidi(MeNewApplication.platsCHoisis);
+            view.getLayout().getContext().startActivity(new Intent(view.getLayout().getContext(), MainActivity.class));
+        }
+        if("soir".equals(quand)){
+            System.out.println("add planning");
+            MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(jour).setSoir(MeNewApplication.platsCHoisis);
             view.getLayout().getContext().startActivity(new Intent(view.getLayout().getContext(), MainActivity.class));
         }
     }
