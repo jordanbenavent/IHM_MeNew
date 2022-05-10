@@ -13,12 +13,14 @@ import ihm.menew.databinding.ActivityRecetteBinding;
 import ihm.menew.demonotifications.NotificationsActivity;
 import ihm.menew.fragments.MainFragment;
 
+import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarItemView;
 
 import java.util.Objects;
 
@@ -34,6 +36,7 @@ public class FavorisActivity extends AppCompatActivity {
     }
 
     private void setUpNavigationBar(){
+        findViewById(R.id.navigation_favoris).setSelected(true);
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnItemSelectedListener(item  -> {
             switch (item.getItemId()) {

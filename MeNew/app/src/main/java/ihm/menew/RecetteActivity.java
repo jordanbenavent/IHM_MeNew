@@ -3,12 +3,18 @@ package ihm.menew;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Calendar;
 
 import ihm.menew.databinding.ActivityRecetteBinding;
@@ -27,7 +33,7 @@ public class RecetteActivity extends AppCompatActivity {
         Intent intent = getIntent();
         plat = intent.getParcelableExtra("Plat");
         ((TextView)findViewById(R.id.platRecette)).setText(plat.getNomPlat());
-        ((ImageView)findViewById(R.id.imageRecette)).setImageResource(plat.getImage());
+        ((ImageView)findViewById(R.id.imageRecette)).setImageBitmap(getBitmapFromURL(plat.getImage()));
         ((TextView)findViewById(R.id.recette)).setText(plat.getPreparation());
         findViewById(R.id.buttonClose).setOnClickListener(click -> {
             finish();
@@ -62,5 +68,20 @@ public class RecetteActivity extends AppCompatActivity {
             }
             return true;
         });
+    }
+
+    public static Bitmap getBitmapFromURL(String src) {
+        try {
+            URL url = new URL(src);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setDoInput(true);
+            connection.connect();
+            InputStream input = connection.getInputStream();
+            Bitmap myBitmap = BitmapFactory.decodeStream(input);
+            return myBitmap;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

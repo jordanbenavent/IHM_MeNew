@@ -49,7 +49,7 @@ public class Model_Starter extends Observable {
         return starters.get(position).getTempsPreparation()+"";
     }
 
-    public int getImage(int position){
+    public String getImage(int position){
         return starters.get(position).getImage();
     }
 

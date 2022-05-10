@@ -48,7 +48,7 @@ public class Model_Favoris extends Observable {
         return favoris.get(position).getTempsPreparation()+"";
     }
 
-    public int getImage(int position){
+    public String getImage(int position){
         return favoris.get(position).getImage();
     }
 

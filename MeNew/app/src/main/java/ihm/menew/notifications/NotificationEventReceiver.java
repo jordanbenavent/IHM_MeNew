@@ -10,6 +10,7 @@ import androidx.legacy.content.WakefulBroadcastReceiver;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 
 public class NotificationEventReceiver extends WakefulBroadcastReceiver {
 
@@ -46,18 +47,23 @@ public class NotificationEventReceiver extends WakefulBroadcastReceiver {
 
     private static long getTriggerAt(Date now) {
         Calendar calendar = Calendar.getInstance();
-        calendar.setTime(now);
+        calendar.setTimeZone(TimeZone.getTimeZone("Europe/Paris"));
+        System.out.println("ici");
+        System.out.println(TimeZone.getTimeZone("Europe/Paris"));
+        System.out.println(calendar.getTimeZone());
+        //calendar.setTime(now);
+        System.out.println(calendar.getTime());
         Date date = new Date();
         System.out.println(date);
-        if( !(date.getHours() > 22) && date.getHours() < 13){
+        if( !(date.getHours()+2 > 22) && date.getHours()+2 < 13){
             date.setHours(11);
             date.setMinutes(30);
         } else {
             date.setHours(date.getHours());// soucis de timezone
-            date.setMinutes(date.getMinutes());
-            date.setSeconds(date.getSeconds() + 10);
-            System.out.println(date);
+            date.setMinutes(date.getMinutes()+2);
+            date.setSeconds(0);
         }
+        System.out.println(date);
         //calendar.add(Calendar.HOUR, NOTIFICATIONS_INTERVAL_IN_HOURS);
         return date.getTime();
     }

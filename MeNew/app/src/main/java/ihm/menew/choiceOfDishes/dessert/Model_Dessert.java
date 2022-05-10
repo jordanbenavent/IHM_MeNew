@@ -50,7 +50,7 @@ public class Model_Dessert extends Observable {
         return desserts.get(position).getTempsPreparation()+"";
     }
 
-    public int getImage(int position){
+    public String getImage(int position){
         return desserts.get(position).getImage();
     }
 

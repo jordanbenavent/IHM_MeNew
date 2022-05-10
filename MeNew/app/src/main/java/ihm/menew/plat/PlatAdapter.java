@@ -74,7 +74,7 @@ public class PlatAdapter extends BaseAdapter {
         //(3) : Renseignement des valeurs
         nomPlat.setText( model.getNomPlat(i) );
         temps.setText(model.getTempsPreparationPlat(i) + "min");
-        image.setImageResource(model.getImage(i));
+        image.setImageBitmap(getBitmapFromURL( model.getImage(i)));
 
         ((ImageView)layoutItem.findViewById(R.id.check)).setImageResource(R.drawable.ic_baseline_stars_24_favoris);
         ((ImageView)layoutItem.findViewById(R.id.check)).setColorFilter(Color.BLACK, PorterDuff.Mode.MULTIPLY);

@@ -67,7 +67,7 @@ public class StarterAdapter extends BaseAdapter {
         //(3) : Renseignement des valeurs
         nomPlat.setText( model.getNomPlat(i) );
         temps.setText(model.getTempsPreparationPlat(i)+ "min");
-        image.setImageResource(model.getImage(i));
+        image.setImageBitmap(getBitmapFromURL(model.getImage(i)));
 
         ((ImageView)layoutItem.findViewById(R.id.check)).setImageResource(R.drawable.ic_baseline_check_circle_24);
 

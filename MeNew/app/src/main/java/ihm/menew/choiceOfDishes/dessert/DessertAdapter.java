@@ -2,6 +2,8 @@ package ihm.menew.choiceOfDishes.dessert;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +12,11 @@ import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 import ihm.menew.MeNewApplication;
 import ihm.menew.R;
@@ -60,7 +67,7 @@ public class DessertAdapter extends BaseAdapter {
         //(3) : Renseignement des valeurs
         nomPlat.setText( model.getNomPlat(i) );
         temps.setText(model.getTempsPreparationPlat(i)+ "min");
-        image.setImageResource(model.getImage(i));
+        image.setImageBitmap(getBitmapFromURL(model.getImage(i)));
 
         ((ImageView)layoutItem.findViewById(R.id.check)).setImageResource(R.drawable.ic_baseline_check_circle_24);
 
@@ -95,5 +102,19 @@ public class DessertAdapter extends BaseAdapter {
     public void refresh(Model_Dessert model) {
         this.model = model;
         notifyDataSetChanged();
+    }
+    public static Bitmap getBitmapFromURL(String src) {
+        try {
+            URL url = new URL(src);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setDoInput(true);
+            connection.connect();
+            InputStream input = connection.getInputStream();
+            Bitmap myBitmap = BitmapFactory.decodeStream(input);
+            return myBitmap;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }
