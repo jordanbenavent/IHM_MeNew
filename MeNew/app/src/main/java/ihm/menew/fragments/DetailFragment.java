@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,7 +23,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.zip.Inflater;
 
+import ihm.menew.MeNewApplication;
 import ihm.menew.R;
+import ihm.menew.semaine.Plat;
 
 
 public class DetailFragment extends Fragment {
@@ -40,6 +43,7 @@ public class DetailFragment extends Fragment {
     private TextView urlRecette;
     private ImageView imageView;
     private Bitmap bitmap;
+    private ImageButton buttonFavorite;
 
     private boolean photoHere = false;
 
@@ -66,6 +70,7 @@ public class DetailFragment extends Fragment {
         ingredientList = result.findViewById(R.id.ingrediantsList);
         urlRecette = result.findViewById(R.id.lienRecette);
         photoFragment = result.findViewById(R.id.photoFrame);
+        buttonFavorite = result.findViewById(R.id.fragment_favorite_button);
         // setteurs
         textView.setText(title);
         readyInMin.setText("Prêt dans : " + readyIn + " min");
@@ -73,6 +78,9 @@ public class DetailFragment extends Fragment {
         ingredientList.setText(createList(ingredients));
         urlRecette.setText(sourceUrl);
         photoFragment.setVisibility(photoHere ? View.VISIBLE : View.GONE);
+        buttonFavorite.setOnClickListener(click -> {
+            setFavorite(); // Ajoute aux favoris
+        });
         return result;
     }
 
@@ -146,5 +154,9 @@ public class DetailFragment extends Fragment {
 
     public void setPhotoHere(boolean isHere){
         this.photoHere = isHere;
+    }
+
+    public void setFavorite(){
+        MeNewApplication.favoris.add(new Plat(this.title, "La Recette", this.readyIn, this.ImageUrl));
     }
 }

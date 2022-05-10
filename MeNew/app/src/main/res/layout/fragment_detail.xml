@@ -39,6 +39,16 @@
                 android:textAlignment="center"
                 />
 
+            <ImageButton
+                android:id="@+id/fragment_favorite_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_twotone_star_24"
+                app:layout_constraintBottom_toTopOf="@id/imagePlat"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="50dp"
+                />
+
             <ImageView
                 android:id="@+id/imagePlat"
                 android:layout_width="match_parent"

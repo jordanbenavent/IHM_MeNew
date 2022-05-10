@@ -11,7 +11,7 @@ public class Plat extends Application implements Parcelable {
     private String nomPlat;
     private String preparation;
     private int tempsPreparation;
-    private int Image;
+    private String Image;
 
     public static Comparator<Plat> triAlpha = new Comparator<Plat>() {
         @Override
@@ -29,7 +29,7 @@ public class Plat extends Application implements Parcelable {
         }
     };
 
-    Plat(String nomPlat, String preparation, int tempsPreparation, int image){
+    public Plat(String nomPlat, String preparation, int tempsPreparation, String image){
         this.nomPlat=nomPlat;
         this.preparation=preparation;
         this.tempsPreparation=tempsPreparation;
@@ -40,7 +40,7 @@ public class Plat extends Application implements Parcelable {
         this.nomPlat = in.readString();
         this.preparation = in.readString();
         this.tempsPreparation = in.readInt();
-        this.Image = in.readInt();
+        this.Image = in.readString();
     }
 
     public static final Parcelable.Creator<Plat> CREATOR = new Parcelable.Creator<Plat>() {
@@ -67,7 +67,7 @@ public class Plat extends Application implements Parcelable {
         return preparation;
     }
 
-    public int getImage() {
+    public String getImage() {
         return Image;
     }
 
@@ -86,6 +86,6 @@ public class Plat extends Application implements Parcelable {
         parcel.writeString(nomPlat);
         parcel.writeString(preparation);
         parcel.writeInt(tempsPreparation);
-        parcel.writeInt(Image);
+        parcel.writeString(Image);
     }
 }

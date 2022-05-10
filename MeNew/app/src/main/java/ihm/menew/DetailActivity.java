@@ -31,6 +31,7 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void configureAndShowDetailFragment() {
+        // MeNewApplication.favoris.add();
         Intent intent = getIntent();
         result = (Result) intent.getSerializableExtra("RESULT");
         this.photoHere = (boolean) intent.getSerializableExtra("photo");
