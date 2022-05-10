@@ -5,6 +5,240 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Calendrier"
+        android:gravity="center"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/lundi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Lundi "
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/mardi"
+        app:layout_constraintBottom_toTopOf="@id/fragmentCalendar"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/mardi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Mardi "
+        android:layout_marginLeft="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/lundi"
+        app:layout_constraintEnd_toStartOf="@id/mercredi"
+        app:layout_constraintBottom_toTopOf="@id/fragmentCalendar"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/mercredi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Mercredi "
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mardi"
+        app:layout_constraintEnd_toStartOf="@id/jeudi"
+        app:layout_constraintBottom_toTopOf="@id/fragmentCalendar"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/jeudi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Jeudi "
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mercredi"
+        app:layout_constraintEnd_toStartOf="@id/vendredi"
+        app:layout_constraintBottom_toTopOf="@id/fragmentCalendar"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/vendredi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Vendredi"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/jeudi"
+        app:layout_constraintEnd_toStartOf="@id/samedi"
+        app:layout_constraintBottom_toTopOf="@id/fragmentCalendar"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/samedi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Samedi "
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vendredi"
+        app:layout_constraintEnd_toStartOf="@id/dimanche"
+        app:layout_constraintBottom_toTopOf="@id/fragmentCalendar"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/dimanche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Dimanche "
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/samedi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fragmentCalendar"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/textSoir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Midi"
+        android:textSize="24dp"
+        app:layout_constraintTop_toBottomOf="@id/midiLundi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/soirLundi"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toBottomOf="@id/textSoir"
+        app:layout_constraintStart_toStartOf="@id/lundi"
+        app:layout_constraintEnd_toEndOf="@id/lundi"
+        />
+    <Button
+        android:id="@+id/soirMardi"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toBottomOf="@id/textSoir"
+        app:layout_constraintStart_toStartOf="@id/mardi"
+        app:layout_constraintEnd_toEndOf="@id/mardi"
+        />
+    <Button
+        android:id="@+id/soirMercredi"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toBottomOf="@id/textSoir"
+        app:layout_constraintStart_toStartOf="@id/mercredi"
+        app:layout_constraintEnd_toEndOf="@id/mercredi"
+        />
+    <Button
+        android:id="@+id/soirJeudi"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toBottomOf="@id/textSoir"
+        app:layout_constraintStart_toStartOf="@id/jeudi"
+        app:layout_constraintEnd_toEndOf="@id/jeudi"
+        />
+    <Button
+        android:id="@+id/soirVendredi"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toBottomOf="@id/textSoir"
+        app:layout_constraintStart_toStartOf="@id/vendredi"
+        app:layout_constraintEnd_toEndOf="@id/vendredi"
+        />
+
+    <Button
+        android:id="@+id/soirSamedi"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toBottomOf="@id/textSoir"
+        app:layout_constraintStart_toStartOf="@id/samedi"
+        app:layout_constraintEnd_toEndOf="@id/samedi"
+        />
+
+    <Button
+        android:id="@+id/soirDimanche"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toBottomOf="@id/textSoir"
+        app:layout_constraintStart_toStartOf="@id/dimanche"
+        app:layout_constraintEnd_toEndOf="@id/dimanche"
+        />
+    <TextView
+        android:id="@+id/textMidi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Midi"
+        android:textSize="24dp"
+        app:layout_constraintTop_toBottomOf="@id/lundi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/midiLundi"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toBottomOf="@id/textMidi"
+        app:layout_constraintStart_toStartOf="@id/lundi"
+        app:layout_constraintEnd_toEndOf="@id/lundi"
+        />
+    <Button
+        android:id="@+id/midiMardi"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toBottomOf="@id/textMidi"
+        app:layout_constraintStart_toStartOf="@id/mardi"
+        app:layout_constraintEnd_toEndOf="@id/mardi"
+        />
+    <Button
+        android:id="@+id/midiMercredi"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toBottomOf="@id/textMidi"
+        app:layout_constraintStart_toStartOf="@id/mercredi"
+        app:layout_constraintEnd_toEndOf="@id/mercredi"
+        />
+    <Button
+        android:id="@+id/midiJeudi"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toBottomOf="@id/textMidi"
+        app:layout_constraintStart_toStartOf="@id/jeudi"
+        app:layout_constraintEnd_toEndOf="@id/jeudi"
+        />
+    <Button
+        android:id="@+id/midiVendredi"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toBottomOf="@id/textMidi"
+        app:layout_constraintStart_toStartOf="@id/vendredi"
+        app:layout_constraintEnd_toEndOf="@id/vendredi"
+        />
+
+    <Button
+        android:id="@+id/midiSamedi"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toBottomOf="@id/textMidi"
+        app:layout_constraintStart_toStartOf="@id/samedi"
+        app:layout_constraintEnd_toEndOf="@id/samedi"
+        />
+
+    <Button
+        android:id="@+id/midiDimanche"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toBottomOf="@id/textMidi"
+        app:layout_constraintStart_toStartOf="@id/dimanche"
+        app:layout_constraintEnd_toEndOf="@id/dimanche"
+        />
+
+
 
     <fragment
         android:id="@+id/fragmentCalendar"

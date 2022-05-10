@@ -135,6 +135,20 @@
         tools:ignore="MissingConstraints" />
 
     <Button
+        android:id="@+id/twitter"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:background="@drawable/twitter"
+        android:onClick="onClickButtonTwitter"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/myRectangleView"
+        app:layout_constraintEnd_toStartOf="@id/previous"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
+        app:layout_constraintVertical_bias="0.418" />
+
+
+    <Button
         android:id="@+id/profil"
         android:layout_width="47dp"
         android:layout_height="47dp"
@@ -172,6 +186,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/jour"
         app:layout_constraintVertical_bias="0.571" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:itemRippleColor="@color/green_menew"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/bottom_nav_menu"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

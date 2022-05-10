@@ -91,10 +91,10 @@
         android:layout_height="155dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Nom_MeNew"
-        app:layout_constraintVertical_bias="0.287"
+        app:layout_constraintVertical_bias="0.378"
         app:srcCompat="@drawable/myrectangle" />
 
     <ImageView
@@ -133,18 +133,6 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/avatar3" />
 
-    <Button
-        android:id="@+id/valider"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Valider"
-        app:layout_constraintBottom_toTopOf="@+id/fragment2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BackgroundGrey"
-        app:layout_constraintVertical_bias="0.372" />
-
     <fragment
         android:id="@+id/fragment2"
         android:name="ihm.menew.fragments.MainFragment"
@@ -182,7 +170,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/NomUtilisateur1"
         app:layout_constraintTop_toTopOf="@+id/BackgroundGrey"
-        app:layout_constraintVertical_bias="0.018" />
+        app:layout_constraintVertical_bias="0.032" />
 
     <Button
         android:id="@+id/buttonEditUtilisateur2"
@@ -208,5 +196,5 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/NomUtilisateur3"
         app:layout_constraintTop_toBottomOf="@+id/buttonEditUtilisateur2"
-        app:layout_constraintVertical_bias="0.107" />
+        app:layout_constraintVertical_bias="0.132" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 import ihm.menew.demonotifications.NotificationsActivity;
@@ -19,6 +20,79 @@ public class CalendarActivity extends AppCompatActivity implements MainFragment.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
+        onclickMidi();
+    }
+
+    void onClickSoir(){
+        findViewById(R.id.soirLundi).setOnClickListener(click -> {
+            MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(1).setSoir(MeNewApplication.platsCHoisis);
+            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+        });
+        findViewById(R.id.soirMardi).setOnClickListener(click -> {
+            MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(2).setSoir(MeNewApplication.platsCHoisis);
+            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+        });
+        findViewById(R.id.soirMercredi).setOnClickListener(click -> {
+            MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(3).setSoir(MeNewApplication.platsCHoisis);
+            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+
+        });
+        findViewById(R.id.soirJeudi).setOnClickListener(click -> {
+            MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(4).setSoir(MeNewApplication.platsCHoisis);
+            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+
+        });
+        findViewById(R.id.soirVendredi).setOnClickListener(click -> {
+            MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(5).setSoir(MeNewApplication.platsCHoisis);
+            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+
+        });
+        findViewById(R.id.soirSamedi).setOnClickListener(click -> {
+            MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(6).setSoir(MeNewApplication.platsCHoisis);
+            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+
+        });
+        findViewById(R.id.soirDimanche).setOnClickListener(click -> {
+            MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(0).setSoir(MeNewApplication.platsCHoisis);
+            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+
+        });
+    }
+
+    void onclickMidi(){
+        findViewById(R.id.midiLundi).setOnClickListener(click -> {
+            MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(1).setMidi(MeNewApplication.platsCHoisis);
+            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+        });
+        findViewById(R.id.midiMardi).setOnClickListener(click -> {
+            MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(2).setMidi(MeNewApplication.platsCHoisis);
+            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+        });
+        findViewById(R.id.midiMercredi).setOnClickListener(click -> {
+            MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(3).setMidi(MeNewApplication.platsCHoisis);
+            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+
+        });
+        findViewById(R.id.midiJeudi).setOnClickListener(click -> {
+            MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(4).setMidi(MeNewApplication.platsCHoisis);
+            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+
+        });
+        findViewById(R.id.midiVendredi).setOnClickListener(click -> {
+            MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(5).setMidi(MeNewApplication.platsCHoisis);
+            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+
+        });
+        findViewById(R.id.midiSamedi).setOnClickListener(click -> {
+            MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(6).setMidi(MeNewApplication.platsCHoisis);
+            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+
+        });
+        findViewById(R.id.midiDimanche).setOnClickListener(click -> {
+            MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(0).setMidi(MeNewApplication.platsCHoisis);
+            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+
+        });
     }
 
 

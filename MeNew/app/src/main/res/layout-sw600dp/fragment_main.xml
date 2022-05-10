@@ -14,14 +14,15 @@
         android:layout_height="wrap_content"
         android:textColor="#B1B1B1"
         android:tag="0"/>
+
     <Button
         android:id="@+id/fragment_main_button"
-        android:layout_width="125px"
+        android:layout_width="69dp"
         android:layout_height="125px"
         android:layout_marginStart="25dp"
         android:background="@drawable/ic_baseline_home_24"
-        android:textColor="#B1B1B1"
-        android:tag="10"/>
+        android:tag="10"
+        android:textColor="#B1B1B1" />
 
     <Button
         android:id="@+id/fragment_plan_button"

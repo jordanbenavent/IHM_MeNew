@@ -39,14 +39,10 @@ public class Controller_PreparerPlat {
     }
 
     public void clickOnButtonPlus2() {
-        MyJour jour = new MyJour();
-        List<Plat> plats = new ArrayList<>();
-        plats.add((MeNewApplication.plats.data.get("Salade")));
-        plats.add((MeNewApplication.plats.data.get("Tartiflette")));
-        plats.add((MeNewApplication.plats.data.get("Mousse au chocolat")));
-        jour.setSoir(plats);
-        MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(model.getIndiceJour()).setSoir(plats);
-        model.clickOnButtonPlus2();
+        Intent intent = new Intent(view.getLayout().getContext(), WhoIsHungryActivity.class);
+        intent.putExtra("jour", model.getIndiceJour());
+        intent.putExtra("temps", "soir");
+        view.getLayout().getContext().startActivity(intent);
     }
 
     public void clickOnButtonPlus1() {
