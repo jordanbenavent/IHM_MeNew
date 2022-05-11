@@ -61,12 +61,14 @@ public class GenerationNotification extends WakefulBroadcastReceiver {
         myBitMap = BitmapFactory.decodeResource(applicationContext.getResources(), R.drawable.plat);
         //myBitMap = getBitmapFromURL("https://images.pexels.com/photos/11866150/pexels-photo-11866150.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
         Log.e(getClass().getSimpleName(),"ALARME");
+        System.out.println(Calendar.getInstance().getTime());
         NotificationCompat.Builder notification = new NotificationCompat.Builder(applicationContext, MeNewApplication.CHANNEL_HIGH)
                 .setSmallIcon(R.drawable.ic_me_new_logo1_foreground)
                 .setContentTitle("Pense à créer ton plat !")
                 .setStyle(new NotificationCompat.BigPictureStyle()
                         .bigPicture(myBitMap))
-                .setPriority(NotificationCompat.PRIORITY_HIGH);
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setTimeoutAfter(2000);
         PendingIntent pendingIntent = PendingIntent.getActivity(applicationContext,
                 id,
                 new Intent(applicationContext, MainActivity.class),

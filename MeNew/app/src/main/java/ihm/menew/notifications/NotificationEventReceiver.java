@@ -60,7 +60,7 @@ public class NotificationEventReceiver extends WakefulBroadcastReceiver {
             date.setMinutes(30);
         } else {
             date.setHours(date.getHours());// soucis de timezone
-            date.setMinutes(date.getMinutes()+2);
+            date.setMinutes(date.getMinutes()+1);
             date.setSeconds(0);
         }
         System.out.println(date);
