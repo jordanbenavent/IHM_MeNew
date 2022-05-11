@@ -7,6 +7,18 @@
     tools:context=".ActivityAddUtilisateur">
 
 
+    <fragment
+        android:id="@+id/fragment4"
+        android:name="ihm.menew.fragments.MainFragment"
+        android:layout_width="474dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BackgroundGrey"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/Nom_MeNew"
         android:layout_width="match_parent"
@@ -135,18 +147,6 @@
         app:layout_constraintTop_toBottomOf="@+id/imageProfil2"
         app:layout_constraintVertical_bias="0.335"
         app:srcCompat="@drawable/avatar3" />
-
-    <fragment
-        android:id="@+id/fragment2"
-        android:name="ihm.menew.fragments.MainFragment"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BackgroundGrey"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/ButtonAddUtilisateur"
