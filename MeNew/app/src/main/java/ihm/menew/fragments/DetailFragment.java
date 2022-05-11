@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -158,5 +159,6 @@ public class DetailFragment extends Fragment {
 
     public void setFavorite(){
         MeNewApplication.favoris.add(new Plat(this.title, "La Recette", this.readyIn, this.ImageUrl));
+        Toast.makeText(getContext(), "Ajouté", Toast.LENGTH_LONG).show();
     }
 }
