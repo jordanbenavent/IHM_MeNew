@@ -49,9 +49,9 @@
         android:background="@drawable/myrectangle"
         app:layout_constraintBottom_toTopOf="@+id/PreparerPlat"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/jour" />
-
 
     <Button
         android:id="@+id/PreparerPlat"
@@ -75,8 +75,7 @@
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="@+id/platMidi"
         app:layout_constraintEnd_toEndOf="@+id/myRectangleView"
-        app:layout_constraintStart_toEndOf="@+id/platMidi"
-        app:layout_constraintTop_toTopOf="@+id/platMidi" />
+        app:layout_constraintStart_toEndOf="@+id/platMidi" />
 
     <ImageButton
         android:id="@+id/buttonpllus2"
@@ -181,6 +180,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:menu="@menu/bottom_nav_menu"
         />
+
+    <ImageButton
+        android:id="@+id/addCalendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/buttonpllus1"
+        app:layout_constraintEnd_toEndOf="@+id/myRectangleView"
+        app:layout_constraintStart_toEndOf="@+id/platMidi"
+        app:layout_constraintTop_toTopOf="@+id/platMidi"
+        app:srcCompat="@android:drawable/stat_sys_download" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

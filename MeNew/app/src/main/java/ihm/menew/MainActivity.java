@@ -5,11 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.provider.CalendarContract;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import org.w3c.dom.Text;
 
 import java.util.Objects;
 
@@ -32,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
         onClickButtonProfil();
         onClickButtonPlat();
         onClickButtonTwitter();
+        onClickButtonAddCalendar();
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                 .permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -129,6 +134,29 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
         findViewById(R.id.twitter).setOnClickListener( click -> {
             Intent intent = new Intent(getApplicationContext(), TwitterActivity.class);
             startActivity(intent);
+        });
+    }
+
+    private void onClickButtonAddCalendar(){
+        TextView platDuMidi = findViewById(R.id.platMidi);
+        findViewById(R.id.addCalendar).setOnClickListener(click ->{
+            if (!platDuMidi.getText().toString().isEmpty()){
+                Intent intent = new Intent(Intent.ACTION_INSERT);
+                intent.setData(CalendarContract.Events.CONTENT_URI);
+                intent.putExtra(CalendarContract.Events.TITLE, "Repas");
+                intent.putExtra(CalendarContract.Events.DESCRIPTION, platDuMidi.getText().toString());
+                intent.putExtra(CalendarContract.Events.ALL_DAY, false);
+
+                if (intent.resolveActivity(getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(MainActivity.this, "Pas d'application pour cette action",Toast.LENGTH_SHORT).show();
+                }
+            }
+            else{
+                Toast.makeText(MainActivity.this, "Il n'y a pas de plat", Toast.LENGTH_SHORT).show();
+            };
         });
     }
 
