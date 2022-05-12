@@ -26,17 +26,6 @@ public class WhoIsHungryActivity extends AppCompatActivity implements MainFragme
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_who_is_hungry);
-
-        ArrayList<Integer> numberList = new ArrayList<Integer>();
-        for (int i = 0; i<15;i++){
-            numberList.add(i);
-        }
-
-        //Spinner spinner1 = findViewById(R.id.spinner);
-
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, numberList);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        //spinner1.setAdapter(adapter);
         clickOnChoiceDishes();
         setUpNavigationBar();
 
