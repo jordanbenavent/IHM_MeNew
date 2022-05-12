@@ -1,6 +1,11 @@
 package ihm.menew.choiceOfDishes.dessert;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.provider.CalendarContract;
+import android.widget.Toast;
 
 import ihm.menew.CalendarActivity;
 import ihm.menew.MainActivity;
@@ -8,7 +13,7 @@ import ihm.menew.MeNewApplication;
 import ihm.menew.choiceOfDishes.dish.Model_Dishes;
 import ihm.menew.choiceOfDishes.dish.View_Dishes;
 
-public class Controller_Dessert {
+public abstract class Controller_Dessert extends Context {
 
     private Model_Dessert model;
     private View_Dessert view;

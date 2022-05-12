@@ -32,11 +32,11 @@ public class WhoIsHungryActivity extends AppCompatActivity implements MainFragme
             numberList.add(i);
         }
 
-        Spinner spinner1 = findViewById(R.id.spinner);
+        //Spinner spinner1 = findViewById(R.id.spinner);
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, numberList);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner1.setAdapter(adapter);
+        //spinner1.setAdapter(adapter);
         clickOnChoiceDishes();
         setUpNavigationBar();
 

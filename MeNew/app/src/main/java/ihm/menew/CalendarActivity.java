@@ -1,9 +1,13 @@
 package ihm.menew;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,47 +18,51 @@ import ihm.menew.demonotifications.NotificationsActivity;
 import ihm.menew.favoris.mvc.FavorisActivity;
 import ihm.menew.fragments.MainFragment;
 
-public class CalendarActivity extends AppCompatActivity implements MainFragment.OnButtonClickedListener{
+public class CalendarActivity extends AppCompatActivity implements MainFragment.OnButtonClickedListener {
+
+    private CalendarActivity calendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        this.calendar = this;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
         onclickMidi();
+        onClickSoir();
     }
 
     void onClickSoir(){
         findViewById(R.id.soirLundi).setOnClickListener(click -> {
             MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(1).setSoir(MeNewApplication.platsCHoisis);
-            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+            this.popUp();
         });
         findViewById(R.id.soirMardi).setOnClickListener(click -> {
             MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(2).setSoir(MeNewApplication.platsCHoisis);
-            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+            this.popUp();
         });
         findViewById(R.id.soirMercredi).setOnClickListener(click -> {
             MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(3).setSoir(MeNewApplication.platsCHoisis);
-            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+            this.popUp();
 
         });
         findViewById(R.id.soirJeudi).setOnClickListener(click -> {
             MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(4).setSoir(MeNewApplication.platsCHoisis);
-            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+            this.popUp();
 
         });
         findViewById(R.id.soirVendredi).setOnClickListener(click -> {
             MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(5).setSoir(MeNewApplication.platsCHoisis);
-            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+            this.popUp();
 
         });
         findViewById(R.id.soirSamedi).setOnClickListener(click -> {
             MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(6).setSoir(MeNewApplication.platsCHoisis);
-            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+            this.popUp();
 
         });
         findViewById(R.id.soirDimanche).setOnClickListener(click -> {
             MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(0).setSoir(MeNewApplication.platsCHoisis);
-            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+            this.popUp();
 
         });
     }
@@ -62,37 +70,66 @@ public class CalendarActivity extends AppCompatActivity implements MainFragment.
     void onclickMidi(){
         findViewById(R.id.midiLundi).setOnClickListener(click -> {
             MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(1).setMidi(MeNewApplication.platsCHoisis);
-            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+            this.popUp();
         });
         findViewById(R.id.midiMardi).setOnClickListener(click -> {
             MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(2).setMidi(MeNewApplication.platsCHoisis);
-            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+            this.popUp();
         });
         findViewById(R.id.midiMercredi).setOnClickListener(click -> {
             MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(3).setMidi(MeNewApplication.platsCHoisis);
-            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+            this.popUp();
 
         });
         findViewById(R.id.midiJeudi).setOnClickListener(click -> {
             MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(4).setMidi(MeNewApplication.platsCHoisis);
-            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+            this.popUp();
 
         });
         findViewById(R.id.midiVendredi).setOnClickListener(click -> {
             MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(5).setMidi(MeNewApplication.platsCHoisis);
-            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+            this.popUp();
 
         });
         findViewById(R.id.midiSamedi).setOnClickListener(click -> {
             MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(6).setMidi(MeNewApplication.platsCHoisis);
-            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+            this.popUp();
 
         });
         findViewById(R.id.midiDimanche).setOnClickListener(click -> {
             MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(0).setMidi(MeNewApplication.platsCHoisis);
-            startActivity( new Intent(getApplicationContext(), MainActivity.class));
+            this.popUp();
 
         });
+    }
+
+    void popUp(){
+        AlertDialog.Builder addCalendar = new AlertDialog.Builder(calendar);
+        addCalendar.setMessage("Voulez-vous aussi ajouter ce repas sur le calendrier de votre téléphone?");
+        addCalendar.setPositiveButton("Oui", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent intent = new Intent(Intent.ACTION_INSERT);
+                intent.setData(CalendarContract.Events.CONTENT_URI);
+                intent.putExtra(CalendarContract.Events.TITLE, "Repas");
+                intent.putExtra(CalendarContract.Events.DESCRIPTION, MeNewApplication.platsCHoisis.toString());
+                intent.putExtra(CalendarContract.Events.ALL_DAY, false);
+
+                if (intent.resolveActivity(getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(CalendarActivity.this, "Pas d'application pour cette action",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        addCalendar.setNegativeButton("Non", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                startActivity( new Intent(getApplicationContext(), MainActivity.class));
+            }
+        });
+        addCalendar.show();
     }
 
 
