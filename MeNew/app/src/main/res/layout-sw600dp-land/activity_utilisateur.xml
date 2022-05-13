@@ -10,13 +10,14 @@
     <fragment
         android:id="@+id/fragment3"
         android:name="ihm.menew.fragments.MainFragment"
-        android:layout_width="474dp"
-        android:layout_height="52dp"
+        android:layout_width="478dp"
+        android:layout_height="55dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BackgroundGrey"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.97"
         tools:ignore="MissingConstraints" />
 
     <TextView

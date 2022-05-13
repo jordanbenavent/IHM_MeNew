@@ -7,6 +7,19 @@
     tools:context=".ActivityAddUtilisateur">
 
 
+    <fragment
+        android:id="@+id/fragment9"
+        android:name="ihm.menew.fragments.MainFragment"
+        android:layout_width="478dp"
+        android:layout_height="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BackgroundGrey"
+        app:layout_constraintVertical_bias="0.97"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/Nom_MeNew"
         android:layout_width="match_parent"
@@ -213,25 +226,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Valider"
-        app:layout_constraintBottom_toTopOf="@+id/fragment2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BackgroundGrey"
-        app:layout_constraintVertical_bias="0.104" />
-
-    <fragment
-        android:id="@+id/fragment2"
-        android:name="ihm.menew.fragments.MainFragment"
-        android:layout_width="400dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BackgroundGrey"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/BackgroundGrey" />
 
     <Button
         android:id="@+id/buttonEditIcone"
