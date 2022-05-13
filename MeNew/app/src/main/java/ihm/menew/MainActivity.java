@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
         onClickButtonPlat();
         onClickButtonTwitter();
         onClickButtonAddCalendar();
+        onClickButtonAddCalendar2();
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                 .permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -145,6 +146,29 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
                 intent.setData(CalendarContract.Events.CONTENT_URI);
                 intent.putExtra(CalendarContract.Events.TITLE, "Repas");
                 intent.putExtra(CalendarContract.Events.DESCRIPTION, platDuMidi.getText().toString());
+                intent.putExtra(CalendarContract.Events.ALL_DAY, false);
+
+                if (intent.resolveActivity(getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(MainActivity.this, "Pas d'application pour cette action",Toast.LENGTH_SHORT).show();
+                }
+            }
+            else{
+                Toast.makeText(MainActivity.this, "Il n'y a pas de plat", Toast.LENGTH_SHORT).show();
+            };
+        });
+    }
+
+    private void onClickButtonAddCalendar2(){
+        TextView platDuSoir = findViewById(R.id.platSoir);
+        findViewById(R.id.addCalendar2).setOnClickListener(click ->{
+            if (!platDuSoir.getText().toString().isEmpty()){
+                Intent intent = new Intent(Intent.ACTION_INSERT);
+                intent.setData(CalendarContract.Events.CONTENT_URI);
+                intent.putExtra(CalendarContract.Events.TITLE, "Repas");
+                intent.putExtra(CalendarContract.Events.DESCRIPTION, platDuSoir.getText().toString());
                 intent.putExtra(CalendarContract.Events.ALL_DAY, false);
 
                 if (intent.resolveActivity(getPackageManager()) != null){

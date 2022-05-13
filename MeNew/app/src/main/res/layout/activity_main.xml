@@ -86,8 +86,7 @@
         android:background="@drawable/ic_baseline_add_circle_24"
         app:layout_constraintBottom_toBottomOf="@id/platSoir"
         app:layout_constraintEnd_toEndOf="@id/myRectangleView"
-        app:layout_constraintStart_toEndOf="@+id/platSoir"
-        app:layout_constraintTop_toTopOf="@id/platSoir" />
+        app:layout_constraintStart_toEndOf="@+id/platSoir" />
 
 
     <TextView
@@ -185,11 +184,24 @@
         android:id="@+id/addCalendar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/green_menew"
         app:layout_constraintBottom_toTopOf="@+id/buttonpllus1"
         app:layout_constraintEnd_toEndOf="@+id/myRectangleView"
         app:layout_constraintStart_toEndOf="@+id/platMidi"
         app:layout_constraintTop_toTopOf="@+id/platMidi"
         app:srcCompat="@android:drawable/stat_sys_download" />
+
+    <ImageButton
+        android:id="@+id/addCalendar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/green_menew"
+        app:layout_constraintBottom_toTopOf="@+id/buttonpllus2"
+        app:layout_constraintEnd_toEndOf="@+id/myRectangleView"
+        app:layout_constraintStart_toEndOf="@+id/platSoir"
+        app:layout_constraintTop_toTopOf="@+id/platSoir"
+        app:srcCompat="@android:drawable/stat_sys_download" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
