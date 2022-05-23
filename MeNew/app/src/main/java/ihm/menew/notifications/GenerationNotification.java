@@ -68,7 +68,7 @@ public class GenerationNotification extends WakefulBroadcastReceiver {
                 .setStyle(new NotificationCompat.BigPictureStyle()
                         .bigPicture(myBitMap))
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .setTimeoutAfter(2000);
+                .setTimeoutAfter(5000);
         PendingIntent pendingIntent = PendingIntent.getActivity(applicationContext,
                 id,
                 new Intent(applicationContext, MainActivity.class),

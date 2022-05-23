@@ -50,15 +50,5 @@ public class Controller_PreparerPlat {
         intent.putExtra("jour", model.getIndiceJour());
         intent.putExtra("temps", "midi");
         view.getLayout().getContext().startActivity(intent);
-        /*
-        MyJour jour = new MyJour();
-        List<Plat> plats = new ArrayList<>();
-        plats.add((MeNewApplication.plats.data.get("Salade")));
-        plats.add((MeNewApplication.plats.data.get("Tartiflette")));
-        plats.add((MeNewApplication.plats.data.get("Mousse au chocolat")));
-        jour.setMidi(plats);
-        MeNewApplication.mesPlat.getEmploieDutemps().get(0).getSemaine().get(model.getIndiceJour()).setMidi(plats);
-        model.clickOnButtonPlus1();
-         */
     }
 }
